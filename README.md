@@ -6,7 +6,7 @@
 ## Getting Started
 
 <img alt="Ed-Fi SDLC"
-src= "https://edfi.atlassian.net/wiki/download/thumbnails/19333125/SDLC_-_Software_Development_Life_Cycle-351170354.jpg?version=1&modificationDate=1665094611967&cacheVersion=1&api=v2&width=248&height=250"
+src= "./images/SDLC-Home/SDLC.jpg"
 align=right width=300>
 
 All developers should review the following content, in addition to reviewing relevant pages in the content listed in this SDLC space:
@@ -16,7 +16,7 @@ All developers should review the following content, in addition to reviewing rel
 
 ## Contents
 
-- [Coding and Testing Standards](Coding.and.Testing.Standards/README.md)
+- [Coding and Testing Standards](./Coding%20and%20Testing%20Standards/README.md)
 - [Continuous Integration](#)
 - [Cross-Functional Projects](#)
 - [Source Code Control Policy](#)

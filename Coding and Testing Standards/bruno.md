@@ -22,7 +22,7 @@ Bruno functionality consists of three areas: The UI, the Markdown and the Runner
 This is a similar, simpler version of the Postman UI, if you've used Postman before, the
 
 <img alt="BrunoUI" 
-src="https://edfi.atlassian.net/wiki/download/thumbnails/19334895/image-2024-1-5_8-24-18.png?version=1&modificationDate=1704464659083&cacheVersion=1&api=v2&width=539&height=250" 
+src="../images/Coding-and-Testing-Standards/BrunoUI.png" 
 height=250>
 
 [https://www.usebruno.com/downloads](https://www.usebruno.com/downloads)
@@ -32,23 +32,23 @@ height=250>
 [https://www.usebruno.com/bru](https://www.usebruno.com/bru)
 
 <img alt="BrunoMarkdown" 
-src="https://edfi.atlassian.net/wiki/download/thumbnails/19334895/image-2024-1-5_8-28-50.png?version=1&modificationDate=1704464930520&cacheVersion=1&api=v2&width=321&height=400" 
+src="../images/Coding-and-Testing-Standards/BrunoMarkdown.png" 
 height=400>
 
 VSCode extension for Syntax Highlighting: [https://marketplace.visualstudio.com/items?itemName=bruno-api-client.bruno](https://marketplace.visualstudio.com/items?itemName=bruno-api-client.bruno)
 
 Bruno has some [built in Node libraries](https://docs.usebruno.com/scripting/inbuilt-libraries.html) and supports adding [node packages as dependencies](https://docs.usebruno.com/scripting/external-libraries.html) adding a package.json file.
 
-<img alt="NodeLibraries Example"
-src="https://edfi.atlassian.net/wiki/download/thumbnails/19334895/image-2024-1-5_8-36-40.png?version=1&modificationDate=1704465401243&cacheVersion=1&api=v2&width=317&height=250"
+<img alt="Bruno NodeLibraries Example"
+src="../images/Coding-and-Testing-Standards/BrunoNode.png"
 height=250>
 
 ## Runner
 
 [https://github.com/andonyns/Ed-Fi-AdminAPI/actions/runs/7281562133/job/19842303482](https://github.com/andonyns/Ed-Fi-AdminAPI/actions/runs/7281562133/job/19842303482)
 
-<img alt="NodeLibraries Example"
-src="https://edfi.atlassian.net/wiki/download/thumbnails/19334895/image-2024-1-5_8-25-13.png?version=1&modificationDate=1704464713683&cacheVersion=1&api=v2&width=279&height=250"
+<img alt="Bruno Runner"
+src="../images/Coding-and-Testing-Standards/BrunoRunner.png"
 height=250>
 
 ## Added Functionality
@@ -57,8 +57,8 @@ height=250>
 
 Simplified tests to verify for specific results
 
-<img alt="NodeLibraries Example"
-src="https://edfi.atlassian.net/wiki/download/thumbnails/19334895/image-2024-1-5_8-32-12.png?version=1&modificationDate=1704465134760&cacheVersion=1&api=v2&width=632&height=250"
+<img alt="Bruno Assertations"
+src="../images/Coding-and-Testing-Standards/BrunoAssertations.png"
 height=250>
 
 ## Missing Functionality
@@ -71,7 +71,7 @@ height=250>
 
 ## Demo
 
-See [Register.bru](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminAPI/blob/14ffada70028375fdd22d1e368992e38e208102f/Application/EdFi.Ods.AdminApi/E2E%20Tests/bruno/Admin%20API%20E2E/User%20Management/Register.bru)
+See [Register.bru](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminAPI/blob/14ffada70028375fdd22d1e368992e38e208102f/Application/EdFi.Ods.AdminApi/E2E-Tests/bruno/Admin-API-E2E/User-Management/Register.bru)
 
 ## Read More
 
