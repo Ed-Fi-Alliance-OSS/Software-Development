@@ -1,6 +1,6 @@
 # Ed-Fi Software Development Lifecycle Home
 
-> :grey_exclamation:
+> [!NOTE]
 > Landing page for policies, guidelines, and procedures related to Ed-Fi software development. Intended for use by Ed-Fi contractors and key open-source contributors on a case-by-case basis.
 
 ## Getting Started
