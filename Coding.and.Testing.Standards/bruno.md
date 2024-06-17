@@ -69,10 +69,10 @@ height=250>
 
 ### Step Reuse
 
-# Demo
+## Demo
 
 See [Register.bru](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminAPI/blob/14ffada70028375fdd22d1e368992e38e208102f/Application/EdFi.Ods.AdminApi/E2E%20Tests/bruno/Admin%20API%20E2E/User%20Management/Register.bru)
 
-# Read More
+## Read More
 
 [https://docs.usebruno.com/bru-lang-overview.html](https://docs.usebruno.com/bru-lang-overview.html)
