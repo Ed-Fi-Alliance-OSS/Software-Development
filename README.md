@@ -16,7 +16,7 @@ All developers should review the following content, in addition to reviewing rel
 
 ## Contents
 
-- [Coding and Testing Standards](#)
+- [Coding and Testing Standards](Coding.and.Testing.Standards/README.md)
 - [Continuous Integration](#)
 - [Cross-Functional Projects](#)
 - [Source Code Control Policy](#)

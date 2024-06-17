@@ -20,6 +20,7 @@ Bruno functionality consists of three areas: The UI, the Markdown and the Runner
 ## The UI
 
 This is a similar, simpler version of the Postman UI, if you've used Postman before, the
+
 <img alt="BrunoUI" 
 src="https://edfi.atlassian.net/wiki/download/thumbnails/19334895/image-2024-1-5_8-24-18.png?version=1&modificationDate=1704464659083&cacheVersion=1&api=v2&width=539&height=250" 
 height=250>
