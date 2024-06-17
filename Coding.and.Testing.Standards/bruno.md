@@ -75,4 +75,4 @@ See [Register.bru](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminAPI/blob/14f
 
 ## Read More
 
-[https://docs.usebruno.com/bru-lang-overview.html](https://docs.usebruno.com/bru-lang-overview.html)
+[https://docs.usebruno.com/bru-lang/overview.html](https://docs.usebruno.com/bru-lang/overview)
