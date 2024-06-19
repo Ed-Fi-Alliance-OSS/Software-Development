@@ -122,7 +122,8 @@ object XYZ : ABC({
 })
 ```
 
-> [!TIP]Proof of concept:
+> [!TIP]
+> **Proof of concept:**
 >  [https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc)
 
 ## Promoting a Package to Release View
@@ -163,8 +164,8 @@ Write-Host @parameters
 Invoke-RestMethod @parameters
 ```
 
-> [!TIP] Proof of concept: 
-> [https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21](https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21)
+> [!TIP]
+> **Proof of concept:** [https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21](https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21)
 > After running the above command, the designated version has been promoted. In
 > the following screenshot you can see that 1.0.0-pre10 has been promoted to
 > Release status, but 1.0.0-pre11 has not.
@@ -187,7 +188,8 @@ PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-pe
 nuget sources add -name EdFiAzure -source https://pkgs.dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS/_packaging/EdFi/nuget/v3/index.json -username <UserName> -password <Pat>
 ```
 
-> [!WARNING] If the source is already registered you can remove a source by name.
+> [!WARNING]
+> If the source is already registered you can remove a source by name.
 >
 > #### List Sources
 >

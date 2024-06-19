@@ -1,6 +1,7 @@
 # Release Workflow and Supply Chain Integrity
 
-> [!NOTE] This document describes the desired state software release workflow including:
+> [!NOTE]
+> This document describes the desired state software release workflow including:
 >
 > - GitHub Actions tasks
 > - Generation of SBOM and Provenance

@@ -53,7 +53,8 @@ $results | Where-Object { $_.Severity -in ("Error", "Warning") }
 Convert to a [sarif](https://github.com/microsoft/sarif-tutorials) file for
 uploading into GitHub
 
-> [!TIP] Docker Testing Since this code will eventually run on a Linux container
+> [!TIP]
+> Docker Testing Since this code will eventually run on a Linux container
 > in GitHub, let's make sure it runs...
 >
 > ```
