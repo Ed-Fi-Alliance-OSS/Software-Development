@@ -20,7 +20,8 @@ This tool will:
 3. Print a text report describing any problems detected, and raise an
    appropriate error that will cause the build to fail.
 
-Source Repository: [Ed-Fi-Actions](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions)
+Source Repository:
+[Ed-Fi-Actions](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions)
 
 ### Initial Ideas
 

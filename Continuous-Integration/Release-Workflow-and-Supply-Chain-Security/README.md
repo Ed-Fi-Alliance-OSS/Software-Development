@@ -77,7 +77,7 @@ development practices:
       3. TypeScript: eslint
       4. Python: flake8
 
-         > [!WARNING]
+         > <img src="../../images/Continuous-Integration/warning.png">
          > Rollout of C# linting has been delayed and not reach
          > Admin App / Admin API as of 19 Oct 2022
          > [AA-1611](https://tracker.ed-fi.org/browse/AA-1611?src=confmacro)
@@ -115,7 +115,7 @@ potentially Docker images, although that has not been investigated.*
    directly through Tech Docs or upload to Azure blob storage and link to them
    on Tech Docs.
 
-   > [!WARNING]
+   > <img src="../../images/Continuous-Integration/warning.png">
    > Using Azure blob storage has an advantage in automation;
    > however, it still requires manual effort to update Tech Docs to have links
    > to the correct files.
@@ -133,7 +133,7 @@ potentially Docker images, although that has not been investigated.*
    2. For NuGet packages, use Microsoft's
       [sbom-tool](https://github.com/microsoft/sbom-tool).
 
-      > [!CAUTION]
+      > <img src="../../images/Continuous-Integration/warning.png">
       > Further research required to determine appropriate tools
       > for npm and pypi packages.
 

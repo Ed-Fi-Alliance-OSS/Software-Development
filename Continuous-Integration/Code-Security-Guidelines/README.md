@@ -203,7 +203,7 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
       | TypeScript / JavaScript      | (default)   | npm                | Azure Artifacts      |
       | MetaEd (see box below)       | npm         | MyGet              |
 
-      > [!NOTE]
+      > <img src="../../images/Cross-Functional-Projects/information.png">
       > Azure Artifacts requires that npm packages are scoped, e.g.
       > `@edfi/whatever`  instead of just `whatever` . Atom text editor seems
       > to have a bug that prevents it from working with scoped packages.

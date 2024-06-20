@@ -11,8 +11,8 @@ others, and thus infects all of *its*  users. We must do all we can to prevent
 that.
 
 *Also see: [Guidelines for Use of GitHub
-Actions](../guidelines-for-use-of-github-actions.md)* *for
-notes on automating dependency scanning.*
+Actions](../guidelines-for-use-of-github-actions.md)* *for notes on automating
+dependency scanning.*
 
 ## GitHub Actions
 
@@ -26,9 +26,8 @@ the reviewed code. These practices are enforced by scanning the Actions
 workflows themselves to ensure that they are only using pre-approved Actions.
 
 _Also see [Guidelines for Use of GitHub
-Actions](../guidelines-for-use-of-github-actions.md) and
-[Automated Security Scanning
-POC](automated-security-scanning-poc.md)._
+Actions](../guidelines-for-use-of-github-actions.md) and [Automated Security
+Scanning POC](automated-security-scanning-poc.md)._
 
 ## Open Source Projects
 
@@ -36,8 +35,7 @@ All open source projects should:
 
 1. Enable [Dependabot](https://duckduckgo.com/?q=dependabot&ia=web), and
 2. Run the [Dependency Review
-   Action](https://github.com/actions/dependency-review-action) on pull
-   requests
+   Action](https://github.com/actions/dependency-review-action) on pull requests
 
 These are essentially the same underlying technologies. Dependabot runs a
 nightly scan on the `main`  branch of the code and reports on any

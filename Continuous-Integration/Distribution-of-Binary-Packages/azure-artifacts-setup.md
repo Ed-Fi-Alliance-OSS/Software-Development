@@ -77,9 +77,9 @@ projects within TeamCity.
 
 > [!CAUTION]
 > Microsoft requires an expiration date on personal access tokens,
-> max one year out. Thus this value will need to be updated periodically.
-> Sign in to the project with this user account and then go to the Profile page
-> to create a new token. The password is available to Ed-Fi tech team members in
+> max one year out. Thus this value will need to be updated periodically. Sign
+> in to the project with this user account and then go to the Profile page to
+> create a new token. The password is available to Ed-Fi tech team members in
 > Password Manager Pro.
 
 ## Pushing a Package to the Feed
@@ -89,9 +89,8 @@ authentication mechanism is different than the one built into nuget.exe. The
 simplest way to work with it from TeamCity is to use the `NuGet feed
 credentials`  as shown below.
 
-_![(warning)](../../images/Continuous-Integration/warning.png)
-image was lost in the Confluence
-migration ![(sad)](../../images/Continuous-Integration/sad.png)_
+_![(warning)](../../images/Continuous-Integration/warning.png) image was lost in
+the Confluence migration ![(sad)](../../images/Continuous-Integration/sad.png)_
 
 This screenshot is for illustration / POC only. Within TeamCity, the feed URL,
 username, and password will be provided as parameters and will use the
@@ -123,8 +122,7 @@ object XYZ : ABC({
 ```
 
 > [!TIP]
-> **Proof of concept:**
->  [https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc)
+> **Proof of concept:** [https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc)
 
 ## Promoting a Package to Release View
 
@@ -189,7 +187,8 @@ nuget sources add -name EdFiAzure -source https://pkgs.dev.azure.com/ed-fi-allia
 ```
 
 > [!WARNING]
-> If the source is already registered you can remove a source by name.
+> If the source is already registered you can remove a source by
+> name.
 >
 > #### List Sources
 >
@@ -231,22 +230,15 @@ package](https://docs.microsoft.com/en-us/azure/devops/artifacts/nuget/publish?v
 ---
 
 [Organization-level Settings](#organization-level-settings) |
-[Billing](#billing) | [Users](#users) |
-[Ed-Fi-Alliance-OSS Project](#ed-fi-alliance-oss-project) |
-[Enabled Services](#enabled-services) | [Organization
-Owner](#organization-owner) | [Package Feed
-URLs](#package-feed-urls) | [Retention
-Policies](#retention-policies) | [Project
-Team](#project-team) |
-[Operations](#operations) | [Automation
-Goals](#automation-goals) | [Parameters in
-TeamCity](#parameters-in-teamcity) | [Pushing a Package to the
-Feed](#pushing-a-package-to-the-feed) | [Promoting a Package to
-Release View](#promoting-a-package-to-release-view) | [Manual
-Package Publishing](#manual-package-publishing) |
-[NuGet.exe](#nugetexe) | [Add a
-Source](#add-a-source) | [List
-Sources](#list-sources) | [Remove a
-Source](#remove-a-source) | [Push a
-Package](#push-a-package) |
+[Billing](#billing) | [Users](#users) | [Ed-Fi-Alliance-OSS
+Project](#ed-fi-alliance-oss-project) | [Enabled Services](#enabled-services) |
+[Organization Owner](#organization-owner) | [Package Feed
+URLs](#package-feed-urls) | [Retention Policies](#retention-policies) | [Project
+Team](#project-team) | [Operations](#operations) | [Automation
+Goals](#automation-goals) | [Parameters in TeamCity](#parameters-in-teamcity) |
+[Pushing a Package to the Feed](#pushing-a-package-to-the-feed) | [Promoting a
+Package to Release View](#promoting-a-package-to-release-view) | [Manual Package
+Publishing](#manual-package-publishing) | [NuGet.exe](#nugetexe) | [Add a
+Source](#add-a-source) | [List Sources](#list-sources) | [Remove a
+Source](#remove-a-source) | [Push a Package](#push-a-package) |
 [Dotnet.exe](#dotnetexe)

@@ -351,14 +351,12 @@ Certificates using │
 
 │ Analyzed Image
 ────────────────────┼─────────────────────────────────────────────────────  
- Target │ edfialliance/ods-admin-api:pre
-digest │ 064e9e6df77d
-platform │ linux/amd64
-provenance │ [https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0](https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0)
-│ [https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0/blob/b6f47fb13111b7f1fbb5d3f52a4ea015d0fb7f05](https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0/blob/b6f47fb13111b7f1fbb5d3f52a4ea015d0fb7f05)
-vulnerabilities │ 0C 2H 16M 0L 1?
-size │ 74 MB
-packages │ 651
+ Target │ edfialliance/ods-admin-api:pre digest │ 064e9e6df77d platform │
+linux/amd64 provenance │
+[https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0](https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0)
+│
+[https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0/blob/b6f47fb13111b7f1fbb5d3f52a4ea015d0fb7f05](https://github.com/Ed-Fi-Alliance-OSS/AdminAPI-2.0/blob/b6f47fb13111b7f1fbb5d3f52a4ea015d0fb7f05)
+vulnerabilities │ 0C 2H 16M 0L 1? size │ 74 MB packages │ 651
 
 ## Packages and Vulnerabilities
 
@@ -367,150 +365,112 @@ packages │ 651
 
 x HIGH CVE-2023-5363  
  [https://scout.docker.com/v/CVE-2023-5363?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.12-r0](https://scout.docker.com/v/CVE-2023-5363?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.12-r0)  
- Affected range : < 3.0.12-r0
-Fixed version : 3.0.12-r0
+ Affected range : < 3.0.12-r0 Fixed version : 3.0.12-r0
 
 x MEDIUM CVE-2023-6129  
  [https://scout.docker.com/v/CVE-2023-6129?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.12-r2](https://scout.docker.com/v/CVE-2023-6129?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.12-r2)  
- Affected range : < 3.0.12-r2
-Fixed version : 3.0.12-r2
+ Affected range : < 3.0.12-r2 Fixed version : 3.0.12-r2
 
 x MEDIUM CVE-2023-2650  
  [https://scout.docker.com/v/CVE-2023-2650?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.9-r0](https://scout.docker.com/v/CVE-2023-2650?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.9-r0)  
- Affected range : < 3.0.9-r0
-Fixed version : 3.0.9-r0
+ Affected range : < 3.0.9-r0 Fixed version : 3.0.9-r0
 
 x MEDIUM CVE-2023-1255  
  [https://scout.docker.com/v/CVE-2023-1255?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.8-r4](https://scout.docker.com/v/CVE-2023-1255?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.8-r4)  
- Affected range : < 3.0.8-r4
-Fixed version : 3.0.8-r4
+ Affected range : < 3.0.8-r4 Fixed version : 3.0.8-r4
 
 x MEDIUM CVE-2024-0727  
  [https://scout.docker.com/v/CVE-2024-0727?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.12-r4](https://scout.docker.com/v/CVE-2024-0727?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.12-r4)  
- Affected range : < 3.0.12-r4
-Fixed version : 3.0.12-r4
+ Affected range : < 3.0.12-r4 Fixed version : 3.0.12-r4
 
 x MEDIUM CVE-2023-5678  
  [https://scout.docker.com/v/CVE-2023-5678?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.12-r1](https://scout.docker.com/v/CVE-2023-5678?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.12-r1)  
-Affected range : < 3.0.12-r1
-Fixed version : 3.0.12-r1
+Affected range : < 3.0.12-r1 Fixed version : 3.0.12-r1
 
 x MEDIUM CVE-2023-3817  
  [https://scout.docker.com/v/CVE-2023-3817?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.10-r0](https://scout.docker.com/v/CVE-2023-3817?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.10-r0)  
- Affected range : < 3.0.10-r0
-Fixed version : 3.0.10-r0
+ Affected range : < 3.0.10-r0 Fixed version : 3.0.10-r0
 
 x MEDIUM CVE-2023-3446  
  [https://scout.docker.com/v/CVE-2023-3446?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.9-r3](https://scout.docker.com/v/CVE-2023-3446?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.9-r3)  
- Affected range : < 3.0.9-r3
-Fixed version : 3.0.9-r3
+ Affected range : < 3.0.9-r3 Fixed version : 3.0.9-r3
 
 x MEDIUM CVE-2023-2975  
  [https://scout.docker.com/v/CVE-2023-2975?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.9-r2](https://scout.docker.com/v/CVE-2023-2975?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.9-r2)  
- Affected range : < 3.0.9-r2
-Fixed version : 3.0.9-r2
+ Affected range : < 3.0.9-r2 Fixed version : 3.0.9-r2
 
 x UNSPECIFIED CVE-2023-6237  
  [https://scout.docker.com/v/CVE-2023-6237?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=<3.0.12-r3](https://scout.docker.com/v/CVE-2023-6237?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.17&vr=%3C3.0.12-r3)  
- Affected range : < 3.0.12-r3
-Fixed version : 3.0.12-r3
+ Affected range : < 3.0.12-r3 Fixed version : 3.0.12-r3
 
 0C 1H 0M 0L System.Text.RegularExpressions 4.3.0  
  pkg:nuget/System.Text.RegularExpressions@4.3.0
 
 x HIGH CVE-2019-0820 [Inefficient Regular Expression Complexity]  
  [https://scout.docker.com/v/CVE-2019-0820?s=github&n=System.Text.RegularExpressions&t=nuget&vr=>=4.3.0,<4.3.1](https://scout.docker.com/v/CVE-2019-0820?s=github&n=System.Text.RegularExpressions&t=nuget&vr=%3E%3D4.3.0%2C%3C4.3.1)  
- Affected range : >=4.3.0
-: <4.3.1
-Fixed version : 4.3.1
-CVSS Score : 7.5
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+ Affected range : >=4.3.0 : <4.3.1 Fixed version : 4.3.1 CVSS Score : 7.5 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
 
-0C 0H 2M 0L Microsoft.IdentityModel.JsonWebTokens 6.25.1.31130213719.9ddad8fc51ed2732622323612acad83f6629d5ba  
+0C 0H 2M 0L Microsoft.IdentityModel.JsonWebTokens
+6.25.1.31130213719.9ddad8fc51ed2732622323612acad83f6629d5ba  
  pkg:nuget/Microsoft.IdentityModel.JsonWebTokens@6.25.1.31130213719.9ddad8fc51ed2732622323612acad83f6629d5ba
 
 x MEDIUM GHSA-59j7-ghrg-fj52  
  [https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 x MEDIUM CVE-2024-21319  
  [https://scout.docker.com/v/CVE-2024-21319?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/CVE-2024-21319?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
-0C 0H 2M 0L System.IdentityModel.Tokens.Jwt 6.24.0.31013185938.779de3802c12c2b5331424e6079e76b06183757a  
+0C 0H 2M 0L System.IdentityModel.Tokens.Jwt
+6.24.0.31013185938.779de3802c12c2b5331424e6079e76b06183757a  
  pkg:nuget/System.IdentityModel.Tokens.Jwt@6.24.0.31013185938.779de3802c12c2b5331424e6079e76b06183757a
 
 x MEDIUM GHSA-59j7-ghrg-fj52  
  [https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 x MEDIUM CVE-2024-21319  
  [https://scout.docker.com/v/CVE-2024-21319?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/CVE-2024-21319?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 0C 0H 2M 0L Microsoft.IdentityModel.JsonWebTokens 6.25.1  
  pkg:nuget/Microsoft.IdentityModel.JsonWebTokens@6.25.1
 
 x MEDIUM GHSA-59j7-ghrg-fj52  
  [https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 x MEDIUM CVE-2024-21319  
  [https://scout.docker.com/v/CVE-2024-21319?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/CVE-2024-21319?s=github&n=Microsoft.IdentityModel.JsonWebTokens&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 0C 0H 2M 0L System.IdentityModel.Tokens.Jwt 6.24.0  
  pkg:nuget/System.IdentityModel.Tokens.Jwt@6.24.0
 
 x MEDIUM GHSA-59j7-ghrg-fj52  
  [https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/GHSA-59j7-ghrg-fj52?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 x MEDIUM CVE-2024-21319  
  [https://scout.docker.com/v/CVE-2024-21319?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=>=6.5.0,<6.34.0](https://scout.docker.com/v/CVE-2024-21319?s=github&n=System.IdentityModel.Tokens.Jwt&t=nuget&vr=%3E%3D6.5.0%2C%3C6.34.0)  
- Affected range : >=6.5.0
-: <6.34.0
-Fixed version : 6.34.0
-CVSS Score : 6.8
-CVSS Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
+ Affected range : >=6.5.0 : <6.34.0 Fixed version : 6.34.0 CVSS Score : 6.8 CVSS
+Vector : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H
 
 19 vulnerabilities found in 6 packages  
- UNSPECIFIED 1
-LOW 0
-MEDIUM 16
-HIGH 2
-CRITICAL 0
+ UNSPECIFIED 1 LOW 0 MEDIUM 16 HIGH 2 CRITICAL 0
 
 What's Next?  
- View base image update recommendations → docker scout recommendations edfialliance/ods-admin-api:pre
+ View base image update recommendations → docker scout recommendations
+edfialliance/ods-admin-api:pre
 
 </details>
 <br>

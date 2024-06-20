@@ -31,5 +31,5 @@ Rulesets have the following advantages over branch and tag protection rules.
 Rulesets can be used alongside branch protections, so we can use a combination
 of both. For example:
 
-Require a pull request before merging as a ruleset and require a merge queue
-for a specific branch.
+Require a pull request before merging as a ruleset and require a merge queue for
+a specific branch.
