@@ -200,7 +200,7 @@ to the Alliance.
 
 ## GitHub Actions, Azure DevOps, and AWS Whatever
 
-| Feature                 | GitHub<br><br>[Proof of concept](./evaluating-cloud-based-ci/github-actions-poc.md)                                                                                                                                                                                                         | Azure | AWS |
+| Feature                 | GitHub<br><br>[Proof of concept](./github-actions-poc.md)                                                                                                                                                                                                                                   | Azure | AWS |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | --- |
 | Cost and Open Source    | - Free for public repositories<br>- 2,000 free minutes for private repositories (can pay for additional minutes)<br>- 20 concurrent jobs<br>- 1000 API requests/hour *within a repository*                                                                                                  |       |     |
 | ​Configuration Language | ​ci.yml file<br><br>Extensive public actions are available but there are [legitimate security concerns](https://news.ycombinator.com/item?id=21844805).<br><br>[3rd party recommendations for security](https://humanwhocodes.com/blog/2020/07/safely-use-github-actions-in-organizations/) | ​     | ​   |

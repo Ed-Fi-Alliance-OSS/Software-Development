@@ -47,26 +47,26 @@ Other items may be added as needed.
   around the use of GitHub Actions, so that we limit the risk of accidentally
   using a malicious action or allowing malicious pull requests. → [Securing
   GitHub
-  Actions](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334563/Guidelines+for+Use+of+GitHub+Actions)
+  Actions](../Continuous-Integration/guidelines-for-use-of-github-actions.md)
 - **Dependency Scanning**: detect third-party dependencies with known
   vulnerabilities, avoid or mitigate as appropriate, patch as soon as possible
   once detected. → [Dependency Security
-  Automation](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334569/Dependency+Security+Automation)
+  Automation](../Continuous-Integration/Distribution-of-Binary-Packages/README.md)
 - **Code Security**: document and apply best practices for avoiding malicious
   injection of source code. → [Code
-  Security](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334579/Code+Security+Guidelines)
+  Security](../Continuous-Integration/Code-Security-Guidelines/README.md)
   - [https://edfi.atlassian.net/wiki/spaces/TT/pages/18649937](https://edfi.atlassian.net/wiki/spaces/TT/pages/18649937)
 - **Code Quality**: take the human out of code review where feasible through
   integration of style, correctness, and standards-compliance checks in the CI
   process. → [Code Quality
-  Automation](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334610/Code+Quality+Automation)
+  Automation](../Continuous-Integration/Code-Quality-Automation/README.md)
 - **Repository Scoring**: develop a scoring process for evaluating and
   tracking a code repository's compliance with all security and quality
   policies developed above. → [Repository
-  Scoring](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334602/Repository+Scoring)
+  Scoring](../Continuous-Integration/Repository-Scoring/README.md)
 - **Supply Chain Integrity**: creating provenance and software bill of
   materials artifacts for validating supply chain integrity. → [Supply Chain
-  Integrity](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334698/Release+Workflow+and+Supply+Chain+Integrity)
+  Integrity](../Continuous-Integration/Release-Workflow-and-Supply-Chain-Security/README.md)
 
 ## References
 

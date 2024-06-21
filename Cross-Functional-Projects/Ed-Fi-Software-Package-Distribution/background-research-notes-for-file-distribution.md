@@ -133,7 +133,7 @@ Even with the gpr tool I did not have success. Was finally able to push a
 package using the `curl.exe` provided with Git.
 
 <details>
-<summary>Curl example...</summary>
+<summary><b>Curl example...</b></summary>
 
 ```
 $curl="C:\Program Files\Git\mingw64\bin\curl.exe"

@@ -137,7 +137,7 @@ reasonable and cost effective but drives more network traffic between TeamCity
 and the host, and lowers the discoverability of the images.
 
 <details>
-<summary>Original analysis...</summary>
+<summary><b>Original analysis...<b></summary>
 <br>
 Public images should go to the Docker Hub. Most likely we will need private
 image repositories as well, for integration/automation test deployments. Either
@@ -173,7 +173,7 @@ Update TeamCity to publish installers to Azure Blob Storage on demand, and npm
 packages (on demand/automatic yet to be determined).
 
 For more information on license acceptance, see [Closed Source License
-Acceptance](../cross-functional-projects/open-source-code-management/closed-source-license-acceptance.md).
+Acceptance](../Open-Source-Code-Management/closed-source-license-acceptance.md).
 
 **_Recommendations:_**
 
@@ -229,4 +229,4 @@ Artifacts](../../Continuous-Integration/Distribution-of-Binary-Packages/transiti
 > [!NOTE]
 > For more information on each of the evaluated storage options,
 > see [Background Research Notes for File
-> Distribution](./ed-fi-software-package-distribution/background-research-notes-for-file-distribution.md).
+> Distribution](./background-research-notes-for-file-distribution.md).

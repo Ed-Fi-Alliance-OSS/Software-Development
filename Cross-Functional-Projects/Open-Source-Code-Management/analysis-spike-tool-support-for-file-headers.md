@@ -155,4 +155,4 @@ Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confl
 the creators can apply whatever license they want to their extensions, AFAIK.
 
 Reference for file types: [License and Copyright
-Notifications](../open-source-code-management/license-and-copyright-notifications.md)
+Notifications](./license-and-copyright-notifications.md)

@@ -90,5 +90,5 @@ strange and disquieting.
 
 > [!NOTE]
 > See [Ed-Fi Software Package
-> Distribution](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334447/Ed-Fi+Software+Package+Distribution#Ed-FiSoftwarePackageDistribution-NextSteps) for
+> Distribution](../../Cross-Functional-Projects/Ed-Fi-Software-Package-Distribution/README.md) for
 > more information on the decision to move from MyGet to Azure Artifacts
