@@ -221,7 +221,7 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
 - **Automated review**:
   - All core repositories should have appropriate automation workflows in
     GitHub. See [Guidelines for Use of GitHub
-    Actions](../continuous-integration/guidelines-for-use-of-github-actions.md)
+    Actions](../guidelines-for-use-of-github-actions.md)
     for more detail. Exceptions:
     - **Ed-Fi-Docker**: vulnerability scanning provided by Docker Hub, rather
       than GitHub Actions

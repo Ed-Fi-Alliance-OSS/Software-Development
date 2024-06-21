@@ -49,11 +49,11 @@ See the following documents for additional context on the Ed-Fi software
 development practices:
 
 - [Source Code Control
-  Policy](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334813/Source+Code+Control+Policy)
+  Policy](../../Source-Code-Control-Policy/README.md)
 - [Code Security
   Guidelines](../Code-Security-Guidelines/README.md)
 - [Coding and Testing
-  Standards](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334828/Coding+and+Testing+Standards)
+  Standards](../../Coding-and-Testing-Standards/README.md)
 
 # Functional Requirements
 

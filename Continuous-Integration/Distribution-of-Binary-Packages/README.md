@@ -17,13 +17,11 @@ available.
 ## Related Content
 
 - [Azure Artifacts
-  Setup](./distribution-of-binary-packages/azure-artifacts-setup.md)
-- [MyGet / Azure
-  Artifacts](./distribution-of-binary-packages/myget-azure-artifacts.md)
+  Setup](./azure-artifacts-setup.md)
 - [Transition from MyGet to Azure
-  Artifacts](./distribution-of-binary-packages/transition-from-myget-to-azure-artifacts.md)
+  Artifacts](./transition-from-myget-to-azure-artifacts.md)
 - [Visual Studio Marketplace
-  Publisher](./distribution-of-binary-packages/visual-studio-marketplace-publisher.md)
+  Publisher](./visual-studio-marketplace-publisher.md)
 
 ## Policy
 

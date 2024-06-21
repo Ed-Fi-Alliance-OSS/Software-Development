@@ -4,7 +4,7 @@
 
 This page will lay out information relating to the 3rd goal listed in
 [Guidelines for Use of Github
-Actions](../../continuous-integration/guidelines-for-use-of-github-actions.md):
+Actions](../guidelines-for-use-of-github-actions.md):
 
 - Provide an automated tool for monitoring GitHub Actions configurations in
   Ed-Fi code repositories.
