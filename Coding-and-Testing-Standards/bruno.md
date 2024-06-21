@@ -1,6 +1,7 @@
 # Bruno Introduction
 
-> [!CAUTION] This document describes investigation of Bruno as an alternative to
+> [!CAUTION]
+> This document describes investigation of Bruno as an alternative to
 > Postman. Our conclusion at the time: it is close, but not quite ready for
 > Ed-Fi. Primary reason: cannot define authentication at a parent level and have
 > that cascade down to the children.
