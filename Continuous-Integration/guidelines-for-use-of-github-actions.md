@@ -129,7 +129,7 @@ cautious in ensuring that you only push to the fork, not the origin repository!
 Generically speaking, a build and test workflow should look something like this:
 
 <details>
-  <summary>Click here to expand...</summary>
+  <summary><b>Click here to expand...</b></summary>
 
 #### Trigger
 
@@ -259,7 +259,7 @@ jobs:
       - run: bats -v
 ```
 
-> [!TIP]
+> :white_check_mark:
 > This example is only using actions created by GitHub itself, whom we
 > are fully trusting. It should be safe to simply use the version tag in these
 > cases. However, for consistency, we will stick with the commit hashes even for
@@ -301,12 +301,12 @@ the source code to look for any obviously malicious or suspicious code:
 - Echo statements that try to guess at repository secrets and print them to
   the log
 
-> [!TIP]
+> :white_check_mark:
 > When reviewing a third party JavaScript-based action that is actually
 > written in TypeScript,  another variant that transpiles down to JavaScript, or
 > has been "compiled" with WebPack, it can be very difficult to understand the
-> built `index.js`. Reviewing the _original source_ is not sufficient, since
-> someone malicious could inject code directly into the _distributed_ version.
+> built `index.js`. Reviewing the \_original source\* is not sufficient, since
+> someone malicious could inject code directly into the \_distributed\* version.
 > When a source map is provided, one can clone the repository, install
 > [reverse-sourcemap](https://github.com/davidkevork/reverse-sourcemap), and
 > then run that utility to recreate the TypeScript. Compare the recreated file
@@ -361,7 +361,7 @@ repository secret.
 ## 6\. Perform Code Analysis
 
 Linters are great for enforcing many style and coding standards (see [Code
-Quality Automation](../continuous-integration/code-quality-automation.md)). They
+Quality Automation](./Code-Quality-Automation/README.md)). They
 may even be able to detect some security vulnerabilities. However, their
 algorithms for detecting vulnerabilities are generally quite limited. An
 advanced static code scanner can detect deeper issues.
