@@ -55,7 +55,7 @@ Other items may be added as needed.
 - **Code Security**: document and apply best practices for avoiding malicious
   injection of source code. → [Code
   Security](../Continuous-Integration/Code-Security-Guidelines/README.md)
-  - [https://edfi.atlassian.net/wiki/spaces/TT/pages/18649937](https://edfi.atlassian.net/wiki/spaces/TT/pages/18649937)
+  - [Protecting DataImport and MetaEd](https://edfi.atlassian.net/wiki/spaces/TT/pages/18649937)
 - **Code Quality**: take the human out of code review where feasible through
   integration of style, correctness, and standards-compliance checks in the CI
   process. → [Code Quality

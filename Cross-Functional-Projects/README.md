@@ -7,8 +7,8 @@
 - [Code Pipeline Security
   2022](code-pipeline-security-2022.md)
 - [Ed-Fi Software Package
-  Distribution](./ed-fi-software-package-distribution/README.md)
+  Distribution](./Ed-Fi-Software-Package-Distribution/README.md)
 - [Evaluating Cloud-based
-  CI](./evaluating-cloud-based-ci/README.md)
+  CI](./Evaluating-Cloud-based-CI/README.md)
 - [Open Source Code
-  Management](./open-source-code-management/README.md)
+  Management](./Open-Source-Code-Management/README.md)

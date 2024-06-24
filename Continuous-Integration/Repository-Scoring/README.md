@@ -73,7 +73,7 @@ are subject to further review at a later date.
    1. At the workflow level, grant `readall`
    2. On any CodeQL job, add permission `security-events: write`
 
-      > [!WARNING]
+      > :warning:
       > A GitHub action with insufficient permissions will fail and
       > it will tell you what is missing. Review that list carefully and
       > update the workflow if everything requested is within reason.

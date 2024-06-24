@@ -13,16 +13,16 @@
    must be loaded into GitHub for verification. → see [Signing Git
    Commits](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875476/Signing+Git+Commits)
 4. See [Code Security
-   Guidelines](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334579/Code+Security+Guidelines)
+   Guidelines](../Continuous-Integration/Code-Security-Guidelines/README.md)
    for additional information on securing repositories in GitHub, including
    access permissions, branch protection, and more.
 5. Users who do not have write access to a repository can fork the repository
    and then submit pull requests (PR) back to the origin. Pull request reviewers
-   should read [checking out pull requests locally](http://Child Pages) for tips
+   should read [checking out pull requests locally](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally) for tips
    on how to manage those PRs. Please be sure when squashing the original
    commits that the committer's name is still associated with the final commit.
 6. All contributors need to agree to the [Ed-Fi Contributor's License
-   Agreement](./source-code-control-policy/ed-fi-contributors-license-agreement.md) (CLA).
+   Agreement](./ed-fi-contributors-license-agreement.md) (CLA).
 
 | **Organization**   | **Purpose**                                                                                                                                                                                                                                      |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
