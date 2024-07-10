@@ -18,19 +18,19 @@ All developers should review the following content, in addition to reviewing rel
 
 - [Coding and Testing Standards](./Coding-and-Testing-Standards/README.md)
 - [Continuous Integration](./Continuous-Integration/README.md)
-- [Cross-Functional Projects](#)
-- [Source Code Control Policy](#)
+- [Cross-Functional Projects](./Cross-Functional-Projects/README.md)
+- [Source Code Control Policy](./Source-Code-Control-Policy/README.md)
 
 ## SDLC Security Documents
 
-:blue_book:[Signing Git Commits](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875476/Signing+Git+Commits>)
+:blue_book:[Signing Git Commits](./Source-Code-Control-Policy/signing-git-commits.md)
 
-:blue_book:[Source Code Control Policy](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334813/Source+Code+Control+Policy)
+:blue_book:[Source Code Control Policy](./Source-Code-Control-Policy/README.md)
 
-:blue_book:[Release Workflow and Supply Chain Integrity](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334698/Release+Workflow+and+Supply+Chain+Integrity)
+:blue_book:[Release Workflow and Supply Chain Integrity](./Continuous-Integration/Release-Workflow-and-Supply-Chain-Security/README.md)
 
-:blue_book:[Code Security Guidelines](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334579/Code+Security+Guidelines)
+:blue_book:[Code Security Guidelines](./Continuous-Integration/Code-Security-Guidelines/README.md)
 
-:blue_book:[Dependency Security Automation](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334569/Dependency+Security+Automation)
+:blue_book:[Dependency Security Automation](./Continuous-Integration/Dependency-Security-Automation/README.md)
 
-:blue_book:[Guidelines for Use of GitHub Actions](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334563/Guidelines+for+Use+of+GitHub+Actions)
+:blue_book:[Guidelines for Use of GitHub Actions](./Continuous-Integration/guidelines-for-use-of-github-actions.md)
