@@ -57,7 +57,7 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
          number on merged code.
       2. All commits should be signed in order to avoid git user spoofing
          (see [Signing Git
-         Commits](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875476/Signing+Git+Commits)).
+         Commits](../../Source-Code-Control-Policy/signing-git-commits.md)).
       3. All submitters must sign the [Individual Contributors License
          Agreement](https://gist.github.com/EdFiBuildAgent/d68fa602d07505c3682e8258b7dc6fbc).
       4. Linear history is required.

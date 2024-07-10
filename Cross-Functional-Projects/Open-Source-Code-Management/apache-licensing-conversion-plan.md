@@ -287,7 +287,7 @@ To be completed by the responsible Scrum team:
 
 ## 6\. All Team Developers
 
-1. Learn how to sign commits. Tutorial: [Signing Git Commits](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875476/Signing+Git+Commits)
+1. Learn how to sign commits. Tutorial: [Signing Git Commits](../../Source-Code-Control-Policy/signing-git-commits.md)
 2. Delete or move your old local clones. Create branch clones of the new
    repositories. Do not add a new remote to your existing repos because we do
    not want to bring old Git history into the new repositories on accident.
