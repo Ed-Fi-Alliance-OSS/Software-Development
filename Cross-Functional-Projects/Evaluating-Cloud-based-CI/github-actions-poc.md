@@ -35,7 +35,7 @@ Summary:
     is in the Windows file system. Significantly better to clone the
     repository in your Linux filesystem.
   - Side note: updated [Signing Git
-    Commits](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875476/Signing+Git+Commits) with
+    Commits](../../Source-Code-Control-Policy/signing-git-commits.md) with
     notes for configuring in WSL2.
 - Having easy CLI command to run was essential.
 

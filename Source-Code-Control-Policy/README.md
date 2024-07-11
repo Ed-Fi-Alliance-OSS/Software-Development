@@ -11,7 +11,7 @@
    (See table at the bottom of the page)
 3. All Git commits need to be signed using a private key, and the public key
    must be loaded into GitHub for verification. → see [Signing Git
-   Commits](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875476/Signing+Git+Commits)
+   Commits](./signing-git-commits.md)
 4. See [Code Security
    Guidelines](../Continuous-Integration/Code-Security-Guidelines/README.md)
    for additional information on securing repositories in GitHub, including
