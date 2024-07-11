@@ -4,9 +4,9 @@
 
 From the *Git User Manual*:
 
->Git is cryptographically secure, but it's not foolproof. If you're taking work
->from others on the internet and want to verify that commits are actually from a
->trusted source, Git has a few ways to sign and verify work using GPG.
+> Git is cryptographically secure, but it's not foolproof. If you're taking work
+> from others on the internet and want to verify that commits are actually from
+> a trusted source, Git has a few ways to sign and verify work using GPG.
 
 As Ed-Fi source repositories have embraced the Apache License, it is more
 important than ever that we ensure pull requests and commits are well
@@ -25,33 +25,39 @@ If you use Git Bash, then you already have GPG at path /usr/bin/gpg .
 If you use PowerShell or cmd.exe, then you will need to install GPG. The
 simplest way to install GPG is with chocolatey:
 
-```none
-> choco install -y gpg4win
+```shell
+choco install -y gpg4win
 ```
 
-Alternately, you can download and install from <https://www.gpg4win.org/>.
+Alternately, you can download and install
+from [GPG4Win](https://www.gpg4win.org).
 
 ### 2. Generate a Key
 
-The default key length is 2048 bit. 4096 is even better. You\'ll be prompted for
-name and email. You should use the same \"commit email address\" as you have
+The default key length is 2048 bit. 4096 is even better. You'll be prompted for
+name and email. You should use the same "commit email address" as you have
 [configured in
 GitHub](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address).
 
-```none
-> gpg \--default-new-key-algo rsa4096 \--gen-key
+```shell
+gpg --default-new-key-algo rsa4096 --gen-key
 ```
 
-> [!WARNING] 
+> [!WARNING]
 > This key will expire after two years.
 
 ### 3. Configure Git to Always Sign
 
 You will need the key ID for this. In the following example from the Git manual,
-the id is \"E1E474F2023B5ABFF8752630BB4\".
+the id is "E1E474F2023B5ABFF8752630BB4".
+
+```shell
+gpg --list-keys
+```
+
+The command above will produce output similar to the following.
 
 ```none
-> gpg --list-keys
 C:/Users/jon.doe/AppData/Roaming/gnupg/pubring.kbx
 ------------------------------------------------
 pub rsa4096 2020-05-24 [SC] [expires: 2022-04-22]
@@ -66,25 +72,26 @@ is usually found at `C:\Program Files (x86)\GnuPG\bin\gpg.exe.` In some
 installations, it might instead be in
 `%LOCALAPPDATA%\Local\Programs\GnuPG\bin\gpg.exe`
 
-```none
-> git config --global user.signingkey E1E474F2023B5ABFF8752630BB4
+```shell
+git config --global user.signingkey E1E474F2023B5ABFF8752630BB4
 
-> git config --global gpg.program "C:\Program Files(x86)\GnuPG\bin\gpg.exe"
+git config --global gpg.program "C:\Program Files(x86)\GnuPG\bin\gpg.exe"
 
-> git config --global commit.gpgsign true
+git config --global commit.gpgsign true
 
-> git config --global tag.gpgsign true
+git config --global tag.gpgsign true
 
 # If you need to change your commit email address to match what is in
 GitHub
 
-> git config --global user.email "YOUR_EMAIL"
+git config --global user.email "YOUR_EMAIL"
 ```
->[!NOTE]
->If you would prefer to take manual control of when to sign a commit or
->tag, you can skip the the `commit.gpgsign`  and `tag.gpgsign` configurations
->above. To sign a tag, add flag `-s` . To sign a commit, >add flag `-S` . *Yes,
->the difference in capitalization is critical*.
+
+> [!NOTE]
+> If you would prefer to take manual control of when to sign a commit or
+> tag, you can skip the the `commit.gpgsign`  and `tag.gpgsign` configurations
+> above. To sign a tag, add flag `-s` . To sign a commit, >add flag `-S` . *Yes,
+> the difference in capitalization is critical*.
 >
 >With the configuration settings above, you have no need to add the s/S flag.
 
@@ -92,16 +99,16 @@ GitHub
 
 Export the key using that same key id from above.
 
-```none
-> gpg \--armor \--export E1E474F2023B5ABFF8752630BB4
+```shell
+gpg --armor --export E1E474F2023B5ABFF8752630BB4
 ```
 
 This will display your PGP Public Key Block. Copy the text, beginning
 with `-----BEGIN PGP PUBLIC KEY BLOCK-----`  and ending with `-----END PGP
 PUBLIC KEY BLOCK-----`.
 
-Open <https://github.com/settings/keys>, click the \"New GPGP Key\" button, and
-then paste and save the copied public key.
+Open [github.com/settings/keys](https://github.com/settings/keys), click the
+"New GPGP Key" button, and then paste and save the copied public key.
 
 ## One-Time Setup on Linux and Mac
 
@@ -129,18 +136,23 @@ Linux](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
 To reuse the same key that you already configured in Windows, open Ubuntu and
 run:
 
-```none
-$ cp /mnt/c/users/john.doe/AppData/Roaming/gnupg ~/.gnupg -r
-$ rm ~/.gnupg/*.lock
+```shell
+cp /mnt/c/users/john.doe/AppData/Roaming/gnupg ~/.gnupg -r
+rm ~/.gnupg/*.lock
 ```
 
 ### 3. Configure Git to Always Sign
 
 You will need the key ID for this. In the following example from the Git manual,
-the id is \"E1E474F2023B5ABFF8752630BB4\".
+the id is "E1E474F2023B5ABFF8752630BB4".
+
+```shell
+gpg --list-keys
+```
+
+The command above will produce output similar to the following.
 
 ```none
-$ gpg \--list-keys
 /home/john.doe/.gnupg/pubring.kbx
 -------------------------------------------------
 pub rsa4096 2020-05-24 [SC] [expires: 2022-04-22]
@@ -151,10 +163,10 @@ uid         [ultimate] Jon Doe <jon.doe@examppppppplllleeeee.com>
 Configure this globally, or set it up one repository at a time by omitting the
 `--global` argument. Additionally, configure the GPG.exe to be used by Git.
 
-```none
-$ git config --global user.signingkey E1E474F2023B5ABFF8752630BB4
-$ git config --global commit.gpgsign true
-$ git config --global tag.gpgsign true
+```shell
+git config --global user.signingkey E1E474F2023B5ABFF8752630BB4
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
 ```
 
 ### 4. Configure the GPG Agent
@@ -165,8 +177,8 @@ instructions*](https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-
 Create a new gpg-agent.conf file by entering the following command in your Bash
 prompt:
 
-```none
-$ cat > ~/.gnupg/gpg-agent.conf <<EOF
+```shell
+cat > ~/.gnupg/gpg-agent.conf <<EOF
 default-cache-ttl 34560000
 max-cache-ttl 34560000
 pinentry-program "/mnt/c/Program Files (x86)/GnuPG/bin/pinentry-basic.exe"
@@ -176,15 +188,15 @@ EOF
 Now restart the GPG Agent. You might need to close the Ubuntu terminal window as
 well.
 
-```none
-$ gpgconf --kill gpg-agent
+```shell
+gpgconf --kill gpg-agent
 ```
 
 ### 5. Switch to Windows GPG If Needed
 
 The instructions above do not always work. If you get a message like this:
 
-```none
+```shell
 error: gpg failed to sign the data
 fatal: failed to write commit object
 ```
@@ -192,8 +204,8 @@ fatal: failed to write commit object
 Then try configuring Git to use the Windows version of gpg, instead of using the
 WSL copy.
 
-```none
-$ git config --global gpg.program "/mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe"
+```shell
+git config --global gpg.program "/mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe"
 ```
 
 ## Practice
@@ -204,16 +216,11 @@ repository](https://github.com/Ed-Fi-Exchange-OSS/training) in Git which you can
 use to practice:
 
 1. Fork [the repository](https://github.com/Ed-Fi-Exchange-OSS/training) and
-    clone it locally.
-
+   clone it locally.
 2. Make a small change to the [test.md](http://test.md) file.
-
 3. Commit it, using the signature process described above.
-
 4. Push your commit to your fork.
-
 5. Create a pull request back to the main repository.
-
 6. Reach out to the Ed-Fi Alliance tech team or a solution architect for help in
    verifying and accepting the pull request.
 
@@ -226,12 +233,12 @@ If your last commit was not signed, you can use `git commit -S --amend
 signed, you can try rebasing them and amending.
 See <https://stackoverflow.com/a/54987693/30384>.
 
-### Error Message: \"cannot open \'/dev/tty\'\"
+### Error Message: "cannot open '/dev/tty'"
 
 Atlassian SourceTree may have a problem with the instructions above, giving you
 an error message like:
 
-```none
+```shell
 gpg: cannot open '/dev/tty': Device not configured
 
 error: gpg failed to sign the data
@@ -242,15 +249,15 @@ To resolve, either [Setup GPG to sign commits in
 SourceTree](https://confluence.atlassian.com/sourcetreekb/setup-gpg-to-sign-commits-within-sourcetree-765397791.html)
 or disable tty:
 
-```none
+```shell
 echo 'no-tty' >> ~/.gnupg/gpg.conf
 ```
 
-### Error Message: \"No secret key\"
+### Error Message: "No secret key"
 
 If the following error message occurs after attempting a commit:
 
-```none
+```shell
 gpg: skipped "xxxxxxxxxxxxxxxxxx": No secret key
 gpg: signing failed: No secret key
 error: gpg failed to sign the data
@@ -259,31 +266,32 @@ fatal: failed to write commit object
 
 Open a Git Bash session and type find the location of gpg on the command line:
 
-```none
+```shell
 # If using separate install
-$ where gpg
+where gpg
 C:\Program Files\Git\usr\bin\gpg.exe
 
 # If using version that comes with Git-bash
-$ which gpg
+which gpg
 /usr/bin/gpg
 ```
 
 Next, set gpg.program to the path returned from the where command:
 
-```none
-$ git config --global gpg.program "C:\Program Files\Git\usr\bin\gpg.exe\"
+```shell
+git config --global gpg.program "C:\Program Files\Git\usr\bin\gpg.exe"
 
 # Or
-$ git config --global gpg.program "/usr/bin/gpg"
+
+git config --global gpg.program "/usr/bin/gpg"
 ```
 
-### Error Message: \"No agent running\"
+### Error Message: "No agent running"
 
 On rare occasions the commit signing might fail with a message like this:
 
-```none
-$ git commit -m "my commit message"
+```shell
+git commit -m "my commit message"
 gpg: can't connect to the agent: IPC connect call failed
 gpg: keydb_search failed: No agent running
 gpg: signing failed: No agent running
@@ -296,20 +304,20 @@ gpg-agent from the command line, at least temporarily. Assuming you are using
 Windows, open a new prompt (cmd, PowerShell, or Git-bash - but not a WSL prompt)
 and run this:
 
-```none
-$ gpg-agent --daemon
+```shell
+gpg-agent --daemon
 ```
 
 Now return to your IDE or other command prompt and re-try the `git commit`
 command. If it is successful, you might be able to return to the second window
 and Control-C out of the daemon.
 
-### Error Message: \"Unusable Secret Key\"
+### Error Message: "Unusable Secret Key"
 
 This likely means that your key has expired and needs to be replaced, following
 the directions above. You can check the expiration at the command line:
 
-```none
+```shell
 PS C:\> gpg --list-keys
 gpg: checking the trustdb
 gpg: marginals needed: 3 completes needed: 1 trust model: pgp
