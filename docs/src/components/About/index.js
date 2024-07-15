@@ -9,7 +9,7 @@ export default function About() {
             <Heading as="h1">About</Heading>
             <p>
               Design and reference documentation for the Ed-Fi Alliance's
-              "Project Tanager", which is building the next generation of the
+              "Project Tanager", which is building the next generation of the 
               <a href="/">Ed-Fi Alliance Technology Suite</a>.
             </p>
             <Heading as="h2">What is a tanager?</Heading>
@@ -26,7 +26,7 @@ export default function About() {
             </p>
           </div>
           <div className="col col--5">
-            <img src="img/scarlet-tanager_by_adam-jackson_no-rights-reserved.jpg" />
+            <img src="img/sdlc-home/SDLC.jpg" />
           </div>
         </div>
       </div>

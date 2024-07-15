@@ -1,13 +1,5 @@
 # License and Copyright Notifications
 
-- [License and Copyright Notifications](#license-and-copyright-notifications)
-- [Overview](#overview)
-- [Rationale](#rationale)
-- [Applicability](#applicability)
-- [Tool Support for License Headers](#tool-support-for-license-headers)
-  - [Visual Studio](#visual-studio)
-  - [Visual Studio Code](#visual-studio-code)
-
 # Overview
 
 As part of the transition to the Apache License, version 2.0, the Ed-Fi Alliance
@@ -38,11 +30,14 @@ This product includes software developed at the Ed-Fi Alliance (http://www.ed-fi
 <additional notifications as needed, e.g. "Portions of this software related to record-level ownership were developed by the Arizona Department of Education." Any license and copyright information from re-used code or re-distributed libraries should be copied verbatim into this file>
 ```
 
-> [!TIP]
-> [Additional samples](https://github.com/Ed-Fi-Alliance/OSS-Sample/tree/master/SampleFileHeaders)
-> are in the OSS-Sample repository, along with a
-> [script](https://github.com/Ed-Fi-Alliance/OSS-Sample/blob/master/InsertFileHeaders.ps1)
-> to modify all files in an existing directory.
+:::tip
+
+[Additional samples](https://github.com/Ed-Fi-Alliance/OSS-Sample/tree/master/SampleFileHeaders)
+are in the OSS-Sample repository, along with a
+[script](https://github.com/Ed-Fi-Alliance/OSS-Sample/blob/master/InsertFileHeaders.ps1)
+to modify all files in an existing directory.
+
+:::
 
 # Rationale
 
@@ -66,17 +61,23 @@ types in source repositories that use the Apache license:
 - C# (\*.cs)
 - JavaScript (.js)
 
-  > <img src="../../../static/img/continuous-integration/warning.png" />
-  > If the project includes a copy of third-party JavaScript files,
-  > e.g. jQuery, then that file *should not* have the Ed-Fi file header in it.
+  :::warning
+
+  If the project includes a copy of third-party JavaScript files,
+  e.g. jQuery, then that file *should not* have the Ed-Fi file header in it.
+
+  :::
 
 - HTML/Razor pages (\*.\*html)
 - MetaEd (\*.metaded)
+  
+  :::warning
 
-  > <img src="../../../static/img/continuous-integration/warning.png" />
-  > Only applies to MetaEd files in the public repositories, e.g.
-  > Ed-Fi-ODS-Implementation. There is no need to put the header on the core
-  > data model files since they are not covered by the Apache license.
+  Only applies to MetaEd files in the public repositories, e.g.
+  Ed-Fi-ODS-Implementation. There is no need to put the header on the core
+  data model files since they are not covered by the Apache license.
+
+  :::
 
 - PowerShell (\*.ps, \*.psm1, \*.psd1)
 - Python (\*.py)
@@ -115,7 +116,8 @@ Add configuration as below (works with Reshaper)
 
 Setup the header template to be as follows:
 
-Expand source
+<details>
+<summary>Expand source</summary>
 
 ```
 extensions: designer.cs generated.cs xml .config .xsd .json .xsd .xml aspx .ascx
@@ -141,6 +143,8 @@ extensions: .sql
 
 ```
 
+</details>
+
 If Resharper is installed, add the license text content in the team-shared
 Resharper file.
 
@@ -148,14 +152,17 @@ Note, exclude any comment indicators.
 
 ![](../../../static/img/cross-functional-projects/screenshot.44.jpg)
 
-Expand source
+<details>
+<summary>Expand source</summary>
 
-```
+```markdown
 SPDX-License-Identifier: Apache-2.0
 Licensed to the Ed-Fi Alliance under one or more agreements.
 The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 See the LICENSE and NOTICES files in the project root for more information.
 ```
+
+</details>
 
 ## Visual Studio Code
 
@@ -164,7 +171,8 @@ extension](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-heade
 Then add the following configuration to the .vscode/settings.json file in each
 applicable repository and commit to Git:
 
-Expand source
+<details>
+<summary> Expand source </summary>
 
 ```json
 {
@@ -239,16 +247,22 @@ Expand source
 }
 ```
 
-> [!TIP]
-> If any files or file types need always have certain lines at the top of
-> the file, with the license info below it, then you can adjust the extension
-> via the [ignoreLines
-> setting](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header#auto-header).
+</details>
+
+:::tip
+
+If any files or file types need always have certain lines at the top of
+the file, with the license info below it, then you can adjust the extension
+via the [ignoreLines
+setting](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header#auto-header).
+
+:::
 
 Default extensions enabled within VS Code using the file
 .vscode/extensions.json.
 
-Expand source
+<details>
+<summary>Expand source</summary>
 
 ```json
 {
@@ -261,3 +275,5 @@ Expand source
 }
 
 ```
+
+</details>

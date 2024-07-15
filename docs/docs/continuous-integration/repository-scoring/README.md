@@ -1,4 +1,4 @@
-<!-- # Repository Scoring
+# Repository Scoring
 
 ## Broad Goals
 
@@ -65,7 +65,7 @@ are subject to further review at a later date.
    6. Secret scanning
    7. Access to alerts: grant to the assigned development team
 3. Use a ruleset instead of branch protection ([Code Security
-   Guidelines](../Code-Security-Guidelines/README.md) contains
+   Guidelines](../code-security-guidelines/README.md) contains
    a JSON file for import)
 4. Copy `.github/``scorecard.yml` from LMS Toolkit
 5. Explicitly set permissions in all existing Actions workflows
@@ -73,16 +73,22 @@ are subject to further review at a later date.
    1. At the workflow level, grant `readall`
    2. On any CodeQL job, add permission `security-events: write`
 
-      > :warning:
-      > A GitHub action with insufficient permissions will fail and
-      > it will tell you what is missing. Review that list carefully and
-      > update the workflow if everything requested is within reason.
+      :::warning
+
+      A GitHub action with insufficient permissions will fail and
+      it will tell you what is missing. Review that list carefully and
+      update the workflow if everything requested is within reason.
+
+      :::
 
 ## 2022 Process
 
-> [!CAUTION]
-> As described above, this process is not in active use at this time,
-> but may be revisited in the future.
+:::danger[CAUTION]
+
+As described above, this process is not in active use at this time,
+but may be revisited in the future.
+
+:::
 
 ### Checklist
 
@@ -91,7 +97,7 @@ detected. These rules apply to all code in the Ed-Fi-Alliance,
 Ed-Fi-Alliance-OSS, and Ed-Fi-Closed repositories, as well as Ed-Fi-Exchange-OSS
 projects that are maintained by the Alliance software teams.
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Category</th>
@@ -261,9 +267,7 @@ projects that are maintained by the Alliance software teams.
       <td>GraphQL</td>
     </tr>
   </tbody>
-</table>
-
-
+</table> -->
 
 **\* Unit Testing, Linting**
 
@@ -295,4 +299,4 @@ Also see:
 
 - [November 18, 2022](november-18-2022.md)
 - [September 2022](september-2022.md)
-- [March 2023](march-2023.md) -->
+- [March 2023](march-2023.md)

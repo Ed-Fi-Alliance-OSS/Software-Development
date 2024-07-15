@@ -1,30 +1,5 @@
 # Apache Licensing Conversion Plan
 
-- [Apache Licensing Conversion Plan](#apache-licensing-conversion-plan)
-- [Summary](#summary)
-- [Development Teams](#development-teams)
-- [For Each Code Repository That Needs Apache Licensing](#for-each-code-repository-that-needs-apache-licensing)
-  - [1. Create New Repo in "Ed-Fi-Alliance-OSS" or "Ed-Fi-Exchange-OSS" as appropriate](#1create-new-repo-in-ed-fi-alliance-oss-or-ed-fi-exchange-oss-as-appropriate)
-  - [2. Prepare the New Repository Before Adding Code](#2-prepare-the-new-repository-before-adding-code)
-  - [3. Preparing Source Code](#3-preparing-source-code)
-  - [4.a. Migrating to the New Repository](#4a-migrating-to-the-new-repository)
-    - [Additional Tasks](#additional-tasks)
-  - [4.b TeamCity Updates](#4b-teamcity-updates)
-  - [5. Closing Up Old Repositories](#5-closing-up-old-repositories)
-  - [6. All Team Developers](#6-all-team-developers)
-- [Repository Analysis](#repository-analysis)
-  - [Not Converting](#not-converting)
-    - [Active closed-source tools](#active-closed-source-tools)
-    - [Miscellaneous old / deprecated repositories](#miscellaneous-old--deprecated-repositories)
-    - [Old Dashboard](#old-dashboard)
-  - [Converting](#converting)
-    - [Analytics Team](#analytics-team)
-    - [ODS Platform Team](#ods-platform-team)
-    - [ODS Tools Team](#ods-tools-team)
-    - [Exchange](#exchange)
-    - [Other](#other)
-  - [Open Questions](#open-questions)
-
 # Summary
 
 Following up on the announced of a move to the [Apache License, version
@@ -133,10 +108,13 @@ To be completed with help of the Analytics Team in April:
 
    1. Set default branch to ~~`development`~~ **`main`**.
 
-      > <img src="../../../static/img/continuous-integration/check.png" />
-      > As of August 2020, the Alliance is transitioning to having a
-      > single `main`  branch and no `master` / `development`  branches.
-      > Releases will be tagged on the `main` branch when ready.
+      :::tip
+
+      As of August 2020, the Alliance is transitioning to having a
+      single `main`  branch and no `master` / `development`  branches.
+      Releases will be tagged on the `main` branch when ready.
+
+      :::
 
    2. ~~Branch protection rule for `master`:~~
       1. ~~Pattern: "master"~~
@@ -152,10 +130,13 @@ To be completed with help of the Analytics Team in April:
 
 ## 2\. Prepare the New Repository Before Adding Code
 
-> [!WARNING]
-> The following broad plan may be customized on a per-project basis,
-> especially for Exchange contributions. Developers should rely on the detailed
-> notes in the Jira ticket over this general plan.
+:::warning
+
+The following broad plan may be customized on a per-project basis,
+especially for Exchange contributions. Developers should rely on the detailed
+notes in the Jira ticket over this general plan.
+
+:::
 
 To be completed with help of the Analytics Team:
 
@@ -224,10 +205,13 @@ To be completed by the responsible Scrum team in the old ("source") repository.
 
 To be completed by the responsible Scrum team on previously agreed schedule:
 
-> [!CAUTION]
-> The development team needs to pause what they are doing while this
-> is going on - or otherwise plan to cherry pick or manually copy their changes
-> into the new repository once all steps are done.
+:::danger[CAUTION]
+
+The development team needs to pause what they are doing while this
+is going on - or otherwise plan to cherry pick or manually copy their changes
+into the new repository once all steps are done.
+
+:::
 
 1. In the original project, checkout the `development-v3` branch after step 2
    is complete.
@@ -454,9 +438,12 @@ in order to keep this page from being overwhelmed with JIRA links.
 
 ### Exchange
 
-> [!NOTE]
-> [MSDF IP Transfers
-> (SharePoint)](https://dellfoundation.sharepoint.com/ed-fi/technology/Forms/AllItems.aspx?viewid=971270b2%2D50f8%2D4ee8%2D90b6%2D78328c5c58d7&id=%2Fed%2Dfi%2Ftechnology%2FIP%20Transfers)
+:::note
+
+[MSDF IP Transfers
+(SharePoint)](https://dellfoundation.sharepoint.com/ed-fi/technology/Forms/AllItems.aspx?viewid=971270b2%2D50f8%2D4ee8%2D90b6%2D78328c5c58d7&id=%2Fed%2Dfi%2Ftechnology%2FIP%20Transfers)
+
+:::
 
 - Ed-Fi-X-ETL-To-Generate
   - [OSS-50](https://tracker.ed-fi.org/browse/OSS-50) - Getting issue
@@ -536,6 +523,9 @@ in order to keep this page from being overwhelmed with JIRA links.
     L. in San Marcos
 - Ed-Fi-X-Finance - email to Sayee 10 Aug 2020
 
-> [!CAUTION]
-> Need to review the list again, there may be some missing Exchange
-> repositories.
+:::danger[CAUTION]
+
+Need to review the list again, there may be some missing Exchange
+repositories.
+
+:::

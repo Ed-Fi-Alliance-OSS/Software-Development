@@ -75,12 +75,15 @@ projects within TeamCity.
 
 ![Parameters](../../../static/img/continuous-integration/image2020-8-26_16-31-17.png)
 
-> [!CAUTION]
-> Microsoft requires an expiration date on personal access tokens,
-> max one year out. Thus this value will need to be updated periodically. Sign
-> in to the project with this user account and then go to the Profile page to
-> create a new token. The password is available to Ed-Fi tech team members in
-> Password Manager Pro.
+:::warning
+
+Microsoft requires an expiration date on personal access tokens,
+max one year out. Thus this value will need to be updated periodically. Sign
+in to the project with this user account and then go to the Profile page to
+create a new token. The password is available to Ed-Fi tech team members in
+Password Manager Pro.
+
+:::
 
 ## Pushing a Package to the Feed
 
@@ -122,8 +125,11 @@ object XYZ : ABC({
 })
 ```
 
-> [!TIP]
-> **Proof of concept:** [https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc)
+:::tip[**Proof of Concept**]
+
+[https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc)
+
+:::
 
 ## Promoting a Package to Release View
 
@@ -163,16 +169,21 @@ Write-Host @parameters
 Invoke-RestMethod @parameters
 ```
 
-> [!TIP]
-> **Proof of concept:**
-> [https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21](https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21)
-> After running the above command, the designated version has been promoted. In
-> the following screenshot you can see that 1.0.0-pre10 has been promoted to
-> Release status, but 1.0.0-pre11 has not.
-> ![](../../../static/img/continuous-integration/image2020-8-26_16-19-27.png)
+:::tip[**Proof of Concept**]
 
-> [!TIP]
-> Change `protocolType`  to `npm`  or `pip` (or is it `pypi`?) as needed.
+[https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21](https://intedfitools1.msdf.org/buildConfiguration/Experimental_SFuqua_PromoteAzureArtifactToRelease/87650?buildTab=log&focusLine=3&linesState=21)
+After running the above command, the designated version has been promoted. In
+the following screenshot you can see that 1.0.0-pre10 has been promoted to
+Release status, but 1.0.0-pre11 has not.
+![](../../../static/img/continuous-integration/image2020-8-26_16-19-27.png)
+
+:::
+
+:::tip
+
+Change `protocolType`  to `npm`  or `pip` (or is it `pypi`?) as needed.
+
+:::
 
 ## Manual Package Publishing
 
@@ -188,21 +199,22 @@ PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-pe
 nuget sources add -name EdFiAzure -source https://pkgs.dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS/_packaging/EdFi/nuget/v3/index.json -username <UserName> -password <Pat>
 ```
 
-> [!WARNING]
-> If the source is already registered you can remove a source by
-> name.
->
-> #### List Sources
->
-> ```
-> nuget sources
-> ```
->
-> #### **Remove a Source**
->
-> ```
-> nuget sources remove -name <SourceName>
-> ```
+:::warning
+
+If the source is already registered you can remove a source by name.
+#### List Sources
+
+```
+nuget sources
+```
+
+#### **Remove a Source**
+
+```
+nuget sources remove -name <SourceName>
+```
+
+:::
 
 #### **Push a Package**
 
@@ -228,19 +240,3 @@ package](https://docs.microsoft.com/en-us/azure/devops/artifacts/nuget/publish?v
    ```
     dotnet nuget push -s https://pkgs.dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS/_packaging/EdFi/nuget/v3/index.json .\EdFi.Suite3.Db.Deploy.2.0.0.nupkg --api-key az
    ```
-
----
-
-[Organization-level Settings](#organization-level-settings) |
-[Billing](#billing) | [Users](#users) | [Ed-Fi-Alliance-OSS
-Project](#ed-fi-alliance-oss-project) | [Enabled Services](#enabled-services) |
-[Organization Owner](#organization-owner) | [Package Feed
-URLs](#package-feed-urls) | [Retention Policies](#retention-policies) | [Project
-Team](#project-team) | [Operations](#operations) | [Automation
-Goals](#automation-goals) | [Parameters in TeamCity](#parameters-in-teamcity) |
-[Pushing a Package to the Feed](#pushing-a-package-to-the-feed) | [Promoting a
-Package to Release View](#promoting-a-package-to-release-view) | [Manual Package
-Publishing](#manual-package-publishing) | [NuGet.exe](#nugetexe) | [Add a
-Source](#add-a-source) | [List Sources](#list-sources) | [Remove a
-Source](#remove-a-source) | [Push a Package](#push-a-package) |
-[Dotnet.exe](#dotnetexe)

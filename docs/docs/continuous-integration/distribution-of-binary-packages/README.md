@@ -42,6 +42,9 @@ available.
     - [Distribution of Binary
       Packages](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334226/Distribution+of+Binary+Packages)
 
-> [!WARNING]
-> The Alliance formerly used MyGet for NuGet and npm packages. This
-> practice was discontinued beginning in 2022.
+:::warning
+
+The Alliance formerly used MyGet for NuGet and npm packages. This
+practice was discontinued beginning in 2022.
+
+:::

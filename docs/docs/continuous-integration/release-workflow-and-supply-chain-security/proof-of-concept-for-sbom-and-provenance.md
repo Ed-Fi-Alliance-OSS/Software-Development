@@ -17,10 +17,13 @@ On step 4, if there is no clear distinction during the build process between
 pre-release and production release, then simply create a GitHub release every
 time.
 
-> [!TIP]
-> The SBOM and provenance files can be saved as artifacts on the job;
-> however, they will have a limited availability due to retention policies. The
-> GitHub Release provides permanent storage for these files.
+:::tip
+
+The SBOM and provenance files can be saved as artifacts on the job;
+however, they will have a limited availability due to retention policies. The
+GitHub Release provides permanent storage for these files.
+
+:::
 
 ## Proof of Concept
 

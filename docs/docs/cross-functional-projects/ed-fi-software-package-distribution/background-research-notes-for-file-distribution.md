@@ -107,9 +107,12 @@ Free for public packages, with max storage of 500 MB and 1 GB data transfer
 (out) per month. Overages are charted at $0.25 per GB of storage and $0.50 per
 GB of data transfer.
 
-> [!WARNING]
-> GitHub Packages is not available in the legacy "Ed-Fi-Alliance"
-> organization because it is on a legacy billing plan.
+:::warning
+
+GitHub Packages is not available in the legacy "Ed-Fi-Alliance"
+organization because it is on a legacy billing plan.
+
+:::
 
 ### Misc Notes
 
@@ -395,11 +398,14 @@ ACCEPTABLE
     compared to pushing images from TeamCity to Docker, so this might be
     very attractive.
 
-> [!NOTE]
-> In early October, [Stephen
-> Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
-> filled out the non-profit account request form. No word back from them as
-> of 15 Oct 2020.
+:::note
+
+In early October, [Stephen
+Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
+filled out the non-profit account request form. No word back from them as
+of 15 Oct 2020.
+
+:::
 
 ### Azure Container Registry
 

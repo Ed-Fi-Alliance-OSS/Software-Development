@@ -53,27 +53,29 @@ $results | Where-Object { $_.Severity -in ("Error", "Warning") }
 Convert to a [sarif](https://github.com/microsoft/sarif-tutorials) file for
 uploading into GitHub
 
-> [!TIP]
-> Docker Testing Since this code will eventually run on a Linux container
-> in GitHub, let's make sure it runs...
->
-> ```
-> # In window 1
-> docker run -it --name ps mcr.microsoft.com/powershell pwsh
->
-> # In window 2 (different shell because the first one is occupied by the running command)
-> docker cp analyze.ps1 ps:/opt
->
-> # Back to window 2, you're now at a powershell prompt inside the container
-> # If Install-Module fails below, disconnect from VPN and then run:
-> #     Register-PSRepository -Default
->
-> Install-Module PSScriptAnalyzer -Force
-> cd opt
-> ./analyze.ps1
->
-> less results.sarif
-> ```
+:::tip
+
+Docker Testing Since this code will eventually run on a Linux container
+in GitHub, let's make sure it runs...
+
+```
+# In window 1
+docker run -it --name ps mcr.microsoft.com/powershell pwsh
+
+# In window 2 (different shell because the first one is occupied by the running command)
+docker cp analyze.ps1 ps:/opt
+
+# Back to window 2, you're now at a powershell prompt inside the container
+# If Install-Module fails below, disconnect from VPN and then run:
+#     Register-PSRepository -Default
+Install-Module PSScriptAnalyzer -Force
+cd opt
+./analyze.ps1
+
+less results.sarif
+ ```
+
+:::
 
 ---
 

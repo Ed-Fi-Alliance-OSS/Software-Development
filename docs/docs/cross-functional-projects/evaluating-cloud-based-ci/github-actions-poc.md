@@ -7,9 +7,12 @@ like the best candidate based on the incomplete review.
 
 ## Spike 1
 
-> [!TIP]
-> Outcome: looks promising for most applications, though not necessarily
-> the ODS/API. Need to test out a few more features before investing in this.
+:::tip
+
+Outcome: looks promising for most applications, though not necessarily
+the ODS/API. Need to test out a few more features before investing in this.
+
+:::
 
 [FIZZ-205](https://tracker.ed-fi.org/browse/FIZZ-205?src=confmacro)  featured a
 quick initial - and very positive - proof of concept. Code and CI results:

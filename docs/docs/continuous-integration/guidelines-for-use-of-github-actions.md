@@ -76,7 +76,7 @@ Actions](https://docs.github.com/en/actions/security-guides/security-hardening-f
     <details>
       <summary><b>Example</b></summary>
 
-    ```
+    ```yml
     # This uses the commit hash to specify exactly which process to download from.
 
         - name: Download SandboxAdmin,SwaggerUI,WebApi,Databases,EdFi.Ods.Api.Sdk,EdFi.SdkGen NugetPackages
@@ -259,11 +259,14 @@ jobs:
       - run: bats -v
 ```
 
-> :white_check_mark:
-> This example is only using actions created by GitHub itself, whom we
-> are fully trusting. It should be safe to simply use the version tag in these
-> cases. However, for consistency, we will stick with the commit hashes even for
-> Actions with the "actions" namespace.
+:::tip
+
+This example is only using actions created by GitHub itself, whom we
+are fully trusting. It should be safe to simply use the version tag in these
+cases. However, for consistency, we will stick with the commit hashes even for
+Actions with the "actions" namespace.
+
+:::
 
 There is one exception to this rule: the action for automated scanning of
 allowed actions (described below) cannot use commit hashes, because that
@@ -301,24 +304,29 @@ the source code to look for any obviously malicious or suspicious code:
 - Echo statements that try to guess at repository secrets and print them to
   the log
 
-> :white_check_mark:
-> When reviewing a third party JavaScript-based action that is actually
-> written in TypeScript,  another variant that transpiles down to JavaScript, or
-> has been "compiled" with WebPack, it can be very difficult to understand the
-> built `index.js`. Reviewing the \_original source\* is not sufficient, since
-> someone malicious could inject code directly into the \_distributed\* version.
-> When a source map is provided, one can clone the repository, install
-> [reverse-sourcemap](https://github.com/davidkevork/reverse-sourcemap), and
-> then run that utility to recreate the TypeScript. Compare the recreated file
-> with the original file to ensure that no tampering occurred. **Example**
->
-> ```
-> git clone https://github.com/zgosalvez/github-actions-ensure-sha-pinned-actions
-> cd github-actions-ensure-sha-pinned-actions
-> npm install reverse-sourcemap
-> npx reverse-sourcemap -o reverse dist/
-> git diff src/index.js reverse/dist/webpack/github-actions-ensure-sha-pinned-actions/src/index.js
-> ```
+:::tip
+
+When reviewing a third party JavaScript-based action that is actually
+written in TypeScript,  another variant that transpiles down to JavaScript, or
+has been "compiled" with WebPack, it can be very difficult to understand the
+built `index.js`. Reviewing the **original** source is not sufficient, since
+someone malicious could inject code directly into the **distributed** version.
+When a source map is provided, one can clone the repository, install
+[reverse-sourcemap](https://github.com/davidkevork/reverse-sourcemap), and
+then run that utility to recreate the TypeScript. Compare the recreated file
+with the original file to ensure that no tampering occurred. 
+
+**Example**
+
+```bash
+git clone https://github.com/zgosalvez/github-actions-ensure-sha-pinned-actions
+cd github-actions-ensure-sha-pinned-actions
+npm install reverse-sourcemap
+npx reverse-sourcemap -o reverse dist/
+git diff src/index.js reverse/dist/webpack/github-actions-ensure-sha-pinned-actions/src/index.js
+```
+
+:::
 
 </details>
 <br/>
@@ -372,20 +380,23 @@ projects,
 the following languages used by the Alliance: C#, JavaScript, Python,
 TypeScript.
 
-> [!WARNING]
-> MetaEd and Data Import cannot use CodeQL. Alternatives need to be
-> explored. Two options that look viable:
->
-> - [SonaType Lift](https://lift.sonatype.com/getting-started) appears to be
->   [freely available](https://www.sonatype.com/products/pricing?topnav=true)
->   for private repos _for now_. That will likely change at some point in the
->   future.
-> - Codacy has [reasonable](https://www.codacy.com/pricing) pricing and has an
->   open source model. $15 /month/user yearly, or $18/month/user monthly. There
->   are currently 11 developers in the Ed-Fi-Closed organization, so that works
->   out to $1,980/year. We do not have a tool for SQL analysis. Might be able to
->   use [Codacy](https://www.codacy.com/pricing). Similarly, we do not have a tool
->   for PowerShell. Will be researching PSScriptAnalyzer.
+:::warning
+
+MetaEd and Data Import cannot use CodeQL. Alternatives need to be
+explored. Two options that look viable:
+
+- [SonaType Lift](https://lift.sonatype.com/getting-started) appears to be
+  [freely available](https://www.sonatype.com/products/pricing?topnav=true)
+  for private repos _for now_. That will likely change at some point in the
+  future.
+- Codacy has [reasonable](https://www.codacy.com/pricing) pricing and has an
+  open source model. $15 /month/user yearly, or $18/month/user monthly. There
+  are currently 11 developers in the Ed-Fi-Closed organization, so that works
+  out to $1,980/year. We do not have a tool for SQL analysis. Might be able to
+  use [Codacy](https://www.codacy.com/pricing). Similarly, we do not have a tool
+  for PowerShell. Will be researching PSScriptAnalyzer.
+
+:::
 
 ## 7\. Scan Dependencies
 
@@ -408,14 +419,17 @@ Scanner](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/tree/main/bidi-scan
 action should be used to search for source code that may be trying to invoke
 this attack vector.
 
-> [!TIP]
-> On rare occasions, we allow storage of binary files in source code.
-> Examples include Visio (.vsdx) and Dacpac (.dacpac) files. These need to be
-> excluded from the scan, because they legitimately contain the Bi-Directional
-> character. See the [bidi-scanner
-> README](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/tree/main/bidi-scanner)
-> for information on how to include a config file for ignoring certain file
-> types.
+:::tip
+
+On rare occasions, we allow storage of binary files in source code.
+Examples include Visio (.vsdx) and Dacpac (.dacpac) files. These need to be
+excluded from the scan, because they legitimately contain the Bi-Directional
+character. See the [bidi-scanner
+README](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/tree/main/bidi-scanner)
+for information on how to include a config file for ignoring certain file
+types.
+
+:::
 
 ## 9\. Download Artifacts Wisely
 
@@ -433,7 +447,7 @@ your repository and try to inject malicious artifacts. The solution is to
 specify exactly which run_id or commit hash to download.
 
 <details>
-<summary><img src="../../static/img/continuous-integration/error.png" /> Bad</summary>
+<summary> ![](../../static/img/continuous-integration/error.png) </summary>
 
 ```
     - name: Download SandboxAdmin,SwaggerUI,WebApi,Databases,EdFi.Ods.Api.Sdk,EdFi.SdkGen NugetPackages
@@ -452,7 +466,7 @@ specify exactly which run_id or commit hash to download.
 <br/>
 
 <details>
-<summary><img src="../../static/img/continuous-integration/check.png" /> Good</summary>
+<summary> ![](../../static/img/continuous-integration/check.png) </summary>
 
 ```yml
     - name: Download SandboxAdmin,SwaggerUI,WebApi,Databases,EdFi.Ods.Api.Sdk,EdFi.SdkGen NugetPackages

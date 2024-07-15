@@ -1,7 +1,10 @@
 # Coding and Testing Standards
 
-> [!NOTE]
-> Links out to pages in the central Tech Docs space.
+:::note
+
+Links out to pages in the central Tech Docs space.
+
+:::
 
 - [Code Contribution Guidelines](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20874883/Code+Contribution+Guidelines)
 - [Coding Standards - General Principles](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20874867/Coding+Standards+-+General+Principles)

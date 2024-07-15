@@ -11,16 +11,19 @@ from so-called supply chain attacks.
 In 2022, the Ed-Fi Alliance will take a more deliberate approach to ensuring the
 security of its code pipeline by:
 
-1.  clearly documenting all code security measures,
-2.  identifying and documenting new procedures,
-3.  developing automation techniques, and
-4.  systematically applying all measures across all core Ed-Fi code
+1.  Clearly documenting all code security measures,
+2.  Identifying and documenting new procedures,
+3.  Developing automation techniques, and
+4.  Systematically applying all measures across all core Ed-Fi code
     repositories.
 
-> [!TIP]
-> This work is about securing the *source* *code and delivered products*.
-> This is different from *application security*, which is about the secure
-> handling of data within an installed instance of a product.
+:::tip
+
+This work is about securing the *source* *code and delivered products*.
+This is different from *application security*, which is about the secure
+handling of data within an installed instance of a product.
+
+:::
 
 ### Code Quality
 

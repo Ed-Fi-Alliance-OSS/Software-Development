@@ -1,12 +1,5 @@
 # Evaluating Cloud-based CI
 
-**Contents**
-
-- [Introduction](#introduction)
-- [Architectural Requirements](#architectural-requirements)
-- [Cost Evaluation](#cost-evaluation)
-- [Evaluation of Providers](#evaluation-of-providers)
-
 # Introduction
 
 **_As an open source developer working on an Ed-Fi project, I want to know if my

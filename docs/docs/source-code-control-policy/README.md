@@ -1,8 +1,11 @@
 # Source Code Control Policy
 
-> [!NOTE]
-> Describes source code control practices for Ed-Fi software
-> development.
+:::note
+
+Describes source code control practices for Ed-Fi software
+development.
+
+:::
 
 1. All Ed-Fi source code should be stored in git repositories and synchronized
    between developers using GitHub.

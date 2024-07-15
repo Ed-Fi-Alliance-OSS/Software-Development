@@ -1,13 +1,16 @@
+---
+sidebar_position: 0
+---
+
 # Ed-Fi Software Development Lifecycle Home
 
-> [!NOTE]
-> Landing page for policies, guidelines, and procedures related to Ed-Fi software development. Intended for use by Ed-Fi contractors and key open-source contributors on a case-by-case basis.
+:::note
+
+Landing page for policies, guidelines, and procedures related to Ed-Fi software development. Intended for use by Ed-Fi contractors and key open-source contributors on a case-by-case basis.
+
+:::
 
 ## Getting Started
-
-<img alt="Ed-Fi SDLC"
-src= "../../static/img/sdlc-home/SDLC.jpg"
-align="right" width="300" />
 
 All developers should review the following content, in addition to reviewing relevant pages in the content listed in this SDLC space:
 

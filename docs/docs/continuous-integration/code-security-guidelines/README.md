@@ -134,9 +134,12 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
 </details>
 <br/>
 
-> [!WARNING]
-> New requirement as of 28 Mar 2024 , will gradually be
-> enforced across the Alliance's repositories.
+:::warning
+
+New requirement as of 28 Mar 2024 , will gradually be
+enforced across the Alliance's repositories.
+
+:::
 
 1. **Injection of Dangerous or Malicious Code**
 
@@ -167,11 +170,11 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
       security vulnerabilities! Here is a vulnerability that CodeQL discovered
       during a GitHub Action workflow run:
 
-        <img src="../../../static/img/continuous-integration/image2022-6-2_13-38-9.png"/>
+        ![](../../../static/img/continuous-integration/image2022-6-2_13-38-9.png)
 
       Clicking on show paths to drill down...
 
-        <img src="../../../static/img/continuous-integration/image2022-6-2_13-38-23.png"/>
+        ![](../../../static/img/continuous-integration/image2022-6-2_13-38-23.png)
 
       ![Warning](../../../static/img/continuous-integration/warning.png)
       ![Error](../../../static/img/continuous-integration/error.png)
@@ -203,11 +206,14 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
       | TypeScript / JavaScript      | (default)   | npm                | Azure Artifacts      |
       | MetaEd (see box below)       | npm         | MyGet              |
 
-      > <img src="../../../static/img/cross-functional-projects/information.png"/>
-      > Azure Artifacts requires that npm packages are scoped, e.g.
-      > `@edfi/whatever`  instead of just `whatever` . Atom text editor seems
-      > to have a bug that prevents it from working with scoped packages.
-      > Therefore MetaEd is stuck with the legacy MyGet account.
+      :::info
+
+      Azure Artifacts requires that npm packages are scoped, e.g.
+      `@edfi/whatever`  instead of just `whatever` . Atom text editor seems
+      to have a bug that prevents it from working with scoped packages.
+      Therefore MetaEd is stuck with the legacy MyGet account.
+
+      :::
 
    3. ![(warning)](../../../static/img/continuous-integration/warning.png)
       The Alliance generally will not distribute packages from Ed-Fi Exchange

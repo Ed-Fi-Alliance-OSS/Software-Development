@@ -1,9 +1,13 @@
 # Bruno Introduction
 
-/> [!CAUTION] /> This document describes investigation of Bruno as an
-alternative to /> Postman. Our conclusion at the time: it is close, but not
-quite ready for /> Ed-Fi. Primary reason: cannot define authentication at a
-parent level and have /> that cascade down to the children.
+:::warning
+
+This document describes investigation of Bruno as an
+alternative to Postman. Our conclusion at the time: it is close, but not
+quite ready for Ed-Fi. Primary reason: cannot define authentication at a
+parent level and have that cascade down to the children.
+
+:::
 
 ## What is Bruno?
 
@@ -32,8 +36,7 @@ Bruno functionality consists of three areas: The UI, the Markdown and the Runner
 This is a similar, simpler version of the Postman UI, if you've used Postman
 before, the
 
-<img alt="BrunoUI"
-src="../../static/img/coding-and-testing-standards/BrunoUI.png"height="250"/>
+![BrunoUI](../../static/img/coding-and-testing-standards/BrunoUI.png)
 
 [https://www.usebruno.com/downloads](https://www.usebruno.com/downloads)
 
@@ -41,9 +44,7 @@ src="../../static/img/coding-and-testing-standards/BrunoUI.png"height="250"/>
 
 [https://www.usebruno.com/bru](https://www.usebruno.com/bru)
 
-<img
-alt="BrunoMarkdown"src="../../static/img/coding-and-testing-standards/BrunoMarkdown.png"
-height="400"/>
+![BrunoMarkdown](../../static/img/coding-and-testing-standards/BrunoMarkdown.png)
 
 VSCode extension for Syntax Highlighting:
 [https://marketplace.visualstudio.com/items?itemName=bruno-api-client.bruno](https://marketplace.visualstudio.com/items?itemName=bruno-api-client.bruno)
@@ -54,17 +55,13 @@ supports adding [node packages as
 dependencies](https://docs.usebruno.com/scripting/external-libraries.html)
 adding a package.json file.
 
-<img alt="Bruno NodeLibraries
-Example"src="../../static/img/coding-and-testing-standards/BrunoNode.png"
-height="250"/>
+![Bruno Node Libraries](../../static/img/coding-and-testing-standards/BrunoNode.png)
 
 ## Runner
 
 [https://github.com/andonyns/Ed-Fi-AdminAPI/actions/runs/7281562133/job/19842303482](https://github.com/andonyns/Ed-Fi-AdminAPI/actions/runs/7281562133/job/19842303482)
 
-<img alt="Bruno
-Runner"src="../../static/img/coding-and-testing-standards/BrunoRunner.png"
-height="250"/>
+![Bruno Runner](../../static/img/coding-and-testing-standards/BrunoRunner.png)
 
 ## Added Functionality
 
@@ -72,9 +69,7 @@ height="250"/>
 
 Simplified tests to verify for specific results
 
-<img alt="Bruno
-Assertations"src="../../static/img/coding-and-testing-standards/BrunoAssertations.png"
-height="250"/>
+![Bruno Assertions](../../static/img/coding-and-testing-standards/BrunoAssertations.png)
 
 ## Missing Functionality
 

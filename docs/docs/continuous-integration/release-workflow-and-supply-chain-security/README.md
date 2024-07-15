@@ -1,12 +1,15 @@
 # Release Workflow and Supply Chain Integrity
 
-> [!NOTE]
-> This document describes the desired state software release workflow including:
->
-> - GitHub Actions tasks
-> - Generation of SBOM and Provenance
-> - And links out to relevant documentation on security practices. As of 19 Oct
->   2022, this workflow has been implemented for Admin App and Admin API.
+:::note
+
+This document describes the desired state software release workflow including:
+
+- GitHub Actions tasks
+- Generation of SBOM and Provenance
+- And links out to relevant documentation on security practices. As of 19 Oct
+  2022, this workflow has been implemented for Admin App and Admin API.
+
+:::
 
 # Overview
 
@@ -23,10 +26,13 @@ collaboration that is promoting the generation of a standard _[provenance
 data](https://slsa.dev/provenance/v0.2)_ file (along with other security
 requirements) as a solution to the second half of the problem.
 
-> [!TIP]
-> The relationship between the two is further expounded on in [SBOM +
-> SLSA: Accelerating SBOM success with the help of
-> SLSA](https://slsa.dev/blog/2022/05/slsa-sbom).
+:::tip
+
+The relationship between the two is further expounded on in [SBOM +
+SLSA: Accelerating SBOM success with the help of
+SLSA](https://slsa.dev/blog/2022/05/slsa-sbom).
+
+:::
 
 ## 2022 Goal
 
@@ -34,14 +40,17 @@ The Ed-Fi Alliance is seeking SLSA level 2 compliance in one repository by mid
 October, 2022. The chosen repository: Admin App. This document describes
 technical details on how we can achieve this.
 
-> [!WARNING]
-> The Alliance has not been asked for this information by our
-> community, although federal organizations such as the District of Columbia and
-> the Dept of Defense will _presumably_ require the SBOM, at least. Truthfully,
-> it is difficult to know if and how the community will utilize these documents.
-> In this sense, this project is more about taking a high road of responsibility
-> with respect to software security. It is as much about mitigating *perceived
-> risk* as reducing actual risk.
+:::warning
+
+The Alliance has not been asked for this information by our
+community, although federal organizations such as the District of Columbia and
+the Dept of Defense will _presumably_ require the SBOM, at least. Truthfully,
+it is difficult to know if and how the community will utilize these documents.
+In this sense, this project is more about taking a high road of responsibility
+with respect to software security. It is as much about mitigating *perceived
+risk* as reducing actual risk.
+
+:::
 
 # Operating Context
 
@@ -77,10 +86,13 @@ development practices:
       3. TypeScript: eslint
       4. Python: flake8
 
-         > <img src="../../../static/img/continuous-integration/warning.png" />
-         > Rollout of C# linting has been delayed and not reach
-         > Admin App / Admin API as of 19 Oct 2022
-         > [AA-1611](https://tracker.ed-fi.org/browse/AA-1611?src=confmacro)
+         :::warning
+
+         Rollout of C# linting has been delayed and not reach
+         Admin App / Admin API as of 19 Oct 2022
+         [AA-1611](https://tracker.ed-fi.org/browse/AA-1611?src=confmacro)
+
+         :::
 
 2. For every published release package\*, create appropriate artifacts:
    - Packages (e.g. NuGet, npm)
@@ -100,12 +112,15 @@ development practices:
 \* *Ultimately this should include NuGet, npm, and pypi packages; and
 potentially Docker images, although that has not been investigated.*
 
-> [!NOTE]
-> Generation and distribution of SBOM and provenance files are elements
-> of a rapidly evolving security landscape. At present there are no clear
-> standards or best practices for how to distribute these files. The Alliance
-> can choose a process now, but may need to adjust in 2023 as new developments
-> arise.
+:::note
+
+Generation and distribution of SBOM and provenance files are elements
+of a rapidly evolving security landscape. At present there are no clear
+standards or best practices for how to distribute these files. The Alliance
+can choose a process now, but may need to adjust in 2023 as new developments
+arise.
+
+:::
 
 # Technical Requirements
 
@@ -115,10 +130,13 @@ potentially Docker images, although that has not been investigated.*
    directly through Tech Docs or upload to Azure blob storage and link to them
    on Tech Docs.
 
-   > <img src="../../../static/img/continuous-integration/warning.png" />
-   > Using Azure blob storage has an advantage in automation;
-   > however, it still requires manual effort to update Tech Docs to have links
-   > to the correct files.
+   :::warning
+
+   Using Azure blob storage has an advantage in automation;
+   however, it still requires manual effort to update Tech Docs to have links
+   to the correct files.
+
+   :::
 
 3. Each distributed package will have its own SBOM and provenance file; these
    can be attached to a common release or separate releases, as determined by
@@ -133,9 +151,12 @@ potentially Docker images, although that has not been investigated.*
    2. For NuGet packages, use Microsoft's
       [sbom-tool](https://github.com/microsoft/sbom-tool).
 
-      > <img src="../../../static/img/continuous-integration/warning.png" />
-      > Further research required to determine appropriate tools
-      > for npm and pypi packages.
+      :::warning
+
+      Further research required to determine appropriate tools
+      for npm and pypi packages.
+
+      :::
 
 7. Provenance files:
 
@@ -159,6 +180,7 @@ potentially Docker images, although that has not been investigated.*
       to a semantic version of the form `@vX.Y.Z`. The build will fail if you
       reference it via a shorter tag like `@vX.Y` or `@vX` or if you reference
       it by a tag of a different form (e.g., `@main`)."
+
       </details>
 
 See [Proof of Concept for SBOM and
@@ -172,18 +194,20 @@ for more information on using the tools mentioned above.
 [tag then
 release.drawio.xml](https://edfi.atlassian.net/wiki/download/attachments/19334698/tag%20then%20release.drawio.xml?version=1&modificationDate=1712684799555&cacheVersion=1&api=v2)
 
-> [!NOTE]
->
-> 1. Only Ed-Fi staff and contractors are given write access to GitHub
->    repositories. Thus open source contributors can create pull requests from
->    forks, but they cannot merge them or push directly into branches in the
->    core repository.
-> 2. Anyone on the development team can review and approve a pull request.
-> 3. Each team has its own standard for when to merge after a successful code
->    review (for example, understanding what manual testing, if any, to perform
->    before merging).
-> 4. Once a pull request has been approved, anyone on the team can merge that
->    pull request, including the original developer.
+:::note
+
+1. Only Ed-Fi staff and contractors are given write access to GitHub
+   repositories. Thus open source contributors can create pull requests from
+   forks, but they cannot merge them or push directly into branches in the
+   core repository.
+2. Anyone on the development team can review and approve a pull request.
+3. Each team has its own standard for when to merge after a successful code
+   review (for example, understanding what manual testing, if any, to perform
+   before merging).
+4. Once a pull request has been approved, anyone on the team can merge that
+   pull request, including the original developer.
+
+:::
 
 ## GitHub Actions Workflows
 

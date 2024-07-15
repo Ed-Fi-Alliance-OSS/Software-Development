@@ -42,9 +42,11 @@ GitHub](https://docs.github.com/en/account-and-profile/setting-up-and-managing-y
 ```shell
 gpg --default-new-key-algo rsa4096 --gen-key
 ```
+:::warning
 
-> [!WARNING]
-> This key will expire after two years.
+This key will expire after two years.
+
+:::
 
 ### 3. Configure Git to Always Sign
 
@@ -87,13 +89,16 @@ GitHub
 git config --global user.email "YOUR_EMAIL"
 ```
 
-> [!NOTE]
-> If you would prefer to take manual control of when to sign a commit or
-> tag, you can skip the the `commit.gpgsign`  and `tag.gpgsign` configurations
-> above. To sign a tag, add flag `-s` . To sign a commit, >add flag `-S` . *Yes,
-> the difference in capitalization is critical*.
->
->With the configuration settings above, you have no need to add the s/S flag.
+:::note
+
+If you would prefer to take manual control of when to sign a commit or
+tag, you can skip the the `commit.gpgsign`  and `tag.gpgsign` configurations
+above. To sign a tag, add flag `-s` . To sign a commit, >add flag `-S` . *Yes,
+the difference in capitalization is critical*.
+
+With the configuration settings above, you have no need to add the s/S flag.
+
+:::
 
 ### 4. Upload the Key to GitHub
 

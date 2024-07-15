@@ -67,9 +67,12 @@ dotnet add package Microsoft.CodeAnalysis.CSharp.CodeStyle
 dotnet add package SonarAnalyzer.CSharp
 ```
 
-> [!NOTE]
-> To reduce scope of changes, it is recommended to apply this to one or
-> a >small number of projects at time; see migration plan below.
+:::note
+
+To reduce scope of changes, it is recommended to apply this to one or
+a >small number of projects at time; see migration plan below.
+
+:::
 
 Next, **copy the appopriate `.editorconfig` file and the `Directory.Build.props`
 file from the [DevSecOps/dotnet
@@ -84,12 +87,15 @@ integrate any build failure messages into GitHub for easy viewing. This feature
 requires a substantially more expensive license for the closed source
 repositories and thus will not be used.
 
-> [!WARNING]
-> SonarLint provides extensions ([VS
-> Code](https://www.sonarlint.org/vscode/),
-> [Rider](https://www.sonarlint.org/jetbrains/)) that are supposed to provide
-> good integration with these tools; however, your author's experience was that
-> the VS Code extension literally did nothing, out of the box.
+:::warning
+
+SonarLint provides extensions ([VS
+Code](https://www.sonarlint.org/vscode/),
+[Rider](https://www.sonarlint.org/jetbrains/)) that are supposed to provide
+good integration with these tools; however, your author's experience was that
+the VS Code extension literally did nothing, out of the box.
+
+:::
 
 ### Example Output
 
@@ -127,17 +133,19 @@ our own comment explaining why we disabled the warning.
     public class SandboxDTO
 #pragma warning restore S101 // Types should be named in PascalCase
 ```
+:::tip
 
-> [!TIP]
-> It is not too difficult to deal with this in Visual Studio Code or
-> Rider as well, even if you don't have the integrated IDE controls: simply
-> wrap  `pragma warning disable CODE`  and `pragma warning restore CODE`  around
-> the line of source code, using the proper error code. Look carefully at the
-> error message above and you'll see code "S101". The "S" prefix tells you that
-> this is a Sonar warning, rather than a built-in C# warning. You can search on
-> that code to find more information, or just modify the following URL to have
-> the desired numeric portion of the code:
-> [https://rules.sonarsource.com/csharp/RSPEC-101](https://rules.sonarsource.com/csharp/RSPEC-101)
+It is not too difficult to deal with this in Visual Studio Code or
+Rider as well, even if you don't have the integrated IDE controls: simply
+wrap  `pragma warning disable CODE`  and `pragma warning restore CODE`  around
+the line of source code, using the proper error code. Look carefully at the
+error message above and you'll see code "S101". The "S" prefix tells you that
+this is a Sonar warning, rather than a built-in C# warning. You can search on
+that code to find more information, or just modify the following URL to have
+the desired numeric portion of the code:
+[https://rules.sonarsource.com/csharp/RSPEC-101](https://rules.sonarsource.com/csharp/RSPEC-101)
+
+:::
 
 ## Migration Plan
 

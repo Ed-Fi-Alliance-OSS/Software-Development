@@ -1,7 +1,10 @@
 # Continuous Integration
 
-> [!NOTE]
-> Ed-Fi continuous integration (CI) practices and procedures
+:::note
+
+Ed-Fi continuous integration (CI) practices and procedures
+
+:::
 
 ## Overview
 

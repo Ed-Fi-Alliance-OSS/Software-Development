@@ -18,10 +18,13 @@ software:
 | Ed-Fi Legacy License - long-term support   | Dashboards (e.g. sample databases)                                    | All                                                                           | Leave on AWS to minimize disruption                     |
 | Ed-Fi Legacy License - out of support      | All                                                                   | All                                                                           | Azure Blob Storage, possibly lower cost storage tier    |
 
-> [!TIP]
-> "JavaScript packaged with NuGet" refers to Fix-it-Friday applications,
-> which are bundled with PowerShell install scripts into NuGet packages for ease
-> of distribution.
+:::tip
+
+"JavaScript packaged with NuGet" refers to Fix-it-Friday applications,
+which are bundled with PowerShell install scripts into NuGet packages for ease
+of distribution.
+
+:::
 
 ## Motivations
 
@@ -212,21 +215,27 @@ No change to current practice.
 
 ## Next Steps
 
-> [!NOTE]
-> Conversation between [Chris Moffatt
-> (Deactivated)](https://edfi.atlassian.net/wiki/people/557058:19debe99-4842-4bab-b285-76589691f7ff?ref=confluence)
-> and [Stephen
-> Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
-> on 20 Jul 2020, agreed to:
->
-> - Azure Artifacts for NuGet and npm packages
-> - Azure blob storage for other large binaries
-> - Probable 1-year deprecation notice on MyGet
+:::note
+
+Conversation between [Chris Moffatt
+(Deactivated)](https://edfi.atlassian.net/wiki/people/557058:19debe99-4842-4bab-b285-76589691f7ff?ref=confluence)
+and [Stephen
+Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
+on 20 Jul 2020, agreed to:
+
+- Azure Artifacts for NuGet and npm packages
+- Azure blob storage for other large binaries
+- Probable 1-year deprecation notice on MyGet
+
+:::
 
 **See** **[Transition from MyGet to Azure
 Artifacts](../../continuous-integration/distribution-of-binary-packages/transition-from-myget-to-azure-artifacts.md).**
 
-> [!NOTE]
-> For more information on each of the evaluated storage options,
-> see [Background Research Notes for File
-> Distribution](./background-research-notes-for-file-distribution.md).
+:::note
+
+For more information on each of the evaluated storage options,
+see [Background Research Notes for File
+Distribution](./background-research-notes-for-file-distribution.md).
+
+:::

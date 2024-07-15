@@ -88,7 +88,10 @@ previously said that it was source from Azure Artifacts. Thus although mirroring
 was not enabled, the package appears to now be mirrored on MyGet. That is
 strange and disquieting.
 
-> [!NOTE]
-> See [Ed-Fi Software Package
-> Distribution](../../cross-functional-projects/ed-fi-software-package-distribution/README.md) for
-> more information on the decision to move from MyGet to Azure Artifacts
+:::note
+
+See [Ed-Fi Software Package
+Distribution](../../cross-functional-projects/ed-fi-software-package-distribution/README.md) for
+more information on the decision to move from MyGet to Azure Artifacts
+
+:::
