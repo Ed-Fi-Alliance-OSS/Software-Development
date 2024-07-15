@@ -97,7 +97,7 @@ detected. These rules apply to all code in the Ed-Fi-Alliance,
 Ed-Fi-Alliance-OSS, and Ed-Fi-Closed repositories, as well as Ed-Fi-Exchange-OSS
 projects that are maintained by the Alliance software teams.
 
-<!-- <table>
+<table>
   <thead>
     <tr>
       <th>Category</th>
@@ -167,9 +167,11 @@ projects that are maintained by the Alliance software teams.
       <td>Supply Chain</td>
       <td>No high or severe dependabot alerts open more than 3 weeks in `main` branch</td>
       <td>
-        <details>
-          <summary><strong>GraphQL</strong></summary>
-          <pre><code>POST https://api.github.com/graphql
+<details>
+  <summary><strong>GraphQL</strong></summary>
+
+  ```graphql
+POST https://api.github.com/graphql
 
 {
   repository(name: "Roster-Starter-Kit-for-Vendors", owner: "Ed-Fi-Alliance-OSS") {
@@ -190,11 +192,15 @@ projects that are maintained by the Alliance software teams.
     }
   }
 }
-          </code></pre>
-        </details>
-        <details>
-          <summary><strong>Sample result</strong></summary>
-          <pre><code>{
+
+  ```
+
+</details>
+<details>
+  <summary><strong>Sample result</strong></summary>
+
+  ```json
+  {
   "data": {
     "repository": {
       "vulnerabilityAlerts": {
@@ -230,8 +236,9 @@ projects that are maintained by the Alliance software teams.
     }
   }
 }
-          </code></pre>
-        </details>
+  ```
+
+</details>
       </td>
     </tr>
     <tr>
@@ -251,13 +258,12 @@ projects that are maintained by the Alliance software teams.
       <td>Configuration</td>
       <td>
         <p>Disable: wiki, issues, projects, sponsorships, discussions</p>
-        <p>Enabled: 
-        <ul>
-          <li>delete head branch</li>
-          <li>squash merge</li>
-          <li>has license information</li>
-        </ul>
-        </p>
+        <p>Enabled:</p>
+          <ul>
+            <li>delete head branch</li>
+            <li>squash merge</li>
+            <li>has license information</li>
+          </ul>
       </td>
       <td>GraphQL</td>
     </tr>
@@ -267,7 +273,7 @@ projects that are maintained by the Alliance software teams.
       <td>GraphQL</td>
     </tr>
   </tbody>
-</table> -->
+</table>
 
 **\* Unit Testing, Linting**
 
