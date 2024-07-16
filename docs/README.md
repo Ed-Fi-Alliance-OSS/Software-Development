@@ -2,4 +2,4 @@
 
 Docusaurus-based pages for Software Development Life Cycle
 
-https://ed-fi-alliance-oss.github.io/SDLC/
+https://dev.ed-fi.org/Software-Development

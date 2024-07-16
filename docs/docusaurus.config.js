@@ -9,14 +9,14 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ed-Fi Software Development Life Cycle',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/tech-congress-favicon.ico',
+  tagline: 'Guidance for building software at the Ed-Fi Alliance',
+  favicon: 'img/tech-congress-favicon.png',
 
   // Set the production url of your site here
   url: 'https://ed-fi-alliance-oss.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/SDLC/',
+  baseUrl: '/Software-Development/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -76,17 +76,12 @@ const config = {
           srcDark: 'img/ed-fi-logo-light.webp',
         },
         items: [
-          {to: 'https://ed-fi-alliance-oss.github.io/blog', label: 'Developer Blog', position: 'left'},
+          {to: 'https://dev.ed-fi.org/blog', label: 'Developer Blog', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'SDLC Docs',
-          },
-          {
-            href: 'https://techdocs.ed-fi.org',
-            label: 'Tech Docs',
-            position: 'right',
           },
           {
             href: 'https://success.ed-fi.org/',

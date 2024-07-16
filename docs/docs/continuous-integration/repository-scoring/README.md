@@ -296,13 +296,3 @@ run the process; however, as of 18 Nov 2022 we do not want to use that. The
 personal access token that we can safely make available to that repository has
 insufficient permissions. This needs to be run with a PAT from an Owner account
 in GitHub (tech team member). That means it needs to be run locally.
-
-## Results
-
-A spreadsheet with running summary is [in
-SharePoint](https://dellfoundation.sharepoint.com/:x:/r/ed-fi/technology/Security%20Audit/Ed-Fi%20Repository%20Scores.xlsx?d=w47211a6f11c243b79cec3b0f946ad337&csf=1&web=1&e=jZFwAb).
-Also see:
-
-- [November 18, 2022](november-18-2022.md)
-- [September 2022](september-2022.md)
-- [March 2023](march-2023.md)

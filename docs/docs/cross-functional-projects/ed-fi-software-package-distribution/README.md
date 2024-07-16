@@ -175,9 +175,6 @@ server to retrieve packages.
 Update TeamCity to publish installers to Azure Blob Storage on demand, and npm
 packages (on demand/automatic yet to be determined).
 
-For more information on license acceptance, see [Closed Source License
-Acceptance](../open-source-code-management/closed-source-license-acceptance.md).
-
 **_Recommendations:_**
 
 - **_Azure Blob Storage for exe / zip files_**
