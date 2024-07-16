@@ -39,27 +39,27 @@ export default function HomepageFeatures() {
             <Heading as="h2"> Boilerplate</Heading>
             <ul>
               <li>
-                <Link to="https://github.com/chrisgocode/Software-Development/blob/main/CONTRIBUTORS.md">
+                <Link to="https://github.com/Ed-Fi-Alliance-OSS/Software-Development/blob/main/CONTRIBUTORS.md">
                   How to Contribute
                 </Link>
               </li>
               <li>
-                <Link to="https://github.com/chrisgocode/Software-Development/blob/main/CONTRIBUTORS.md">
+                <Link to="https://github.com/Ed-Fi-Alliance-OSS/Software-Development/blob/main/CONTRIBUTORS.md">
                   Contributor Code of Conduct
                 </Link>
               </li>
               <li>
-                <Link to="https://github.com/chrisgocode/Software-Development/blob/main/CONTRIBUTORS.md">
+                <Link to="https://github.com/Ed-Fi-Alliance-OSS/Software-Development/blob/main/CONTRIBUTORS.md">
                   List of Contributors
                 </Link>
               </li>
               <li>
-                <Link to="https://github.com/Ed-Fi-Alliance-OSS/Project-Tanager/blob/main/NOTICES.md">
+                <Link to="https://github.com/Ed-Fi-Alliance-OSS/Software-Development/blob/main/NOTICES.md">
                   Copyright and License Notices
                 </Link>
               </li>
               <li>
-                <Link to="https://github.com/chrisgocode/Software-Development/blob/main/LICENSE">
+                <Link to="https://github.com/Ed-Fi-Alliance-OSS/Software-Development/blob/main/LICENSE">
                   License
                 </Link>
               </li>
