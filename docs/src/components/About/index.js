@@ -8,21 +8,13 @@ export default function About() {
           <div className="col col--5 col--offset-1">
             <Heading as="h1">About</Heading>
             <p>
-              Design and reference documentation for the Ed-Fi Alliance's
-              "Project Tanager", which is building the next generation of the 
-              <a href="/">Ed-Fi Alliance Technology Suite</a>.
-            </p>
-            <Heading as="h2">What is a tanager?</Heading>
-            <p>
-              "Tanagers" are a class of new world birds, including the Scarlet
-              Tanager pictured above. The Scarlet Tanager breeds across much of
-              eastern North America and winters in northwestern South America.
-            </p>
-            <p>
-              This photo was taken by&nbsp;
-              <a href="https://www.inaturalist.org/observations/193251982">
-                Adam Jackson, with no rights reserved
-              </a>.
+              This document provides a comprehensive overview of the Ed-Fi
+              Software Development Life Cycle (SDLC), detailing the processes
+              and best practices involved in planning, designing, developing,
+              testing, and deploying software within the Ed-Fi Alliance. It
+              serves as a reference guide for Ed-Fi contractors and open-source
+              contributors to ensure the development of high-quality, scalable
+              educational technology solutions.
             </p>
           </div>
           <div className="col col--5">
