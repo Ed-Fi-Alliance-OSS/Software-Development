@@ -18,9 +18,9 @@ cover/support.
 
 ## Why considering a different API Client?
 
-When exploring test automation options for Meadowlark
-([https://edfi.atlassian.net/wiki/spaces/BD/pages/22041449](https://edfi.atlassian.net/wiki/spaces/BD/pages/22041449)),
-I mentioned some caveats of using Postman for test automation (based on previous
+When exploring test automation options for [Project
+Meadowlark](https://edfi.atlassian.net/wiki/spaces/BD/pages/22041449), I
+mentioned some caveats of using Postman for test automation (based on previous
 experience in developing API test suites such as Admin API's).
 
 The [Bruno's Manifesto](https://www.usebruno.com/manifesto) mentions some of
@@ -36,7 +36,7 @@ Bruno functionality consists of three areas: The UI, the Markdown and the Runner
 This is a similar, simpler version of the Postman UI, if you've used Postman
 before, the
 
-![BrunoUI](../../static/img/coding-and-testing-standards/BrunoUI.png)
+![BrunoUI](../../../static/img/coding-and-testing-standards/BrunoUI.png)
 
 [https://www.usebruno.com/downloads](https://www.usebruno.com/downloads)
 
@@ -44,7 +44,7 @@ before, the
 
 [https://www.usebruno.com/bru](https://www.usebruno.com/bru)
 
-![BrunoMarkdown](../../static/img/coding-and-testing-standards/BrunoMarkdown.png)
+![BrunoMarkdown](../../../static/img/coding-and-testing-standards/BrunoMarkdown.png)
 
 VSCode extension for Syntax Highlighting:
 [https://marketplace.visualstudio.com/items?itemName=bruno-api-client.bruno](https://marketplace.visualstudio.com/items?itemName=bruno-api-client.bruno)
@@ -55,13 +55,13 @@ supports adding [node packages as
 dependencies](https://docs.usebruno.com/scripting/external-libraries.html)
 adding a package.json file.
 
-![Bruno Node Libraries](../../static/img/coding-and-testing-standards/BrunoNode.png)
+![Bruno Node Libraries](../../../static/img/coding-and-testing-standards/BrunoNode.png)
 
 ## Runner
 
 [https://github.com/andonyns/Ed-Fi-AdminAPI/actions/runs/7281562133/job/19842303482](https://github.com/andonyns/Ed-Fi-AdminAPI/actions/runs/7281562133/job/19842303482)
 
-![Bruno Runner](../../static/img/coding-and-testing-standards/BrunoRunner.png)
+![Bruno Runner](../../../static/img/coding-and-testing-standards/BrunoRunner.png)
 
 ## Added Functionality
 
@@ -69,7 +69,7 @@ adding a package.json file.
 
 Simplified tests to verify for specific results
 
-![Bruno Assertions](../../static/img/coding-and-testing-standards/BrunoAssertations.png)
+![Bruno Assertions](../../../static/img/coding-and-testing-standards/BrunoAssertations.png)
 
 ## Missing Functionality
 
