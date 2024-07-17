@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/tech-congress-favicon.png',
 
   // Set the production url of your site here
-  url: 'https://ed-fi-alliance-oss.github.io',
+  url: 'https://dev.ed-fi.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Software-Development/',
@@ -74,12 +74,12 @@ const config = {
           alt: 'Ed-Fi Docs Logo',
           src: 'img/ed-fi-logo.webp',
           srcDark: 'img/ed-fi-logo-light.webp',
+          href: 'https://dev.ed-fi.org'
         },
         items: [
-          {to: 'https://dev.ed-fi.org/blog', label: 'Developer Blog', position: 'left'},
+          {to: 'https://dev.ed-fi.org', label: 'Developer Home', position: 'left'},
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/',
             position: 'left',
             label: 'SDLC Docs',
           },
@@ -103,7 +103,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: 'a58d193c70793d68151589d3cfbdeb6b',
 
-        indexName: 'teched-fi',
+        indexName: 'ed-fi-alliance-ossio',
 
         // Optional: see doc section below
         contextualSearch: true,
@@ -134,8 +134,12 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Tech',
+            title: 'Developers',
             items: [
+              {
+                label: 'Developer Blog',
+                to: 'https://ed-fi-alliance-oss.github.io/blog',
+              },
               {
                 label: 'Tutorial',
                 to: 'https://ed-fi-alliance-oss.github.io/docs/intro',
@@ -153,11 +157,6 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                href: 'https://techdocs.ed-fi.org',
-                label: 'Tech Docs',
-                position: 'right',
-              },
               {
                 href: 'https://success.ed-fi.org/',
                 label: 'Community',
