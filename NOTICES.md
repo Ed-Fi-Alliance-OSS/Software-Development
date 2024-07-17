@@ -11,7 +11,10 @@ copies of the license agreement are provided below or in separate files in the
 Licenses subdirectory. Unless noted below, all open source software is
 distributed in its original form without modification.
 
-This repository uses Docusaurus for publishing markdown files to a static website. The Docusaurus starter code is used under license:
+----
+
+This repository uses Docusaurus for publishing markdown files to a static
+website. The Docusaurus starter code is used under license:
 
     MIT License
 
@@ -34,3 +37,14 @@ This repository uses Docusaurus for publishing markdown files to a static websit
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
+
+----
+
+The SDLC image comes from Wikipedia:
+[SDLC_-_Software_Development_Life_Cycle.jpg](https://commons.wikimedia.org/wiki/File:SDLC_-_Software_Development_Life_Cycle.jpg).
+It has been modified to resize the image. Some rights reserved: This file is
+licensed under the [Creative
+Commons](https://en.wikipedia.org/wiki/en:Creative_Commons) [Attribution-Share
+Alike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+license. The modified image is hereby made available under the same license
+terms.
