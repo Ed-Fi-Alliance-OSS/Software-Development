@@ -1,36 +1,38 @@
-# Ed-Fi Software Development Lifecycle Home
+# Software Development Life Cycle Pages
 
-> [!NOTE]
-> Landing page for policies, guidelines, and procedures related to Ed-Fi software development. Intended for use by Ed-Fi contractors and key open-source contributors on a case-by-case basis.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## Getting Started
+## Usage
 
-<img alt="Ed-Fi SDLC"
-src= "./images/SDLC-Home/SDLC.jpg"
-align=right width=300>
+### Installation
 
-All developers should review the following content, in addition to reviewing relevant pages in the content listed in this SDLC space:
+```bash
+npm install
+```
 
-- [Contributor Code of Conduct](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875353/Contributor+Code+of+Conduct)
-- [Slack for the Ed-Fi Community](https://edfi.atlassian.net/wiki/spaces/ETKB/pages/20875301/Slack+for+the+Ed-Fi+Community)
+### Build
 
-## Contents
+```bash
+npm run build
+```
 
-- [Coding and Testing Standards](./Coding-and-Testing-Standards/README.md)
-- [Continuous Integration](./Continuous-Integration/README.md)
-- [Cross-Functional Projects](./Cross-Functional-Projects/README.md)
-- [Source Code Control Policy](./Source-Code-Control-Policy/README.md)
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## SDLC Security Documents
+### Local Development
 
-:blue_book:[Signing Git Commits](./Source-Code-Control-Policy/signing-git-commits.md)
+```bash
+npm run serve
+```
 
-:blue_book:[Source Code Control Policy](./Source-Code-Control-Policy/README.md)
+This command starts a server to serve the static content from the `build` directory.
 
-:blue_book:[Release Workflow and Supply Chain Integrity](./Continuous-Integration/Release-Workflow-and-Supply-Chain-Security/README.md)
+## Legal Information
 
-:blue_book:[Code Security Guidelines](./Continuous-Integration/Code-Security-Guidelines/README.md)
+Copyright (c) 2024 Ed-Fi Alliance, LLC and contributors.
 
-:blue_book:[Dependency Security Automation](./Continuous-Integration/Dependency-Security-Automation/README.md)
+Licensed under the [Apache License, Version 2.0](./LICENSE) (the "License").
 
-:blue_book:[Guidelines for Use of GitHub Actions](./Continuous-Integration/guidelines-for-use-of-github-actions.md)
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
