@@ -5,7 +5,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages-poc
+      - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
   workflow_dispatch:
@@ -21,10 +21,12 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: ./docs/package-lock.json
 
       - name: Install dependencies
         run: npm install
