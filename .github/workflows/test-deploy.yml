@@ -5,7 +5,7 @@ name: Test deployment
 on:
   pull_request:
     branches:
-      - gh-pages-poc
+      - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
   workflow_dispatch:
@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: ./docs/package-lock.json
 
       - name: Install dependencies
         run: npm install
