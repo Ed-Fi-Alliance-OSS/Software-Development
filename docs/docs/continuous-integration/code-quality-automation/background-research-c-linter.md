@@ -1,6 +1,12 @@
 # Background Research - C# Linter
 
-# Incumbent - ReSharper
+:::note
+
+See [Code Quality Automation](./README.md) for context on this evaluation
+
+:::
+
+## Incumbent - ReSharper
 
 Most of the .NET development team for Ed-Fi has ReSharper,
 ![(error)](../../../static/img/continuous-integration/error.png) which does not satisfy
@@ -20,7 +26,7 @@ cross-platform standalone tool". It is configurable via .editorconfig or
 to inspect only particular projects instead of the entire solution, and there is
 a wildcard include/exclude option for file matching. Example run and output:
 
-```
+```shell
 PS C:\source\tmp\ed-fi-ods-implementation\Application> jb inspectcode .\Ed-Fi-Ods.sln
 JetBrains Inspect Code 2021.3.3
 Running on AMD 64 in 64-bit mode, .NET Core 3.1.22 under Microsoft Windows 10.0.19044
@@ -83,7 +89,7 @@ documentation helps fill the gaps.
 
 Installation is via NuGet package (SonarAnalyzer.CSharp). Errors and warnings
 will show up at compile time. These, as well as additional suggestions ("info"
-level) will also show up in the IDE (Visual Studio
+level) will also show up in the IDE (Visual Studio).
 
 An example ruleset:
 [https://gist.github.com/srmagura/744ec1f356515eb3fe4b829f89c21a8c](https://gist.github.com/srmagura/744ec1f356515eb3fe4b829f89c21a8c).
@@ -149,30 +155,31 @@ Use a combination of StyleCop and SonarLint in C# projects.
   anywhere other than in Visual Studio?
 
 ```C#
-<PackageReference Include\="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version\="4.2.0"\>
-    <PrivateAssets\>all</PrivateAssets\>
-    <IncludeAssets\>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets\>
-</PackageReference\>
-<PackageReference Include\="SonarAnalyzer.CSharp" Version\="8.40.0.48530"\>
-    <PrivateAssets\>all</PrivateAssets\>
-    <IncludeAssets\>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets\>
-</PackageReference\>
+<PackageReference Include\="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version\="4.2.0">
+    <PrivateAssets>all</PrivateAssets>
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+</PackageReference>
+<PackageReference Include\="SonarAnalyzer.CSharp" Version\="8.40.0.48530">
+    <PrivateAssets>all</PrivateAssets>
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+</PackageReference>
 ```
 
-```C#
-<PropertyGroup\>
-    <OutputType\>Exe</OutputType\>
-    <TargetFramework\>netcoreapp3.1</TargetFramework\>
-    <DockerDefaultTargetOS\>Linux</DockerDefaultTargetOS\>
-    <Authors\>Ed-Fi Alliance</Authors\>
-    <Company\>Ed-Fi Alliance</Company\>
-    <Copyright\>Copyright (c) 2018, Ed-Fi Alliance</Copyright\>
-    <Version\>1.1.0</Version\>
-    <AssemblyVersion\>1.1.0.0</AssemblyVersion\>
-      <ErrorLog\>compiler-diagnostics.sarif</ErrorLog\>
-  </PropertyGroup\>
+```xml
+<PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Authors>Ed-Fi Alliance</Authors>
+    <Company>Ed-Fi Alliance</Company>
+    <Copyright>Copyright (c) 2018, Ed-Fi Alliance</Copyright>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      <ErrorLog>compiler-diagnostics.sarif</ErrorLog>
+  </PropertyGroup>
 ```
 
-[https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning)
+## References
 
-[https://github.com/marketplace/actions/security-devops-action](https://github.com/marketplace/actions/security-devops-action)
+- [SARIF support for code scanning](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning)
+- [security-devops-action from Microsoft](https://github.com/marketplace/actions/security-devops-action)
