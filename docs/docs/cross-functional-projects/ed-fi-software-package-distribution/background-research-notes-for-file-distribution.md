@@ -49,7 +49,7 @@ mechanisms:
    4. Windows Installers (\*.exe or \*.msi)
    5. Compressed files (e.g. databases) (\*.zip or \*.7z)
    6. Docker images
-      (![(warning)](../../../static/img/continuous-integration/warning.png)
+      (⚠️
 
       future)
 
@@ -66,15 +66,15 @@ mechanisms:
 
 ### Features
 
-| Feature          | Support                                                   | Notes                               |
-| ---------------- | --------------------------------------------------------- | ----------------------------------- |
-| ​NuGet           | ![(tick)](../../../static/img/continuous-integration/check.png)​ | ​                                   |
-| npm              | ![(tick)](../../../static/img/continuous-integration/check.png)  |                                     |
-| vsix             | ![(tick)](../../../static/img/continuous-integration/check.png)  | not currently used                  |
-| Docker           | ![(error)](../../../static/img/continuous-integration/error.png) | not currently used                  |
-| Python           | ![(tick)](../../../static/img/continuous-integration/check.png)  | not currently used                  |
-| Upstream Sources | ![(tick)](../../../static/img/continuous-integration/check.png)  | Can proxy with or without mirroring |
-| Retention rules  | ![(tick)](../../../static/img/continuous-integration/check.png)  |                                     |
+| Feature          | Support | Notes                               |
+| ---------------- | ------- | ----------------------------------- |
+| ​NuGet           | ✅​      | ​                                   |
+| npm              | ✅       |                                     |
+| vsix             | ✅       | not currently used                  |
+| Docker           | ❌       | not currently used                  |
+| Python           | ✅       | not currently used                  |
+| Upstream Sources | ✅       | Can proxy with or without mirroring |
+| Retention rules  | ✅       |                                     |
 
 ### Cost
 
@@ -91,15 +91,15 @@ UNACCEPTABLE
 
 ### Features
 
-| Feature          | Support                                                   | Notes                                                                    |
-| ---------------- | --------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ​NuGet           | ![(tick)](../../../static/img/continuous-integration/check.png)​ |                                                                          |
-| npm              | ![(tick)](../../../static/img/continuous-integration/check.png)  |                                                                          |
-| vsix             | ![(error)](../../../static/img/continuous-integration/error.png) | (not currently used)                                                     |
-| Docker           | ![(tick)](../../../static/img/continuous-integration/check.png)  | (not currently used)                                                     |
-| Python           | ![(error)](../../../static/img/continuous-integration/error.png) | (not currently used)                                                     |
-| Upstream Sources | ![(error)](../../../static/img/continuous-integration/error.png) |                                                                          |
-| Retention rules  | ![(error)](../../../static/img/continuous-integration/error.png) | This is a significant limitation for management of pre-release packages. |
+| Feature          | Support | Notes                                                                    |
+| ---------------- | ------- | ------------------------------------------------------------------------ |
+| ​NuGet           | ✅​      |                                                                          |
+| npm              | ✅       |                                                                          |
+| vsix             | ❌       | (not currently used)                                                     |
+| Docker           | ✅       | (not currently used)                                                     |
+| Python           | ❌       | (not currently used)                                                     |
+| Upstream Sources | ❌       |                                                                          |
+| Retention rules  | ❌       | This is a significant limitation for management of pre-release packages. |
 
 ### Cost
 
@@ -120,7 +120,7 @@ Only authenticated users can download packages. That's terrible for an open
 source project. Screenshot below is in a Docker thread, but I've seen the same
 comment in a Maven message thread and experienced it with NuGet first-hand.
 
-![](../../../static/img/cross-functional-projects/image2020-7-6_15-9-58.png)
+![Message in a Docker thread regarding lack of anonymous access](../../../static/img/cross-functional-projects/image2020-7-6_15-9-58.png)
 
 ### Proof-of-Concept
 
@@ -157,15 +157,15 @@ ACCEPTABLE
 
 ### Features
 
-| Feature          | Support                                                       | Notes                                                                                                                                                                  |
-| ---------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ​NuGet           | ![(tick)](../../../static/img/continuous-integration/check.png)​     | ​                                                                                                                                                                      |
-| npm              | ![(tick)](../../../static/img/continuous-integration/check.png)      |                                                                                                                                                                        |
-| vsix             | ![(tick)](../../../static/img/continuous-integration/check.png)      | not currently used                                                                                                                                                     |
-| Docker           | ![(error)](../../../static/img/continuous-integration/error.png)     | not currently used                                                                                                                                                     |
-| Python           | ![(tick)](../../../static/img/continuous-integration/check.png)      | not currently used                                                                                                                                                     |
-| Upstream Sources | ![(warning)](../../../static/img/continuous-integration/warning.png) | Only for authenticated users                                                                                                                                           |
-| Retention rules  | ![(tick)](../../../static/img/continuous-integration/check.png)      | Can set max # versions per package and days to keep "recently" downloaded packages.<br/>![(warning)](../../../static/img/continuous-integration/warning.png) what is "recent"? |
+| Feature          | Support                                                              | Notes                                                                                                                                                                          |
+| ---------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ​NuGet           | ✅​                                                                   | ​                                                                                                                                                                              |
+| npm              | ✅                                                                    |                                                                                                                                                                                |
+| vsix             | ✅                                                                    | not currently used                                                                                                                                                             |
+| Docker           | ❌                                                                    | not currently used                                                                                                                                                             |
+| Python           | ✅                                                                    | not currently used                                                                                                                                                             |
+| Upstream Sources | ⚠️ | Only for authenticated users                                                                                                                                                   |
+| Retention rules  | ✅                                                                    | Can set max # versions per package and days to keep "recently" downloaded packages.<br/>⚠️ what is "recent"? |
 
 ### Cost
 
@@ -188,22 +188,22 @@ then $1/GB.
     Ownership](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/change-organization-ownership?view=azure-devops)
 - Authentication - three options
 
-  - ![(warning)](../../../static/img/continuous-integration/warning.png)
+  - ⚠️
     Use Microsoft's nuget plugin Credential Provider - works for
      individuals, but did not work as expected on a TeamCity build.
 
-  - ![(error)](../../../static/img/continuous-integration/error.png)
+  - ❌
     Integrate a [NuGet
      package](https://docs.microsoft.com/en-us/azure/devops/pipelines/packages/jenkins?view=azure-devops)
      into the application - do not want to "pollute" an open source
      application with this.
 
-  - ![(tick)](../../../static/img/continuous-integration/check.png)
+  - ✅
     Use TeamCity's nuget plugin Credential Provider - applies only to our
      build configurations, separate from source code, so this is acceptable
      and it worked.
 
-- ![(warning)](../../../static/img/continuous-integration/warning.png)
+- ⚠️
   Success using the Microsoft credential provider on a TeanCity build agent
    server. *But this did not work from the automated build.*
 
@@ -229,7 +229,7 @@ then $1/GB.
   - This gives you a link to open in Chrome. The page will tell you to enter
     a code from your device. That code is there in the PowerShell console
     output. Enter the code and follow instructions  
-    ![](../../../static/img/cross-functional-projects/image2020-7-6_15-51-46.png)
+    ![Terminal showing instructions](../../../static/img/cross-functional-projects/image2020-7-6_15-51-46.png)
   - Next, test out nuget push. The following command should get a
     409-conflict because there is already a package with version 1.0.0.
     That's fine - it still proves that the connectivity has been setup
@@ -242,18 +242,18 @@ then $1/GB.
     dotnet nuget push --source EdFi --api-key az .\bin\debug\azureArtifactLib.one.1.0.0.nupkg
     ```
 
-  - ![(tick)](../../../static/img/continuous-integration/check.png)
+  - ✅
     On TeamCity
 
     - [https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc/75627?buildTab=log&focusLine=3&linesState=137.138](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc/75627?buildTab=log&focusLine=3&linesState=137.138)
     - Configure the NuGet Credentials feature. Get a personal access token
       for the EdFi Build Agent account instead of using Stephen's token.
       This eliminates the need to install that PowerShell script   
-      ![](../../../static/img/cross-functional-projects/image2020-7-6_16-30-26.png)
+      ![NuGet Feed Credentials](../../../static/img/cross-functional-projects/image2020-7-6_16-30-26.png)
     - The API key is meaningless. In the example below it is just "az"  
-      ![](../../../static/img/cross-functional-projects/image2020-7-6_16-30-53.png)
+      ![TeamCity .NET CLI build step.](../../../static/img/cross-functional-projects/image2020-7-6_16-30-53.png)
     - Success  
-      ![](../../../static/img/cross-functional-projects/image2020-7-6_16-31-56.png)
+      ![Package was pushed](../../../static/img/cross-functional-projects/image2020-7-6_16-31-56.png)
 
 ## [Nuget.org](http://Nuget.org)
 
@@ -261,15 +261,15 @@ ACCEPTABLE
 
 ### Features
 
-| Feature          | Support                                                   | Notes |
-| ---------------- | --------------------------------------------------------- | ----- |
-| ​NuGet           | ![(tick)](../../../static/img/continuous-integration/check.png)​ | ​Free |
-| npm              | ![(error)](../../../static/img/continuous-integration/error.png) |       |
-| vsix             | ![(error)](../../../static/img/continuous-integration/error.png) |       |
-| Docker           | ![(error)](../../../static/img/continuous-integration/error.png) |       |
-| Python           | ![(error)](../../../static/img/continuous-integration/error.png) |       |
-| Upstream Sources | ![(error)](../../../static/img/continuous-integration/error.png) |       |
-| Retention rules  | ![(error)](../../../static/img/continuous-integration/error.png) |       |
+| Feature          | Support | Notes |
+| ---------------- | ------- | ----- |
+| ​NuGet           | ✅​      | ​Free |
+| npm              | ❌       |       |
+| vsix             | ❌       |       |
+| Docker           | ❌       |       |
+| Python           | ❌       |       |
+| Upstream Sources | ❌       |       |
+| Retention rules  | ❌       |       |
 
 ### Cost
 
@@ -281,7 +281,7 @@ Free
 - [Creating organizational
   accounts](https://docs.microsoft.com/en-us/nuget/nuget-org/organizations-on-nuget-org)
 - Notes from a GitHub issues response about file size limits:  
-  ![](../../../static/img/cross-functional-projects/image2020-7-7_10-12-30.png)
+  ![GitHub user's reponse about file size limits](../../../static/img/cross-functional-projects/image2020-7-7_10-12-30.png)
 - There is an integration
   environment: [https://int.nugettest.org/](https://int.nugettest.org/)
 - Useful for public releases and some pre-releases. Not sure that it is good
@@ -338,7 +338,7 @@ pretty quickly; Azure is ultimately cheaper with "large" volumes.
   azcopy copy <file> 'https://odsassets.blob.core.windows.net/public/<destination dir & file>'
   ```
 
-- ![(tick)](../../../static/img/continuous-integration/check.png)
+- ✅
   SUCCESS - Used the Azure Artifacts POC to push a file to Azure via
    TeamCity, in step 6
    of [https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc](https://intedfitools1.msdf.org/buildConfiguration/Experimental_AzureArtifactsPoc)
@@ -355,7 +355,7 @@ ACCEPTABLE
 
 ### Cost
 
-![](../../../static/img/cross-functional-projects/image2020-7-7_10-5-37.png)
+![Monthly cost breakdown for AWS S3](../../../static/img/cross-functional-projects/image2020-7-7_10-5-37.png)
 
 ### Misc Notes
 

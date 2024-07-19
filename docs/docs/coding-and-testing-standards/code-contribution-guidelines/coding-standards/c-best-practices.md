@@ -304,12 +304,14 @@ Robert C. Martin are highly recommended reading.
         ```
 
 11. Use creational patterns for creating objects that involve significant
-    logic. 1.  When the logic required to create something doesn't fit well into
+    logic.
+    1. When the logic required to create something doesn't fit well into
     a class constructor, use a creational pattern like the [Factory
     Pattern](http://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29).
-    2.  When an item can built in one step, use "Create" semantics (see the
+    2. When an item can built in one step, use "Create" semantics (see the
     [Factory Method
-    Pattern](http://en.wikipedia.org/wiki/Factory_method_pattern)). 3.  When an
+    Pattern](http://en.wikipedia.org/wiki/Factory_method_pattern)). 
+    3. When an
     item is built up over multiple steps, using "Build" semantics (see the
     [Builder Pattern](http://en.wikipedia.org/wiki/Builder_pattern)).
 12. When a class has the concept of an empty instance, implement a static

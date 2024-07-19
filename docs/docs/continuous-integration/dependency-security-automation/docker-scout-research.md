@@ -32,7 +32,7 @@ potential vulnerabilities, for example, this are the current warnings on the
 [meadowlark
 Dockerfile](https://hub.docker.com/r/edfialliance/meadowlark-ed-fi-api):
 
-![](../../../static/img/continuous-integration/Screenshot%202023-11-06%20112324.png)
+![High severity vulnerabilities in npm packages.](../../../static/img/continuous-integration/Screenshot%202023-11-06%20112324.png)
 
 Docker Scout has a GitHub Action available to generate reports from images:
 
@@ -61,9 +61,9 @@ help detect vulnerabilities.
 Pricing:
 [https://docs.docker.com/subscription/scout-details/](https://docs.docker.com/subscription/scout-details/)
 
-![](../../../static/img/continuous-integration/image-2023-11-11_11-29-56.png)
+![Prices for Docker Scout](../../../static/img/continuous-integration/image-2023-11-11_11-29-56.png)
 
-![](../../../static/img/continuous-integration/image-2023-11-11_11-29-10.png)
+![Limited repos with Docker Scout free plan](../../../static/img/continuous-integration/image-2023-11-11_11-29-10.png)
 
 We can enable it right now for free with the 3 repositories included and add
 more by demand.

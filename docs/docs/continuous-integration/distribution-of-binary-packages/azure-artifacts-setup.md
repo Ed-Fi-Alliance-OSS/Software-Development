@@ -27,7 +27,7 @@ Ed-Fi-Alliance-OSS](https://dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS)
 settings](https://dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS/_settings/)).
 
 Administrators are: Jason, Stephen, Steven,
-Vinaya. ![(warning)](../../../static/img/continuous-integration/warning.png)
+Vinaya. ⚠️
 
 it is possible to add other administrators, but once granted, there is no
 obvious way to *remove* administrative access on the project.
@@ -92,7 +92,7 @@ authentication mechanism is different than the one built into nuget.exe. The
 simplest way to work with it from TeamCity is to use the `NuGet feed
 credentials`  as shown below.
 
-_![(warning)](../../../static/img/continuous-integration/warning.png) image was
+⚠️ _image was
 lost in the Confluence
 migration ![(sad)](../../../static/img/continuous-integration/sad.png)_
 
@@ -175,7 +175,7 @@ Invoke-RestMethod @parameters
 After running the above command, the designated version has been promoted. In
 the following screenshot you can see that 1.0.0-pre10 has been promoted to
 Release status, but 1.0.0-pre11 has not.
-![](../../../static/img/continuous-integration/image2020-8-26_16-19-27.png)
+![1.0.0-pre10 has been promoted to Release status, but 1.0.0-pre11 has not.](../../../static/img/continuous-integration/image2020-8-26_16-19-27.png)
 
 :::
 

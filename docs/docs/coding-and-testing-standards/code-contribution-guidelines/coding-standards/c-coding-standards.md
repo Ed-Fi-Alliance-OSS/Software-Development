@@ -111,7 +111,7 @@ For other important guidance, see also:
     }
     ```
 
-*See also* [c# Best Practices: Naming
+*See also* [C# Best Practices: Naming
 Conventions](./c-best-practices.md).
 
 ## Formatting
@@ -334,12 +334,12 @@ Conventions](./c-best-practices.md).
 
 1. Use idiomatic C# types instead of .NET Framework types.
 
-    | Idiomatic  ![(tick)](../../../../static/img/continuous-integration/check.png) | Framework ![(error)](../../../../static/img/continuous-integration/error.png) |
-    | --- | --- |
-    | string | String |
-    | object | Object |
-    | int | Int32 |
-    | double | Double |
+    | Idiomatic  ✅ | Framework ❌ |
+    | ------------ | ----------- |
+    | string       | String      |
+    | object       | Object      |
+    | int          | Int32       |
+    | double       | Double      |
 
 2. In general, use `int` rather than unsigned types. The use of `int` is common
     throughout C#, and it is easier to interact with other libraries when you

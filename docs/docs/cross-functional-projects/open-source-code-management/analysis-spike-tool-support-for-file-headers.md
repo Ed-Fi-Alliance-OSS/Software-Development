@@ -62,12 +62,12 @@ extensions:  .xml .config .xsd .cshtml .html
 Configuration is relatively simple and the following works with or without
 Resharper.
 
-![](../../../static/img/cross-functional-projects/screenshot.43.jpg)
+![License Header Manager options](../../../static/img/cross-functional-projects/screenshot.43.jpg)
 
 Though there are some known challenges with Resharper, but a work around does
 exists by adding the license text in Reshaper.
 
-![](../../../static/img/cross-functional-projects/screenshot.44.jpg)
+![License text added in Reshaper](../../../static/img/cross-functional-projects/screenshot.44.jpg)
 
 Testing with the above configuration I was able to apply the templates to all C#
 classes, html files, JavaScript, razor pages, xml, and xsd with a simple right

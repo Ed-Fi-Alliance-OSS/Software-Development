@@ -49,11 +49,9 @@
 Feed URL (requires v2 feed, not the standard v3
 feed): [https://pkgs.dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS/\_packaging/EdFi/nuget/v2](https://pkgs.dev.azure.com/ed-fi-alliance/Ed-Fi-Alliance-OSS/_packaging/EdFi/nuget/v2)
 
-![(tick)](../../../static/img/continuous-integration/check.png)
-make all upstream packages available in clients
+✅ make all upstream packages available in clients
 
-![(tick)](../../../static/img/continuous-integration/check.png)
-include prerelease versions
+✅ include prerelease versions
 
 update interval: 1 week
 
@@ -66,19 +64,16 @@ mirroring option.
 
 After waiting a minute for the MyGet cache to catch up:
 
-- ![(tick)](../../../static/img/continuous-integration/check.png)
-  the library shows up on the website
+- ✅ the library shows up on the website
 
-- ![(tick)](../../../static/img/continuous-integration/check.png)
-  I'm able to install the library locally using nuget.exe
+- ✅ I'm able to install the library locally using nuget.exe
 
-- ![(tick)](../../../static/img/continuous-integration/check.png)
-  the library shows up in Visual Studio *when displaying all packages from
-   MyGet*
+- ✅ the library shows up in Visual Studio *when displaying all packages from
+  MyGet*
 
-- ![(error)](../../../static/img/continuous-integration/error.png)
-  500 internal server error occurs when searching for this library *or any
-   other*. Occurs in Visual Studio and with nuget.exe.
+- ❌ 500 internal
+  server error occurs when searching for this library *or any other*. Occurs in
+   Visual Studio and with nuget.exe.
 
 Disabled the upstream source for now. We might be able to live with this, but
 the ODS Platform team is trying to create a release right now and we do not want

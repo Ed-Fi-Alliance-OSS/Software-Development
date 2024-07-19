@@ -190,7 +190,7 @@ which the malicious user won't be able to manipulate - then either the GitHub
 Actions job will import the correct (pre-hacked) code *or* it will simply fail,
 if the hacker removed that commit from the repository.
 
-![(error)](../../static/img/continuous-integration/error.png)
+❌
 This initial example has code from [Understanding GitHub
 Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
 
@@ -211,7 +211,7 @@ jobs:
       - run: bats -v
 ```
 
-![(warning)](../../static/img/continuous-integration/warning.png)
+⚠️
 Better:
 
 - [https://github.com/actions/checkout/releases/tag/v2](https://github.com/actions/checkout/releases/tag/v2)
@@ -236,8 +236,7 @@ jobs:
       - run: bats -v
 ```
 
-![(tick)](../../static/img/continuous-integration/check.png)
-Best:
+✅ Best:
 
 - For the benefit of future readers, retain the version tag as a comment at
   the end of the `uses` line.
@@ -447,7 +446,7 @@ your repository and try to inject malicious artifacts. The solution is to
 specify exactly which run_id or commit hash to download.
 
 <details>
-<summary> ![](../../static/img/continuous-integration/error.png) </summary>
+<summary> ❌ </summary>
 
 ```
     - name: Download SandboxAdmin,SwaggerUI,WebApi,Databases,EdFi.Ods.Api.Sdk,EdFi.SdkGen NugetPackages
@@ -466,7 +465,7 @@ specify exactly which run_id or commit hash to download.
 <br/>
 
 <details>
-<summary> ![](../../static/img/continuous-integration/check.png) </summary>
+<summary> ✅ </summary>
 
 ```yml
     - name: Download SandboxAdmin,SwaggerUI,WebApi,Databases,EdFi.Ods.Api.Sdk,EdFi.SdkGen NugetPackages

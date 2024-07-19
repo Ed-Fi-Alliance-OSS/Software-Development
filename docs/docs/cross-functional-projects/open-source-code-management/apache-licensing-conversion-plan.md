@@ -299,7 +299,7 @@ in order to keep this page from being overwhelmed with JIRA links.
 - Ed-Fi-Meadowlark
 - Ed-Fi-ODS-Deploy
 
-  - ![(warning)](../../../static/img/continuous-integration/warning.png)
+  - ⚠️
     Should consider moving the PowerShell parts of it.
 
 - Ed-Fi-TeamCity-Configs
@@ -365,7 +365,7 @@ in order to keep this page from being overwhelmed with JIRA links.
     details... STATUS
 - Ed-Fi-X-Data-Analytics
 
-  - ![(warning)](../../../static/img/continuous-integration/warning.png)
+  - ⚠️
     Must remove the QuickSight password
 
   - [OSS-20](https://tracker.ed-fi.org/browse/OSS-20) - Getting issue

@@ -88,7 +88,7 @@ Here are some Tracker queries to help find these up-for-grab tickets:
 * [ODS / API Up for Grabs](https://tracker.ed-fi.org/issues/?filter=14105)
 * [Analytics Up for Grabs](https://tracker.ed-fi.org/issues/?filter=14107)
 
-![(warning)](../../../static/img/continuous-integration/warning.png)
+⚠️
 At any given time there might not be any current tickets with this label.
 
 Other queries will be made available after completion of the respective
@@ -156,7 +156,7 @@ In order to contribute code, please follow this development process:
     title of the ticket (e.g., "\[ODS-3140\] PostgreSQL support for Identity
     Value Mappers").
 
-![](../../../static/img/code-contribution-guidelines/Fork%20Branch%20PR%20Workflow.png)
+![Diagram of the forking branch workflow](../../../static/img/code-contribution-guidelines/Fork%20Branch%20PR%20Workflow.png)
 
 An Ed-Fi development team member will review your pull request for the following
 requirements:
@@ -196,7 +196,7 @@ requirements:
     time to run. The reviewer can run these tests on Ed-Fi build servers and
     provide feedback if the tests have passed or failed.
 
-![](../../../static/img/code-contribution-guidelines/Review%20Cycle.png)
+![Diagram of the Review Cycle](../../../static/img/code-contribution-guidelines/Review%20Cycle.png)
 
 :::tip
 

@@ -52,7 +52,7 @@ are subject to further review at a later date.
    2. SECURITY.md
    3. .githbub/dependabot.yml
 
-      1. ![(warning)](../../../static/img/continuous-integration/warning.png)
+      1. ⚠️
          not applicable in repositories that do not contain source code /
          package dependencies
 

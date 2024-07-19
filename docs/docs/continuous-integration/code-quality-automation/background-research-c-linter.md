@@ -9,7 +9,7 @@ See [Code Quality Automation](./README.md) for context on this evaluation
 ## Incumbent - ReSharper
 
 Most of the .NET development team for Ed-Fi has ReSharper,
-![(error)](../../../static/img/continuous-integration/error.png) which does not satisfy
+❌ which does not satisfy
 both 4 and 5 at the same time. That said, it is not very expensive - only a few
 hundred dollars per person per year.
 
@@ -20,7 +20,7 @@ Historically we have not used it at the command line. JetBrains provides a
 utility](https://www.jetbrains.com/help/resharper/ReSharper_Command_Line_Tools.html)
 as a dotnet tool ([detailed usage
 instructions](https://www.jetbrains.com/help/resharper/InspectCode.html#usage-scenarios)).
-This is a ![(tick)](../../../static/img/continuous-integration/check.png) "free
+This is a ✅ "free
 cross-platform standalone tool". It is configurable via .editorconfig or
 .DotSettings file, just like ReSharper. At the command line, you can instruct it
 to inspect only particular projects instead of the entire solution, and there is

@@ -112,7 +112,7 @@ Manager](https://marketplace.visualstudio.com/items?itemName=StefanWenig.License
 
 Add configuration as below (works with Reshaper)
 
-![](../../../static/img/cross-functional-projects/screenshot.43.jpg)
+![License Header Manager options](../../../static/img/cross-functional-projects/screenshot.43.jpg)
 
 Setup the header template to be as follows:
 
@@ -150,7 +150,7 @@ Resharper file.
 
 Note, exclude any comment indicators.
 
-![](../../../static/img/cross-functional-projects/screenshot.44.jpg)
+![Licenser header added in Resharper](../../../static/img/cross-functional-projects/screenshot.44.jpg)
 
 <details>
 <summary>Expand source</summary>

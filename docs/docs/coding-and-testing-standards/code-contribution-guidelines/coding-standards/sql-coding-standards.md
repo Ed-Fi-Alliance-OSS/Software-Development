@@ -56,13 +56,13 @@ Guidelines](https://edfi.atlassian.net/wiki/spaces/EDFITOOLS/pages/24118129/AMT+
 
 ### Data Types
 
-| Conceptual Type | SQL Server Type | PostgreSQL Type | Notes |
-| --- | --- | --- | --- |
-| ​String | `NVARCHAR(size)​` | `VARCHAR(size)`​ | Don't just default to `MAX`/unbounded strings - use an appropriate length for the expected data. |
-| Dates | `DATETIME` or `DATETIME2` as needed | `TIMESTAMP` | Avoid `TIMESTAMPTZ` on PostgreSQL because the source data generally do not include time zone. |
-| Guids | `UNIQUEIDENTIFIER` | `UUID` |     |
-| Booleans | `BIT` | `BOOL` |     |
-| Auto-incrementing numbers | INT IDENTITY or LONG IDENTITY | `serial` or `BIGSERIAL` |     |
+| Conceptual Type           | SQL Server Type                     | PostgreSQL Type         | Notes                                                                                            |
+| ------------------------- | ----------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
+| ​String                   | `NVARCHAR(size)​`                   | `VARCHAR(size)`​        | Don't just default to `MAX`/unbounded strings - use an appropriate length for the expected data. |
+| Dates                     | `DATETIME` or `DATETIME2` as needed | `TIMESTAMP`             | Avoid `TIMESTAMPTZ` on PostgreSQL because the source data generally do not include time zone.    |
+| Guids                     | `UNIQUEIDENTIFIER`                  | `UUID`                  |                                                                                                  |
+| Booleans                  | `BIT`                               | `BOOL`                  |                                                                                                  |
+| Auto-incrementing numbers | INT IDENTITY or LONG IDENTITY       | `serial` or `BIGSERIAL` |                                                                                                  |
 
 ## Readability Preferences
 

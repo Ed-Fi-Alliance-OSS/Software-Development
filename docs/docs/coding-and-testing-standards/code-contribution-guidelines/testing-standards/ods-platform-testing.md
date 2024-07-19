@@ -60,26 +60,26 @@ descriptions.
 [SuppressMessage("ReSharper", "InconsistentNaming")]
 public class ApiConfigurationProviderTests
 {
- // Create an inner class class whose name describes the action being tested; 
- // it should inherit from TestFixtureBase.
+    // Create an inner class class whose name describes the action being tested; 
+    // it should inherit from TestFixtureBase.
     public class When_getting_a_sandbox_api_mode : TestFixtureBase
     {
-  // Variables and properties can go here, with appropriate scope. Example:
+        // Variables and properties can go here, with appropriate scope. Example:
         private IConfigConnectionStringsProvider _configConnectionStringsProvider;
         private IConfigValueProvider _configValueProvider;
         private IDatabaseEngineProvider _databaseEngineProvider;
 
-  // Commonly there are variables here to store the system under test
-  // and the test result:
+        // Commonly there are variables here to store the system under test
+        // and the test result:
         private ApiConfigurationProvider _systemUnderTest;
         private ApiMode _result;
 
-  // Implement the Arrange() method, which the base class will call before 
-  // execution of each and every test.
+        // Implement the Arrange() method, which the base class will call before 
+        // execution of each and every test.
         protected override void Arrange()
         {
-   // This section will include initial values, creation of fakes, and 
-   // setup of those fakes to inject expected responses (mocks)
+            // This section will include initial values, creation of fakes, and 
+            // setup of those fakes to inject expected responses (mocks)
             _configValueProvider = A.Fake<IConfigValueProvider>();
             _configConnectionStringsProvider = A.Fake<IConfigConnectionStringsProvider>();
             _databaseEngineProvider = A.Fake<IDatabaseEngineProvider>();
@@ -90,21 +90,21 @@ public class ApiConfigurationProviderTests
             A.CallTo(() => _configConnectionStringsProvider.ConnectionStringProviderByName)
                 .Returns(new Dictionary<string, string> {{"db", ApiConfigurationConstants.SqlServerProviderName}});
 
-   // Commonly, `_systemUnderTest` is initialized using constructor injection 
-   // to insert the fake dependencies created above.
+            // Commonly, `_systemUnderTest` is initialized using constructor injection 
+            // to insert the fake dependencies created above.
             _systemUnderTest = new ApiConfigurationProvider(_configValueProvider, _databaseEngineProvider);
         }
 
-  // Implement the Act() method, which will perform the action whose outcome is 
-  // being tested.
+        // Implement the Act() method, which will perform the action whose outcome is 
+        // being tested.
         protected override void Act()
         {
             // If the method under test has a return value, that value is commonly stored 
-   // in an instance variable defined above, e.g. `_result`.
+            // in an instance variable defined above, e.g. `_result`.
             _result = _systemUnderTest.Mode;
         }
 
-  // The following two [Test] cases illustrate the rule of "one assertion per test".
+        // The following two [Test] cases illustrate the rule of "one assertion per test".
         [Test]
         public void Should_not_be_year_specific()
         {
@@ -119,10 +119,10 @@ public class ApiConfigurationProviderTests
         }
     }
 
- // Here we have a second inner class to test functionality under different conditions.
+    // Here we have a second inner class to test functionality under different conditions.
     public class When_getting_a_year_specific_api_mode : TestFixtureBase
     {
-  // Member properties and instance variables...
+        // Member properties and instance variables...
 
         protected override void Arrange()
         {
@@ -134,8 +134,8 @@ public class ApiConfigurationProviderTests
             // Call the system under test
         }
 
-  // These two test are similar to the class above this, but with different expected 
-  // results due to differing input values in the setup process.
+        // These two test are similar to the class above this, but with different expected 
+        // results due to differing input values in the setup process.
         [Test]
         public void Should_be_year_specific()
         {

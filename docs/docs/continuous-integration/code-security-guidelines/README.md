@@ -170,17 +170,15 @@ enforced across the Alliance's repositories.
       security vulnerabilities! Here is a vulnerability that CodeQL discovered
       during a GitHub Action workflow run:
 
-        ![](../../../static/img/continuous-integration/image2022-6-2_13-38-9.png)
+        ![CodeQL Vulnerability](../../../static/img/continuous-integration/image2022-6-2_13-38-9.png)
 
       Clicking on show paths to drill down...
 
-        ![](../../../static/img/continuous-integration/image2022-6-2_13-38-23.png)
+        ![Text-logging of sensitive information](../../../static/img/continuous-integration/image2022-6-2_13-38-23.png)
 
-      ![Warning](../../../static/img/continuous-integration/warning.png)
-      ![Error](../../../static/img/continuous-integration/error.png)
-      😲 When there's an error connecting to OpenSearch, the entire set of
-      connection information gets logged! And this doesn't even have the
-      excuse of being a debug setting!
+      ⚠️ ❌ 😲 When there's an error connecting to OpenSearch, the entire set of
+      connection information gets logged! And this doesn't even have the excuse
+      of being a debug setting!
         </details>
         <br/>
 
@@ -215,7 +213,7 @@ enforced across the Alliance's repositories.
 
       :::
 
-   3. ![(warning)](../../../static/img/continuous-integration/warning.png)
+   3. ⚠️
       The Alliance generally will not distribute packages from Ed-Fi Exchange
       repositories.
 

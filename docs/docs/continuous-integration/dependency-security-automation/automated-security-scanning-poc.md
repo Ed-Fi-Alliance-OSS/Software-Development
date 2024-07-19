@@ -40,7 +40,7 @@ Source Repository:
     - "actions"
   - This action will throw an error if it finds GitHub Actions that are not
     pinned to full length commit SHAs.
-    ![](../../../static/img/continuous-integration/image2022-3-18_9-59-31.png)
+    ![GitHub Actions error](../../../static/img/continuous-integration/image2022-3-18_9-59-31.png)
 
 ### 2. Only allow known actions
 
@@ -55,7 +55,7 @@ Solutions:
   - You can disable all workflows for an organization [or set a policy that
     configures which actions can be used in an
     organization.](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#allowing-specific-actions-to-run)
-  - ![](../../../static/img/continuous-integration/image2022-3-14_12-17-10.png)
+  - ![General Actions Permissions](../../../static/img/continuous-integration/image2022-3-14_12-17-10.png)
   - **Allow actions created by GitHub:**
     - You can allow all actions created by GitHub to be used by workflows.
       Actions created by GitHub are located in the actions and github
@@ -151,8 +151,8 @@ file, the action will output the unapproved actions and fail.
 
 ❌ Actions found that are not in the approved.json file
 
-![](../../../static/img/continuous-integration/image2022-3-22_15-25-41.png)
+![Example of workflow finding unapproved actions](../../../static/img/continuous-integration/image2022-3-22_15-25-41.png)
 
 ✅ All actions detected are found within the approved.json file
 
-![](../../../static/img/continuous-integration/image2022-3-22_15-26-5.png)
+![All actions are approved](../../../static/img/continuous-integration/image2022-3-22_15-26-5.png)
