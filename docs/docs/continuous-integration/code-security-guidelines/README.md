@@ -154,9 +154,8 @@ enforced across the Alliance's repositories.
          limiting user access to Ed-Fi system administrators.
    2. Protect against [Trojan Source](https://trojansource.codes/) attacks.
    3. Use GitHub CodeQL as a static application security testing (SAST) tool
-      to search for potential security vulnerabilities.
-      ![Warning](../../../static/img/continuous-integration/warning.png)
-      Not available for closed source applications.
+      to search for potential security vulnerabilities. ⚠️ Not available for
+      closed source applications.
         <details>
         <summary>
             Example of accidentally dangerous code...

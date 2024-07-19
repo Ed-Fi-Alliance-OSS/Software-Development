@@ -177,7 +177,7 @@ requirements:
 4. The pull request includes appropriate unit test coverage and/or integration
     test coverage.
     1. References: [Testing
-        Standards](./testing-standards/README.md)  
+        Standards](./testing-standards/README.mdx)  
 
 5. Pull request includes [Postman](https://www.postman.com/) tests when a
     feature or fix directly affects the ODS / API behavior. You can add your
@@ -185,7 +185,7 @@ requirements:
     Suite](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS/tree/development/Postman%20Test%20Suite) and/or
     modify existing tests as appropriate.
     1. References: [Testing
-        Standards](./testing-standards/README.md)  
+        Standards](./testing-standards/README.mdx)  
 
 6. The pull request changes should be rebased onto the corresponding
     repository's `main` branch.
@@ -299,6 +299,6 @@ You may wish to also review some or all of the following documents:
 
 * [Coding Standards - General
     Principles](./coding-standards/README.md)
-* [Testing Standards](./testing-standards/README.md)
+* [Testing Standards](./testing-standards/README.mdx)
 * [Ed-Fi Software Development Lifecycle
     Home](../../intro/README.md)

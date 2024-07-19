@@ -7,7 +7,7 @@ team in maintaining the Ed-Fi ODS / API and its associated utilities (e.g., code
 generation, migration utility, database deploy).
 
 *For more context on Ed-Fi testing practices, see* [Testing
-Standards](./README.md).
+Standards](./README.mdx).
 
 ## Unit Testing
 
