@@ -7,4 +7,4 @@
   - [PowerShell Coding Standards](./code-contribution-guidelines/coding-standards/powershell-coding-standards.md)
   - [SQL Coding Standards](./code-contribution-guidelines/coding-standards/sql-coding-standards.md)
   - [Markdown Best Practices](./code-contribution-guidelines/coding-standards/markdown-best-practices.md)
-- [Testing Standards](./code-contribution-guidelines/testing-standards/README.md)
+- [Testing Standards](./code-contribution-guidelines/testing-standards/README.mdx)
