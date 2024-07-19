@@ -19,7 +19,7 @@ methods, fields and variables to reduce maintenance costs.
 
     **A Method Name That Does Not Reflect Its Behavior**
 
-    ```c#
+    ```csharp
     // The method name includes the text "Not" and returns a boolean value.
     // This could create scenarios where callers are performing double
     // negatives, which are hard to read (e.g., if (!IsNotDuplicate(…) { )
@@ -46,7 +46,7 @@ methods, fields and variables to reduce maintenance costs.
 
     **Improved Name and Signature**
 
-    ```c#
+    ```csharp
     private static bool TryAppendDuplicateValueMessage(StringBuilder duplicatesMessageBuilder,
           Tuple<string, string> key,
           Dictionary<Tuple<string, string>, int> idsByValue)
@@ -70,7 +70,7 @@ methods, fields and variables to reduce maintenance costs.
 
     * For types with a single generic type, prefer the use of `T`.
 
-        ```c#
+        ```csharp
         public interface IList<T>
         ```
 
@@ -78,7 +78,7 @@ methods, fields and variables to reduce maintenance costs.
         optional secondary name for additional clarity. In all cases, start the
         type with a capital letter.
 
-        ```c#
+        ```csharp
         public interface IService<TRequest, TResponse>
         ```
 
@@ -95,7 +95,7 @@ methods, fields and variables to reduce maintenance costs.
 
     1. When appropriate, format the message using string interpolation.
 
-        ```c#
+        ```csharp
         throw new Exception($"There is no data for resource '{resourceName}'.");
          
         throw new Exception($"Type '{typeName}' not found in assembly '{assemblyName}'.");
@@ -143,7 +143,7 @@ methods, fields and variables to reduce maintenance costs.
 
     1. For `System.IO.File`, this would look like this:
 
-        ```c#
+        ```csharp
         public interface IFile
         {
             bool Exists(string path);
@@ -213,7 +213,7 @@ Robert C. Martin are highly recommended reading.
     TValue>` over `IDictionary<TKey, TValue>`, unless modifications by the
     caller are intended.
 
-    ```c#
+    ```csharp
     // Good
     public interface IStudentDataProvider
     {
@@ -237,7 +237,7 @@ Robert C. Martin are highly recommended reading.
 9. When providing an implementation of an interface that does nothing, use the
     [Null Object Pattern](http://en.wikipedia.org/wiki/Null_Object_pattern).
 
-    ```c#
+    ```csharp
     public interface IETagProvider
     {
         string GetETag(object value);
@@ -266,7 +266,7 @@ Robert C. Martin are highly recommended reading.
     1. If the contract being defined basically allows the caller to *get* something, the `Provider` suffix is preferred.
     2. If the contract allows the caller to *get* and *set* something, consider splitting the methods into `Reader` and `Writer` interfaces (which could still be implemented by the same class).  The intent here is to provide more clearly stated intent when a caller intends to modify the underlying data exposed by the provider.
 
-        ```c#
+        ```csharp
         // Instead of this...
         public interface ICacheProvider
         {
@@ -296,7 +296,7 @@ Robert C. Martin are highly recommended reading.
 
     3. If the contract being defined performs some sort of action, the suffix may be removed entirely.
 
-        ```c#
+        ```csharp
         public interface IObjectValidator
         {
             ICollection<ValidationResult> ValidateObject(object @object);
@@ -315,7 +315,7 @@ Robert C. Martin are highly recommended reading.
 12. When a class has the concept of an empty instance, implement a static
      read-only `Empty` property.
 
-    ```c#
+    ```csharp
     public class UserLookupResult
     {
         public static readonly UserLookupResult Empty = new UserLookupResult();
@@ -325,7 +325,7 @@ Robert C. Martin are highly recommended reading.
 
 :::info
 
-Portions of this document are based on the [Microsoft C# Coding
+Portions of this document are based on the [Microsoft csharp Coding
 Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions),
 which have been reproduced and modified under the terms of the [Creative
 Commons Attribution 4.0 International

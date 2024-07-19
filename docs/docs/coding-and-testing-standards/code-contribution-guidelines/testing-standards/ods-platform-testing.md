@@ -54,7 +54,7 @@ descriptions.
 
 :::
 
-```c#
+```csharp
 // Create an outer "container" for all tests that belong to a particular system.
 [TestFixture]
 [SuppressMessage("ReSharper", "InconsistentNaming")]

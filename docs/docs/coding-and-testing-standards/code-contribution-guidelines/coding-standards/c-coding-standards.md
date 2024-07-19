@@ -1,4 +1,4 @@
-# C# Coding Standards
+# c# Coding Standards
 
 :::tip
 
@@ -6,7 +6,7 @@ For other important guidance, see also:
 
 * [Coding Standards - General
     Principles](./README.md)
-* [C# Best
+* [c# Best
     Practices](./c-best-practices.md)
 
 :::
@@ -15,7 +15,7 @@ For other important guidance, see also:
 
 1. Use Pascal casing for type, method names, and constants:
 
-    ```c#
+    ```csharp
     public class SomeClass
     {
         private const int DefaultSize = 100;
@@ -29,7 +29,7 @@ For other important guidance, see also:
 
 2. Use camel casing for local variable names and method arguments:
 
-    ```c#
+    ```csharp
     public void SomeMethod(int someNumber)
     {
         int number;
@@ -39,7 +39,7 @@ For other important guidance, see also:
 
 3. Prefix interfaces with `I`:
 
-    ```c#
+    ```csharp
     public interface ISomethingProvider
     {
         …
@@ -48,7 +48,7 @@ For other important guidance, see also:
 
 4. Suffix interface implementations with the non-prefixed interface name:
 
-    ```c#
+    ```csharp
     public class ThisSomethingProvider : ISomethingProvider
     {
         …
@@ -59,7 +59,7 @@ For other important guidance, see also:
     style from these guidelines, the existing style in that file takes
     precedence:
 
-    ```c#
+    ```csharp
     public class SomeClass
     {
         private ISomethingProvider _thisSomethingProvider;
@@ -69,7 +69,7 @@ For other important guidance, see also:
 6. Name methods using a verb or verb-object pair (unless implementing a fluent
     API):
 
-    ```c#
+    ```csharp
     public decimal CalculateTax(decimal amount)
     {
         …
@@ -100,7 +100,7 @@ For other important guidance, see also:
 
     **ByteArrayExtensions.cs**
 
-    ```c#
+    ```csharp
     public static class ByteArrayExtensions
     {
         public static int ToInt32(this byte[] input) => BitConverter.ToInt32(input, 0);
@@ -111,7 +111,7 @@ For other important guidance, see also:
     }
     ```
 
-*See also* [C# Best Practices: Naming
+*See also* [c# Best Practices: Naming
 Conventions](./c-best-practices.md).
 
 ## Formatting
@@ -120,7 +120,7 @@ Conventions](./c-best-practices.md).
     braces](http://en.wikipedia.org/wiki/Indent_style#Allman_style) where each
     brace begins on a new line and use consistent style.
 
-    ```c#
+    ```csharp
     // Good
     if (a == b)
     {
@@ -143,7 +143,7 @@ Conventions](./c-best-practices.md).
 
 2. Do not add blank lines between sets of closing braces.
 
-    ```c#
+    ```csharp
     if (a == b)
     {
         if (c == d)
@@ -161,7 +161,7 @@ Conventions](./c-best-practices.md).
     part of a continuing language construct (e.g., if / else, try / catch /
     finally).
 
-    ```c#
+    ```csharp
     // Good
     public static string ToCamelCase(this string text)
     {
@@ -187,7 +187,7 @@ Conventions](./c-best-practices.md).
 4. Use parentheses to make clauses in an expression apparent, as shown in the
     following code:
 
-    ```c#
+    ```csharp
     if ((val1 > val2) && (val1 > val3))
     {
         // Take appropriate action.
@@ -197,7 +197,7 @@ Conventions](./c-best-practices.md).
 5. When building multi-line conditional statements, put the conditional
     operator at the beginning of each line.
 
-    ```c#
+    ```csharp
     // Good
     public bool IsEmpty()
     {
@@ -231,7 +231,7 @@ Conventions](./c-best-practices.md).
 
 6. Put auto-properties on a single line.
 
-    ```c#
+    ```csharp
     // Good
     public int Age { get; set; }
      
@@ -245,7 +245,7 @@ Conventions](./c-best-practices.md).
 
 7. Bring base or this constructors onto a separate line (indented).
 
-    ```c#
+    ```csharp
     public NotFoundException(string message, string typeName, string identifier)
         : base(message)
     {
@@ -256,7 +256,7 @@ Conventions](./c-best-practices.md).
 
 8. Constructors with no bodies can be shortened to one line.
 
-    ```c#
+    ```csharp
     public NotFoundException() {}
       
     public NotFoundException(string message)
@@ -265,7 +265,7 @@ Conventions](./c-best-practices.md).
 
 9. Bring constraints for generic types onto separate lines (indented).
 
-    ```c#
+    ```csharp
     public abstract class EdFiControllerBase<TResource, TEntityInterface, TAggregateRoot, TGetByKeyRequest, TPutRequest, TPostRequest, TDeleteRequest> : ApiController
         where TResource : IHasIdentifier, IHasETag, new()
         where TEntityInterface : class
@@ -287,7 +287,7 @@ Conventions](./c-best-practices.md).
     3. Public members (properties and methods).
     4. Define property-backing fields immediately before the property.
 
-        ```c#
+        ```csharp
         private IEnumerable<Student> _students;
          
         public IEnumerable<Student> Students
@@ -298,7 +298,7 @@ Conventions](./c-best-practices.md).
 
     5. Define non-shared supporting methods immediately following the method they were introduced to support, or use a local method.
 
-        ```c#
+        ```csharp
         public void DoSomethingInteresting()
         {
             …
@@ -349,7 +349,7 @@ Conventions](./c-best-practices.md).
         interpolation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated) to
         concatenate short strings, as shown in the following code:
 
-        ```c#
+        ```csharp
         string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
         ```
 
@@ -357,7 +357,7 @@ Conventions](./c-best-practices.md).
         amounts of text, use
         a [StringBuilder](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder) object.
 
-        ```c#
+        ```csharp
         var phrase = "lalalalalalalalalalalalalalalalalalalalalalalala";
         var manyPhrases = new StringBuilder();
         for (var i = 0; i < 10000; i++)
@@ -370,7 +370,7 @@ Conventions](./c-best-practices.md).
     3. Use case-insensitive checks rather than converting the casing of strings
         for case-sensitive comparison.
 
-        ```c#
+        ```csharp
         string value1 = "Bob";
         string value2 = "BoB";
          
@@ -391,7 +391,7 @@ Conventions](./c-best-practices.md).
     typing, unless the programmer or reviewer feels that an explicit type is a
     significant readability improvement.
 
-    ```c#
+    ```csharp
     // When the type of a variable is clear from the context, use var
     // in the declaration.
     var var1 = "This is clearly a string.";
@@ -406,7 +406,7 @@ Conventions](./c-best-practices.md).
 5. Do not rely on the variable name to specify the type of the variable. It
     might not be correct.  
 
-    ```c#
+    ```csharp
     // Naming the following variable inputInt is misleading.
     // It is a string.
     var inputInt = Console.ReadLine();
@@ -421,7 +421,7 @@ Conventions](./c-best-practices.md).
 1. Arrays: Use the concise syntax when you initialize arrays on the declaration
     line.
 
-    ```c#
+    ```csharp
     // Preferred syntax. Note that you cannot use var here instead of string[].
     string[] vowels1 = { "a", "e", "i", "o", "u" };
     
@@ -438,7 +438,7 @@ Conventions](./c-best-practices.md).
 2. New Operator: Use the concise form of object instantiation, with implicit
     typing, as shown in the following declaration:
 
-    ```c#
+    ```csharp
     var instance1 = new ExampleClass();
     
     // The previous line is equivalent to the following declaration.
@@ -447,7 +447,7 @@ Conventions](./c-best-practices.md).
 
 3. Use object initializers to simplify object creation.
 
-    ```c#
+    ```csharp
     // Good
     var claims = new List<Claims>
         {
@@ -487,7 +487,7 @@ Conventions](./c-best-practices.md).
     a [try-catch](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch) statement
     for most exception handling.
 
-    ```c#
+    ```csharp
     static string GetValueFromArray(string[] array, int index)
     {
         try
@@ -510,7 +510,7 @@ Conventions](./c-best-practices.md).
     the [Dispose](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method,
     use a `using` statement instead.
 
-    ```c#
+    ```csharp
     // This try-finally statement only calls Dispose in the finally block.
     Font font1 = new Font("Arial", 10.0f);
     try
@@ -547,7 +547,7 @@ using an object reference:
 
 1. On public, protected, and internal method arguments:
 
-    ```c#
+    ```csharp
     public void Something(Object obj)
     {
         if (obj == null)
@@ -562,7 +562,7 @@ using an object reference:
     inject a null object. Thus this primarily relates to constructors that we
     expect to invoke directly in code.
 
-    ```c#
+    ```csharp
     public class A
     {
         private readonly B _b;
@@ -578,7 +578,7 @@ using an object reference:
     dependency code and confirm that it does not *right now* return a null, but
     it is safer to assume that it *can* return a null value.
 
-    ```c#
+    ```csharp
     public class A
     {
         private readonly ISomeInterface _b;
@@ -607,7 +607,7 @@ using an object reference:
     value. Otherwise, if `null` is not expected and you convert to a real value,
     that might be masking an underlying bug in the dependency.
 
-    ```c#
+    ```csharp
     public class A
     {
         private readonly ISomeInterface _b;
@@ -645,7 +645,7 @@ using an object reference:
 2. Use meaningful names for query variables. The following example
     uses `seattleCustomers` for customers who are located in Seattle.
 
-    ```c#
+    ```csharp
     var seattleCustomers = customers.Where(x => x.City == "Seattle")
                                     .Select(x => x.Name);
     ```
@@ -653,7 +653,7 @@ using an object reference:
 3. Use aliases to make sure that property names of anonymous types are
     correctly capitalized, using Pascal casing.
 
-    ```c#
+    ```csharp
     var seattleCustomers = customers.Join(distributors, 
                customer => customer.City, 
                distributor => distributor.City,
@@ -669,7 +669,7 @@ using an object reference:
     clarify that `Name` is the name of a customer, and `ID` is the ID of a
     distributor.
 
-    ```c#
+    ```csharp
     var seattleCustomers = customers.Join(distributors, 
                customer => customer.City, 
                distributor => distributor.City,
@@ -682,7 +682,7 @@ using an object reference:
 5. Use implicit typing in the declaration of query variables and range
     variables.
 
-    ```c#
+    ```csharp
     var seattleCustomers = customers.Where(x => x.City == "Seattle")
                                     .Select(x => x.Name);
     ```
@@ -691,7 +691,7 @@ using an object reference:
     before other query clauses to ensure that later query clauses operate on the
     reduced, filtered set of data.
 
-    ```c#
+    ```csharp
     var seattleCustomers = customers.Where(x => x.City == "Seattle")
                             .OrderBy(x => x.Age)
                                      .Select(x);
@@ -706,7 +706,7 @@ using an object reference:
     of `[|](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-or-operator-)` when
     you perform comparisons, as shown in the following example.
 
-    ```c#
+    ```csharp
     Console.Write("Enter a dividend: ");
     var dividend = Convert.ToInt32(Console.ReadLine());
     
@@ -730,7 +730,7 @@ using an object reference:
 
 2. Always use explicit scope.
 
-    ```c#
+    ```csharp
     // Good
     public class Something
     {
@@ -767,7 +767,7 @@ using an object reference:
     1. Limit use of closure on variables from the enclosing method, as they can
         make it difficult to read and understand the overall method.
 
-        ```c#
+        ```csharp
         public void Demonstration(string path)
         {
          var pathComponents = input.Split('/');
@@ -802,7 +802,7 @@ using an object reference:
     exception to be thrown or a value to be returned with no further logic,
     perform that logic immediately rather than leaving it for an `else` clause.
 
-    ```c#
+    ```csharp
     // Good
     public void SomeMethod(ISomethingProvider somethingProvider)
     {
@@ -841,7 +841,7 @@ using an object reference:
 10. Use explicit property name on anonymous types, and place each property on a
      separate line.
 
-    ```c#
+    ```csharp
     // Assuming there are a couple of objects being mapped into an anonymous type, call them "sourceA" and "sourceB", with various properties on them...
     
     // Avoid

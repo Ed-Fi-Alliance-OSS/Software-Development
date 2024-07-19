@@ -71,7 +71,7 @@ code easier to read. Ed-Fi code conforms to the following conventions:
 
     **C# Example**
 
-    ```c#
+    ```csharp
     // SPDX-License-Identifier: Apache-2.0
     // Licensed to the Ed-Fi Alliance under one or more agreements.
     // The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
@@ -92,7 +92,7 @@ not *what.* Prefer using proper English sentences.
 
     **C# Example**
 
-    ```c#
+    ```csharp
     // The following declaration creates a query. It does not run
     // the query.
     ```
@@ -112,7 +112,7 @@ not *what.* Prefer using proper English sentences.
 
     **C# Example**
 
-    ```c#
+    ```csharp
     var scores = _injectedService.GetScores();
      
     // Calculate the average

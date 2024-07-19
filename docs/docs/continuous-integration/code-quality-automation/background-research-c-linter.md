@@ -154,7 +154,7 @@ Use a combination of StyleCop and SonarLint in C# projects.
 - PROBLEM: how to get these reports into GitHub? How to get build errors
   anywhere other than in Visual Studio?
 
-```C#
+```csharp
 <PackageReference Include\="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version\="4.2.0">
     <PrivateAssets>all</PrivateAssets>
     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
