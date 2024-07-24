@@ -55,12 +55,10 @@ following articles are helpful in understanding the various options:
     Rules](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/)
 - [SonarLint C# Rules](https://rules.sonarsource.com/csharp)
 
-## Usage
-
 We **install these analyzers as NuGet package dependencies** in C# projects. For
 each project:
 
-```
+```shell
 cd <project directory>
 dotnet add package Microsoft.CodeAnalysis
 dotnet add package Microsoft.CodeAnalysis.CSharp.CodeStyle
@@ -102,7 +100,7 @@ the VS Code extension literally did nothing, out of the box.
 When you run msbuild at the command line, warnings will now  be treated as
 errors - thus causing the build to fail, and giving us strict enforcement.
 
-```
+```shell
 ...
 Build FAILED.
 
@@ -128,7 +126,7 @@ person to join the conversation. In the following example, the comment starts
 with the code smell "Types should be named in PascalCase", and continues with
 our own comment explaining why we disabled the warning.
 
-```
+```csharp
 #pragma warning disable S101 // Types should be named in PascalCase, however, uppercase is preferred for acronyms such as "DTO"
     public class SandboxDTO
 #pragma warning restore S101 // Types should be named in PascalCase
@@ -188,8 +186,6 @@ must use
 2. [Prettier](https://prettier.io/) for code formatting and enforce that via
    ESLint using `eslint-plugin-prettier`  and `eslint-config-prettier` .
 
-### Usage
-
 **Install the following packages as dev dependencies:**
 
 - `@types/eslint`
@@ -221,8 +217,6 @@ Following the lead of the LMS Toolkit project, other Python code must use:
       will follow the same configuration
 3. [Black](https://black.readthedocs.io/en/stable/) for formatting
 
-### Usage
-
 **Install the following packages as dev dependencies:**
 
 - `flake8`
@@ -239,25 +233,25 @@ For PowerShell, we can use the
 to review the scripts and modules.
 
 To do so, clone:
-[https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/tree/main/powershell-analyzer](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/tree/main/powershell-analyzer)
+[powershell-analyzer](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/tree/main/powershell-analyzer)
 and run `analyze.ps1`
 
 This script takes different options as parameters, the required parameter is the
-**\-Directory** where you can specify a file or a folder, and this will review
+`-Directory` where you can specify a file or a folder, and this will review
 the file or folder and subfolders included.
 
-The flag **\-SaveToFile** defines if it should only print the results into the
+The flag `-SaveToFile` defines if it should only print the results into the
 console or save to a [SARIF](https://sarifweb.azurewebsites.net/) file. The
 SARIF file can be viewed in VSCode with an
 [extension](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer).
 
 Additionally, you can specify the path where to save the results in the
-**\-ResultsPath** parameter or specify a comma separated list of rules to be
-excluded with the **\-ExcludedRules** parameter.
+`-ResultsPath` parameter or specify a comma separated list of rules to be
+excluded with the `-ExcludedRules` parameter.
 
 Example:
 
-```
+```pwsh
 .\analyze.ps1 -Directory "Ed-Fi-ODS-AdminApp\eng\send-test-results.ps1" -SaveToFile $False -ExcludedRules PSReviewUnusedParameter, PSAvoidUsingWriteHost
 ```
 
@@ -267,5 +261,4 @@ following:
 `[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments',
 'unused', Justification = 'False positives')]`
 
-List of rules:
-[https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules-recommendations?view=ps-modules](https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules-recommendations?view=ps-modules)
+[List of PowerShell Rules](https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules-recommendations?view=ps-modules)

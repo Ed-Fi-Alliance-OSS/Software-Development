@@ -37,9 +37,9 @@ practices.
 (external) [Security Hardening for GitHub
 Actions](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions)
 
-# Authoring GitHub Actions in a Repository
+## Authoring GitHub Actions in a Repository
 
-## Summary of Policies and Best Practices
+### Summary of Policies and Best Practices
 
 - Only uses "3rd party" actions that are in the
   [approved.json](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Actions/blob/main/action-allowedlist/approved.json).
@@ -66,7 +66,7 @@ Actions](https://docs.github.com/en/actions/security-guides/security-hardening-f
   output as an artifact for download in another job, specify the exact commit
   hash or run id of the artifacts to download.
 
-## Examples
+### Examples
 
 - All
 
@@ -116,7 +116,7 @@ Actions](https://docs.github.com/en/actions/security-guides/security-hardening-f
   - [Performance Test Suite: **Build and
     Test**](https://github.com/Ed-Fi-Exchange-OSS/Suite-3-Performance-Testing/blob/main/.github/workflows/edfi_paging_test.yml)
 
-### Testing
+#### Testing
 
 It can be difficult to test Actions without having early merges to the `main`
 branch. To work around this, consider forking the repository and merging your
@@ -124,14 +124,14 @@ commits into `main`  in the fork only. That will trigger any workflow that runs
 off of `main`  itself, and will trigger on pull requests into `main`. Just be
 cautious in ensuring that you only push to the fork, not the origin repository!
 
-## Recommended Build / Test Workflow
+### Recommended Build / Test Workflow
 
 Generically speaking, a build and test workflow should look something like this:
 
 <details>
   <summary><b>Click here to expand...</b></summary>
 
-#### Trigger
+##### Trigger
 
 - Run on pull request where source code files are modified in the directory
   that is being monitored.
@@ -142,7 +142,7 @@ Generically speaking, a build and test workflow should look something like this:
   - It is not necessary to run on every push to every branch.
 - Often convenient to also allow push button execution ("workflow dispatch").
 
-#### Job
+##### Job
 
 1. Checkout code
 2. Setup tool version if necessary (e.g. specific Python or Nodejs version)
@@ -156,9 +156,9 @@ Generically speaking, a build and test workflow should look something like this:
 </details>
 <br/>
 
-# Policies
+## Policies
 
-## 1\. Commit Hashes
+### 1. Commit Hashes
 
 Use commit hashes rather than version numbers when specifying an action - even
 for those actions created by GitHub itself.
@@ -190,8 +190,7 @@ which the malicious user won't be able to manipulate - then either the GitHub
 Actions job will import the correct (pre-hacked) code *or* it will simply fail,
 if the hacker removed that commit from the repository.
 
-❌
-This initial example has code from [Understanding GitHub
+❌ This initial example has code from [Understanding GitHub
 Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
 
 **Bad: out of the box example**
@@ -211,8 +210,7 @@ jobs:
       - run: bats -v
 ```
 
-⚠️
-Better:
+⚠️ Better:
 
 - [https://github.com/actions/checkout/releases/tag/v2](https://github.com/actions/checkout/releases/tag/v2)
   get the commit hash → ec3a7ce113134d7a93b817d10a8272cb61118579
@@ -274,7 +272,7 @@ the `main` branch.
 
 </details>
 
-## 2\. Only Use Approved Actions
+### 2. Only Use Approved Actions
 
 A list of approved actions is maintained by the Ed-Fi tech team and made
 available to all Ed-Fi developers:
@@ -341,7 +339,7 @@ pull request asking for a new Action.
 _More background: [Automated Security Scanning
 POC](../continuous-integration/dependency-security-automation/automated-security-scanning-poc.md)_
 
-## 4\. Stick With Ubuntu (when feasible)
+### 3. Stick With Ubuntu (when feasible)
 
 Ed-Fi software development has historically focused on Windows usage. The move
 to .NET Core (now .NET 5+), the core Ed-Fi software can now be built and run in
@@ -360,12 +358,12 @@ PostgreSQL. Windows runners should be avoided whenever possible:
 For more information about available runners, please see [About GitHub-hosted
 Runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners).
 
-## 5\. Do Not Hardcode Sensitive Data
+### 4. Do Not Hardcode Sensitive Data
 
 Instead, an Ed-Fi Tech Team member can put the value into an organization or
 repository secret.
 
-## 6\. Perform Code Analysis
+### 5. Perform Code Analysis
 
 Linters are great for enforcing many style and coding standards (see [Code
 Quality Automation](./code-quality-automation/README.md)). They
@@ -397,7 +395,7 @@ explored. Two options that look viable:
 
 :::
 
-## 7\. Scan Dependencies
+### 6. Scan Dependencies
 
 Supply chain attacks often come in the form of corrupting a dependency, such as
 a NuGet or npm package. Dependabot is a helpful GitHub tool for scanning these
@@ -407,7 +405,7 @@ should also be scanned during a pull request.
 Open source projects can use the [Dependency Review
 Action](https://github.com/actions/dependency-review-action).
 
-## 8\. Scan for Trojan Source Attacks
+### 7. Scan for Trojan Source Attacks
 
 Scan a repo for hidden Unicode bidirectional characters as described in
 CVE-2021-42694 and detailed
@@ -430,7 +428,7 @@ types.
 
 :::
 
-## 9\. Download Artifacts Wisely
+### 8. Download Artifacts Wisely
 
 Run a build process multiple times is wasteful. When structuring a workflow - or
 set of workflows - into multiple jobs, output from one can be shared with the
@@ -482,7 +480,7 @@ specify exactly which run_id or commit hash to download.
 
 </details>
 
-## 10\. Use a CODEOWNERS File
+### 9. Use a CODEOWNERS File
 
 Place a [CODEOWNERS
 file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
@@ -491,7 +489,7 @@ core configuration files for automated testing. The restricted team needs to be
 selected and configured by Ed-Fi staff. Example:
 [Ed-Fi-ODS/.github/CODEOWNERS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS/blob/main/.github/CODEOWNERS).
 
-## 11\. Fine-Grained Personal Access Tokens
+### 10. Fine-Grained Personal Access Tokens
 
 When a GitHub token is needed to perform an action - for example, posting to the
 REST API to create a release - the token should be fine-grained, limited to the
@@ -516,15 +514,3 @@ settings](https://github.com/organizations/Ed-Fi-Exchange-OSS/settings/personal-
 
 The EdFiBuildAgent account also needs to have Write access to the given
 repository.
-
-# Future Considerations
-
-Topics that [Stephen
-Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
-might add to this document in the future:
-
-- Restricting artifact history (cf
-  [AA-1542](https://tracker.ed-fi.org/browse/AA-1542?src=confmacro) )
-- Review & consider using the [ScoreCard
-  Action](https://github.com/ossf/scorecard-action#installation)
-- [https://devops.com/software-supply-chain-attacks-how-to-disrupt-attackers/](https://devops.com/software-supply-chain-attacks-how-to-disrupt-attackers/)
