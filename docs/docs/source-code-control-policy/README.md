@@ -27,9 +27,9 @@ development.
 6. All contributors need to agree to the [Ed-Fi Contributor's License
    Agreement](./ed-fi-contributors-license-agreement.md) (CLA).
 
-| **Organization**   | **Purpose**                                                                                                                                                                                                                                      |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Ed-Fi-Alliance-OSS | All public, fully-supported (“core”) Ed-Fi source code <br/>![(tick)](../../static/img/continuous-integration/check.png) open for new repositories                                                                                                         |
-| Ed-Fi-Exchange-OSS | All public, community-supported or experimental Ed-Fi source code<br/>![(tick)](../../static/img/continuous-integration/check.png) open for new repositories                                                                                               |
-| Ed-Fi-Closed       | Closed source repositories that need GitHub Actions. All contributors must have a paid license<br/>![(warning)](../../static/img/continuous-integration/warning.png) new repositories only in coordination with the Ed-Fi Director of Software Engineering |
-| Ed-Fi-Alliance     | Legacy account with free private plans, but no GitHub Actions<br/>![(error)](../../static/img/continuous-integration/error.png) should not have new repositories here                                                                                      |
+| **Organization**   | **Purpose**                                                                                                                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Ed-Fi-Alliance-OSS | All public, fully-supported (“core”) Ed-Fi source code <br/>✅ open for new repositories                                                                                                    |
+| Ed-Fi-Exchange-OSS | All public, community-supported or experimental Ed-Fi source code<br/>✅ open for new repositories                                                                                          |
+| Ed-Fi-Closed       | Closed source repositories that need GitHub Actions. All contributors must have a paid license<br/>⚠️ new repositories only in coordination with the Ed-Fi Director of Software Engineering |
+| Ed-Fi-Alliance     | Legacy account with free private plans, but no GitHub Actions<br/>❌ should not have new repositories here                                                                                  |

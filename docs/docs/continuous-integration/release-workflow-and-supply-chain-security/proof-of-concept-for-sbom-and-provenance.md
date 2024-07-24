@@ -45,7 +45,7 @@ To use it:
 
 The following code will run this in Bash:
 
-```
+```shell
 curl -Lo sbom-tool https://github.com/microsoft/sbom-tool/releases/latest/download/sbom-tool-linux-x64 --silent
 chmod +x sbom-tool
 find ./*.nupkg  -printf "%f\n" > buildfilelist.txt
@@ -78,7 +78,7 @@ responsible for this tool, we assume it is generating it correctly.
 
 The  tool requires a hash value of the packages file(s):
 
-```
+```shell
 echo "::set-output name=hashes::$(sha256sum *.nupkg | base64 -w0)"
 ```
 

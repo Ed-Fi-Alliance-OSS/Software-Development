@@ -47,9 +47,6 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
    4. Access rights are reviewed whenever there is a change to team
       composition, so that authorization can be removed when no longer needed.
 4. **Branch Security**
-
-   ***
-
    1. The `main`  branch is special and needs to be protected at all times,
       and must require pull requests.
       1. Where applicable, the EdFiBuildAgent account can be allowed to
@@ -68,9 +65,7 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
       should receive the same protection.
    3. Other branches are treated as feature branches and do not need branch
       security, as releases will not be made from those branches.
-   4. Use Rulesets instead of Branch Protection, as they are more flexible
-      (cf [GitHub Rulesets vs Branch
-      Protections](rulesets-vs-branch-protections.md)).
+   4. Use Rulesets instead of Branch Protection, as they are more flexible.
 
 <details>
   <summary><b>Exported rules from LMS-Toolkit</b></summary>
@@ -154,9 +149,8 @@ enforced across the Alliance's repositories.
          limiting user access to Ed-Fi system administrators.
    2. Protect against [Trojan Source](https://trojansource.codes/) attacks.
    3. Use GitHub CodeQL as a static application security testing (SAST) tool
-      to search for potential security vulnerabilities.
-      ![Warning](../../../static/img/continuous-integration/warning.png)
-      Not available for closed source applications.
+      to search for potential security vulnerabilities. ⚠️ Not available for
+      closed source applications.
         <details>
         <summary>
             Example of accidentally dangerous code...
@@ -170,17 +164,15 @@ enforced across the Alliance's repositories.
       security vulnerabilities! Here is a vulnerability that CodeQL discovered
       during a GitHub Action workflow run:
 
-        ![](../../../static/img/continuous-integration/image2022-6-2_13-38-9.png)
+        ![CodeQL Vulnerability](../../../static/img/continuous-integration/image2022-6-2_13-38-9.png)
 
       Clicking on show paths to drill down...
 
-        ![](../../../static/img/continuous-integration/image2022-6-2_13-38-23.png)
+        ![Text-logging of sensitive information](../../../static/img/continuous-integration/image2022-6-2_13-38-23.png)
 
-      ![Warning](../../../static/img/continuous-integration/warning.png)
-      ![Error](../../../static/img/continuous-integration/error.png)
-      😲 When there's an error connecting to OpenSearch, the entire set of
-      connection information gets logged! And this doesn't even have the
-      excuse of being a debug setting!
+      ⚠️ ❌ 😲 When there's an error connecting to OpenSearch, the entire set of
+      connection information gets logged! And this doesn't even have the excuse
+      of being a debug setting!
         </details>
         <br/>
 
@@ -215,8 +207,7 @@ enforced across the Alliance's repositories.
 
       :::
 
-   3. ![(warning)](../../../static/img/continuous-integration/warning.png)
-      The Alliance generally will not distribute packages from Ed-Fi Exchange
+   3. ⚠️ The Alliance generally will not distribute packages from Ed-Fi Exchange
       repositories.
 
 ## Procedures

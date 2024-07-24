@@ -11,7 +11,7 @@ This document describes the desired state software release workflow including:
 
 :::
 
-# Overview
+## Overview
 
 Two aspects of software supply chain integrity include knowing the components
 that went into the end product, and knowing that the end product was produced in
@@ -52,7 +52,7 @@ risk* as reducing actual risk.
 
 :::
 
-# Operating Context
+## Operating Context
 
 See the following documents for additional context on the Ed-Fi software
 development practices:
@@ -64,7 +64,7 @@ development practices:
 - [Coding and Testing
   Standards](../../coding-and-testing-standards/README.md)
 
-# Functional Requirements
+## Functional Requirements
 
 1. Create a release management workflow that incorporates the requirements for:
 
@@ -122,7 +122,7 @@ arise.
 
 :::
 
-# Technical Requirements
+## Technical Requirements
 
 1. For open source software, the Alliance will distribute SBOM and provenance
    files as attachments to GitHub releases.
@@ -187,12 +187,9 @@ See [Proof of Concept for SBOM and
 Provenance](./proof-of-concept-for-sbom-and-provenance.md)
 for more information on using the tools mentioned above.
 
-# Design
+## Design
 
 ![Design](../../../static/img/continuous-integration/tag%20then%20release.png)
-
-[tag then
-release.drawio.xml](https://edfi.atlassian.net/wiki/download/attachments/19334698/tag%20then%20release.drawio.xml?version=1&modificationDate=1712684799555&cacheVersion=1&api=v2)
 
 :::note
 
@@ -209,24 +206,24 @@ release.drawio.xml](https://edfi.atlassian.net/wiki/download/attachments/1933469
 
 :::
 
-## GitHub Actions Workflows
+### GitHub Actions Workflows
 
 | Name                | Trigger                                                                                                    | Steps to Take                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ​`on-pullrequest`   | ​Creation of a pull request                                                                                | - Linter<br/>- Unit Tests<br/>- Other tests<br/>- CodeQL<br/>- Dependency Review<br/><br/> <br/><br/>In some cases it might make sense to have multiple "on pull request" workflows, for example one that runs when C# files are updated, and one that runs when changes are only in PowerShell files.                                                                                                            |
 | `after-pullrequest` | Runs after successful completion of `on-pullrequest`                                                       | Report test results                                                                                                                                                                                                                                                                                                                                                                                       |
-| `on-merge-or-tag`   | 1. Merge to `main`  branch<br/>2. Merge to `patch-*`  branch (for hotfixes)<br/>3. Creation of a release tag | Create a pre-release for each "product" that might be released (in the future) from this merge. ![(warning)](../../../static/img/continuous-integration/warning.png) There are no artifacts on the pre-release yet. Think of this as a placeholder to receive the artifacts created in the next step below.<br/><br/>Admin App example:<br/><br/>- AdminApp.Web<br/>- AdminApp.Database<br/>- Admin.Api<br/>- Installer |
+| `on-merge-or-tag`   | 1. Merge to `main` branch<br/>2. Merge to `patch-*`  branch (for hotfixes)<br/>3. Creation of a release tag | Create a pre-release for each "product" that might be released (in the future) from this merge. ⚠️ There are no artifacts on the pre-release yet. Think of this as a placeholder to receive the artifacts created in the next step below.<br/><br/>Admin App example:<br/><br/>- AdminApp.Web<br/>- AdminApp.Database<br/>- Admin.Api<br/>- Installer |
 | `on-prerelease`     | Creation of a pre-release. Effectively, triggered by completion of `on-merge-or-tag`  job                  | - Build<br/>- Package<br/>- Publish<br/>- Create SBOM<br/>- Attach SBOM to pre-release<br/>- Create provenance<br/>- Attach provenance to pre-release                                                                                                                                                                                                                                                           |
 | `on-release`        | Changed a pre-release to a release                                                                         | - Delete other pre-release *only for the released product*<br/>- Promote version in Azure Artifacts (NuGet only)                                                                                                                                                                                                                                                                                           |
 
-## Dividing Releases by Package
+### Dividing Releases by Package
 
 Some repository contain multiple independently-releasable packages. There will
 be situations where multiple provenance and SBOM files are needed in a
 repository for these separate packages, namely, when they have separate build
 configurations. For example, in the AdminApp repository there are two
 independent packages: Admin App Web and Admin API
-(![(warning)](../../../static/img/continuous-integration/warning.png)
+(⚠️
 Admin API is transitioning to its own repository). In the ODS Platform, there
 are separate packages for the Web API, Swagger, Client Bulk Load utility, etc.
 
@@ -254,7 +251,7 @@ Teams can apply other meaningful naming conventions relevant to their toolchains
 and workflows, so long as each release is easily identifiable on the GitHub
 Releases page for the repository.
 
-## Creating a Release
+### Creating a Release
 
 The development teams have had many different release processes historically. In
 order to provide more safeguards on when a release is created, beginning with
@@ -274,7 +271,7 @@ product:
 With more experimentation we may be able to automate this process so that
 pushing the release tag is all that is required.
 
-# Future Requirements
+## Future Requirements
 
 1. Provenance and SBOM for Docker containers, which are currently built on
    Docker Hub.

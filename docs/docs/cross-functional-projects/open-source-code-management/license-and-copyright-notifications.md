@@ -1,6 +1,6 @@
 # License and Copyright Notifications
 
-# Overview
+## Overview
 
 As part of the transition to the Apache License, version 2.0, the Ed-Fi Alliance
 has chosen to apply a small license and notification statement at the top of
@@ -9,7 +9,7 @@ supports the `//`  style of comments:
 
 **C# File Header**
 
-```
+```none
 // SPDX-License-Identifier: Apache-2.0
 // Licensed to the Ed-Fi Alliance under one or more agreements.
 // The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
@@ -21,7 +21,7 @@ be patterned on this example:
 
 **NOTICES file**
 
-```
+```none
 <project name>
 Copyright (c) Ed-Fi Alliance, LLC and contributors.
 
@@ -39,7 +39,7 @@ to modify all files in an existing directory.
 
 :::
 
-# Rationale
+## Rationale
 
 In short, the header allows the Alliance to inform any reader of the appropriate
 license and how to find more information on copyright, thus eliminating the
@@ -53,7 +53,7 @@ This is a common practice across the non-profit sector; see for example:
 - [Apache Foundation](https://www.apache.org/legal/src-headers.html)
 - [Eclipse Foundation](https://www.eclipse.org/legal/guidetolegaldoc2.php)
 
-# Applicability
+## Applicability
 
 The header will be applied, with correct comment syntax, in the following file
 types in source repositories that use the Apache license:
@@ -103,23 +103,23 @@ markdown. Non-exhaustive list:
 - \*.nuspec
 - \*.css
 
-# Tool Support for License Headers
+## Tool Support for License Headers
 
-## Visual Studio
+### Visual Studio
 
 Install VS Studio Extension [License Header
 Manager](https://marketplace.visualstudio.com/items?itemName=StefanWenig.LicenseHeaderManager)
 
 Add configuration as below (works with Reshaper)
 
-![](../../../static/img/cross-functional-projects/screenshot.43.jpg)
+![License Header Manager options](../../../static/img/cross-functional-projects/screenshot.43.jpg)
 
 Setup the header template to be as follows:
 
 <details>
 <summary>Expand source</summary>
 
-```
+```none
 extensions: designer.cs generated.cs xml .config .xsd .json .xsd .xml aspx .ascx
 extensions: .cs .cpp .h .js
 // SPDX-License-Identifier: Apache-2.0
@@ -150,12 +150,12 @@ Resharper file.
 
 Note, exclude any comment indicators.
 
-![](../../../static/img/cross-functional-projects/screenshot.44.jpg)
+![Licenser header added in Resharper](../../../static/img/cross-functional-projects/screenshot.44.jpg)
 
 <details>
 <summary>Expand source</summary>
 
-```markdown
+```none
 SPDX-License-Identifier: Apache-2.0
 Licensed to the Ed-Fi Alliance under one or more agreements.
 The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
@@ -273,7 +273,6 @@ Default extensions enabled within VS Code using the file
       "streetsidesoftware.code-spell-checker"
     ]
 }
-
 ```
 
 </details>
