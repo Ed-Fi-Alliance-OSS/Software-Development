@@ -16,12 +16,7 @@ available.
 
 ## Related Content
 
-- [Azure Artifacts
-  Setup](./azure-artifacts-setup.md)
-- [Transition from MyGet to Azure
-  Artifacts](./transition-from-myget-to-azure-artifacts.md)
-- [Visual Studio Marketplace
-  Publisher](./visual-studio-marketplace-publisher.md)
+- [Azure Artifacts Setup](./azure-artifacts-setup.md)
 
 ## Policy
 
@@ -31,16 +26,12 @@ available.
   - NuGet: Azure Artifacts
     - Ed-Fi-Alliance subscription
     - EdFiBuildAgent account
-    - [Distribution of Binary
-      Packages](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334226/Distribution+of+Binary+Packages)
   - npm: Azure Artifacts
   - wheel: PyPi
     - `ed-fi-alliance`  account
   - images: Docker Hub
     - `edfi`  subscription / account
   - vsix: Visual Studio Marketplace
-    - [Distribution of Binary
-      Packages](https://edfi.atlassian.net/wiki/spaces/SDLC/pages/19334226/Distribution+of+Binary+Packages)
 
 :::warning
 

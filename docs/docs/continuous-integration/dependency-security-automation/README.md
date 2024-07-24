@@ -26,8 +26,7 @@ the reviewed code. These practices are enforced by scanning the Actions
 workflows themselves to ensure that they are only using pre-approved Actions.
 
 _Also see [Guidelines for Use of GitHub
-Actions](../guidelines-for-use-of-github-actions.md) and [Automated Security
-Scanning POC](./automated-security-scanning-poc.md)._
+Actions](../guidelines-for-use-of-github-actions.md)_.
 
 ## Open Source Projects
 

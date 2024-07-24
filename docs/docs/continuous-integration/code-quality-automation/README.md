@@ -22,10 +22,8 @@ Basic requirements for a project linter:
 
 Historically, the Alliance has relied on ReSharper for detecting common code
 smells, style inconsistencies, and more. However, it does not meet the
-requirements above for a good linter in several respects (see [Background
-Research - C#
-Linter](./background-research-c-linter.md)). Instead,
-the Alliance is adopting a combination of two tools:
+requirements above for a good linter in several respects. Instead, the Alliance
+is adopting a combination of two tools:
 
 - Microsoft's [.NET compiler platform
   analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview)

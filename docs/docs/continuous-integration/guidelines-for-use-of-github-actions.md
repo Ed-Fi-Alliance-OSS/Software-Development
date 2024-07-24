@@ -336,9 +336,6 @@ it will causes the job to fail. The list of actions can only be modified by the
 Ed-Fi tech team and other designated individuals. However, anyone can submit a
 pull request asking for a new Action.
 
-_More background: [Automated Security Scanning
-POC](../continuous-integration/dependency-security-automation/automated-security-scanning-poc.md)_
-
 ### 3. Stick With Ubuntu (when feasible)
 
 Ed-Fi software development has historically focused on Windows usage. The move

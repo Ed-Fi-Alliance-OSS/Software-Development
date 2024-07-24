@@ -95,7 +95,7 @@ run and provide a transition plan.
 
 Update TeamCity to publish packages to the new repository automatically.
 
-## Recommendations
+**Recommendations**
 
 - **Azure Artifacts**
 - **_One-year deprecation notice for packages on MyGet.org along with
@@ -122,7 +122,7 @@ for anything else, and it would be preferable to consolidate platforms.
 Use TeamCity to push new artifacts to Azure Blob Storage on demand, but not
 automatically.
 
-**_Recommendation: Azure Blob Storage_**
+**Recommendation: Azure Blob Storage**
 
 ### Docker Images
 
@@ -209,30 +209,3 @@ No change to current practice.
 No change to current practice.
 
 **_Recommendation: Amazon S3_**
-
-## Next Steps
-
-:::note
-
-Conversation between [Chris Moffatt
-(Deactivated)](https://edfi.atlassian.net/wiki/people/557058:19debe99-4842-4bab-b285-76589691f7ff?ref=confluence)
-and [Stephen
-Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
-on 20 Jul 2020, agreed to:
-
-- Azure Artifacts for NuGet and npm packages
-- Azure blob storage for other large binaries
-- Probable 1-year deprecation notice on MyGet
-
-:::
-
-**See** **[Transition from MyGet to Azure
-Artifacts](../../continuous-integration/distribution-of-binary-packages/transition-from-myget-to-azure-artifacts.md).**
-
-:::note
-
-For more information on each of the evaluated storage options,
-see [Background Research Notes for File
-Distribution](./background-research-notes-for-file-distribution.md).
-
-:::
