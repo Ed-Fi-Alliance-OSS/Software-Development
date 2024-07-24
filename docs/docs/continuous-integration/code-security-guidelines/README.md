@@ -47,9 +47,6 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
    4. Access rights are reviewed whenever there is a change to team
       composition, so that authorization can be removed when no longer needed.
 4. **Branch Security**
-
-   ***
-
    1. The `main`  branch is special and needs to be protected at all times,
       and must require pull requests.
       1. Where applicable, the EdFiBuildAgent account can be allowed to
@@ -68,9 +65,7 @@ distribution (where applicable) of compiled software to the Ed-Fi Community.
       should receive the same protection.
    3. Other branches are treated as feature branches and do not need branch
       security, as releases will not be made from those branches.
-   4. Use Rulesets instead of Branch Protection, as they are more flexible
-      (cf [GitHub Rulesets vs Branch
-      Protections](rulesets-vs-branch-protections.md)).
+   4. Use Rulesets instead of Branch Protection, as they are more flexible.
 
 <details>
   <summary><b>Exported rules from LMS-Toolkit</b></summary>
@@ -212,8 +207,7 @@ enforced across the Alliance's repositories.
 
       :::
 
-   3. ⚠️
-      The Alliance generally will not distribute packages from Ed-Fi Exchange
+   3. ⚠️ The Alliance generally will not distribute packages from Ed-Fi Exchange
       repositories.
 
 ## Procedures

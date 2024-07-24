@@ -5,18 +5,18 @@
 Distribute software files in the most appropriate channel for the class of
 software:
 
-| License                                    | Package Type                                                          | Release Status                                                                | Distribution Channel                                    |
-| ------------------------------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------- |
-| Apache                                     | .NET libraries and applications<br/><br/>JavaScript packaged with NuGet | Release<br/><br/>Release-Candidate<br/><br/>Formal Beta<br/><br/>Other pre-releases | Azure Artifacts​                                        |
-| Apache                                     | .NET application *installers executables*<br/><br/>Cloud ODS            | Release<br/><br/>Release-Candidate<br/><br/>Formal Beta                           | Azure Blob Storage                                      |
-| Apache                                     | Docker images                                                         | Release<br/><br/>Release-Candidate<br/><br/>Formal Beta                           | Docker Hub                                              |
-| Apache                                     | Docker images                                                         | Other pre-releases                                                            | Azure Container Registry                                |
-| Ed-Fi Binary License - MetaEd, Data Import | Zip file                                                              | All                                                                           | Azure Blob Storage                                      |
-| Ed-Fi Binary License - MetaEd              | JavaScript package                                                    | All                                                                           | Azure Artifacts with transition plan away from MyGet    |
-| Ed-Fi Legacy License - long-term support   | .NET libraries and applications                                       | All                                                                           | Azure Blob Storage with transition plan away from MyGet |
-| Ed-Fi Legacy License - long-term support   | Cloud ODS                                                             | All                                                                           | Azure Blob Storage                                      |
-| Ed-Fi Legacy License - long-term support   | Dashboards (e.g. sample databases)                                    | All                                                                           | Leave on AWS to minimize disruption                     |
-| Ed-Fi Legacy License - out of support      | All                                                                   | All                                                                           | Azure Blob Storage, possibly lower cost storage tier    |
+| License                                  | Package Type                                                            | Release Status                                                                      | Distribution Channel                                    |
+| ---------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Apache                                   | .NET libraries and applications, JavaScript packaged with NuGet | Release<br/><br/>Release-Candidate<br/><br/>Formal Beta<br/><br/>Other pre-releases | Azure Artifacts​                                        |
+| Apache                                   | .NET application *installers executables*, Cloud ODS            | Release<br/><br/>Release-Candidate<br/><br/>Formal Beta                             | Azure Blob Storage                                      |
+| Apache                                   | Docker images                                                           | Release<br/><br/>Release-Candidate<br/><br/>Formal Beta                             | Docker Hub                                              |
+| Apache                                   | Docker images                                                           | Other pre-releases                                                                  | Azure Container Registry                                |
+| Ed-Fi Binary License - MetaEd            | Zip file                                                                | All                                                                                 | Azure Blob Storage                                      |
+| Ed-Fi Binary License - MetaEd            | JavaScript package                                                      | All                                                                                 | Azure Artifacts with transition plan away from MyGet    |
+| Ed-Fi Legacy License - long-term support | .NET libraries and applications                                         | All                                                                                 | Azure Blob Storage with transition plan away from MyGet |
+| Ed-Fi Legacy License - long-term         | Cloud ODS                                                               | All                                                                                 | Azure Blob Storage                                      |
+| Ed-Fi Legacy License - long-term support | Dashboards (e.g. sample databases)                                      | All                                                                                 | Leave on AWS to minimize disruption                     |
+| Ed-Fi Legacy License - out of support    | All                                                                     | All                                                                                 | Azure Blob Storage, possibly lower cost storage tier    |
 
 :::tip
 
@@ -74,12 +74,12 @@ not under the Apache license - MetaEd and Data Import?
 
 i.e. NuGet packages, including the PowerShell installer packages.
 
-| Option                       | Analysis                                                                                                                                                                                                                                                                                            |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Option                       | Analysis                                                                                                                                                                                                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ​NuGet Gallery               | - ✅ Free<br/>- ![(info)](../../../static/img/cross-functional-projects/information.png) Good for high visibility discovery of packages<br/>- ![(info)](../../../static/img/cross-functional-projects/information.png) Not ideal for high-volume pre-releases |
-| Azure Artifacts              | - ✅ Much lower cost than MyGet<br/>- ✅ Good for all package types<br/>- ✅ Proven automation                                      |
-| GitHub Packages              | - ❌ Difficult to use and only works for private packages.                                                                                                                                                                                   |
-| Azure Blob Storage or AWS S3 | - ![(info)](../../../static/img/cross-functional-projects/information.png) Very low cost but requires additional effort for serving packages                                                                                                                                                               |
+| Azure Artifacts              | - ✅ Much lower cost than MyGet<br/>- ✅ Good for all package types<br/>- ✅ Proven automation                                                                                                                                                                  |
+| GitHub Packages              | - ❌ Difficult to use and only works for private packages.                                                                                                                                                                                                    |
+| Azure Blob Storage or AWS S3 | - ![(info)](../../../static/img/cross-functional-projects/information.png) Very low cost but requires additional effort for serving packages                                                                                                                 |
 
 Pre-release packages will best be handled through Azure Artifacts. Released
 packages can be "promoted" to NuGet Gallery. This would require some additional
@@ -95,7 +95,7 @@ run and provide a transition plan.
 
 Update TeamCity to publish packages to the new repository automatically.
 
-**_Recommendations:_**
+**Recommendations**
 
 - **Azure Artifacts**
 - **_One-year deprecation notice for packages on MyGet.org along with
@@ -105,12 +105,12 @@ Update TeamCity to publish packages to the new repository automatically.
 
 Executable installers ("msi") for the ODS/API and Admin App.
 
-| Option                       | Analysis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ​NuGet Gallery               | - ![(info)](../../../static/img/cross-functional-projects/information.png) Not ideal for large files.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Azure Artifacts              | - ⚠️ Compressing an exe into a NuGet package requires extra handling by the end-user:<br/> - Download with `chocolatey` , or<br/> - Manually rename from .nupkg to .zip and extract files, or<br/> \- Use a provided PowerShell script to download latest and extract.                                                                                                                                                                                                                       |
+| Option                       | Analysis                                                                                                                                                                                                                                                                                                                      |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ​NuGet Gallery               | - ![(info)](../../../static/img/cross-functional-projects/information.png) Not ideal for large files.                                                                                                                                                                                                                         |
+| Azure Artifacts              | - ⚠️ Compressing an exe into a NuGet package requires extra handling by the end-user:<br/> - Download with `chocolatey` , or<br/> - Manually rename from .nupkg to .zip and extract files, or<br/> \- Use a provided PowerShell script to download latest and extract.                                                         |
 | Azure Blob Storage or AWS S3 | - ✅  Easy to use<br/>- ✅ Low cost - Azure slightly lower than AWS as volume goes up<br/>- ✅ ![(info)](../../../static/img/cross-functional-projects/information.png) Easy to automate - proven with Azure, assumed with Amazon<br/>- ⚠️ Download links in Confluence need to be changed every time a new release is available. |
-| GitHub Release               | - ✅ Easy to use<br/>- ✅ Easy to discover<br/>- ✅ Low/no cost<br/>- ✅ Easy to automate / proven                                                                                                                                                                                                                              |
+| GitHub Release               | - ✅ Easy to use<br/>- ✅ Easy to discover<br/>- ✅ Low/no cost<br/>- ✅ Easy to automate / proven                                                                                                                                                                                                                                |
 
 Azure or AWS Blob storage will provide an easier end-user experience than a
 NuGet package at the cost of having to paste a new URL into a Confluence page
@@ -122,16 +122,16 @@ for anything else, and it would be preferable to consolidate platforms.
 Use TeamCity to push new artifacts to Azure Blob Storage on demand, but not
 automatically.
 
-**_Recommendation: Azure Blob Storage_**
+**Recommendation: Azure Blob Storage**
 
 ### Docker Images
 
-| Option                            | Analysis                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Option                            | Analysis                                                                                                                                                                                |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ​Docker Hub                       | - ✅ ​Free for public images - but limited retention<br/>- ❌ / ✅ Higher price than Azure or AWS for private repositories, though that includes CI/CD time and the cost is not very high. |
-| Azure Container Registry          | - ✅ Low cost for private repositories when building on TeamCity                                                                                                                                                                                                                                       |
-| Amazon Elastic Container Registry | - ✅ Low cost for private repositories when building on TeamCity                                                                                                                                                                                                                                       |
-| GitHub Packages                   | - ❌ High number of support issues and only works for private packages                                                                                                                                                                                                                                |
+| Azure Container Registry          | - ✅ Low cost for private repositories when building on TeamCity                                                                                                                         |
+| Amazon Elastic Container Registry | - ✅ Low cost for private repositories when building on TeamCity                                                                                                                         |
+| GitHub Packages                   | - ❌ High number of support issues and only works for private packages                                                                                                                   |
 
 Public images should go to Docker Hub for visibility. At only $25/month for five
 years on an annual plan, the cost to have unlimited image retention and a
@@ -158,11 +158,11 @@ to do a POC to evaluate ease of integration before selecting one.
 
 Ed-Fi Binary License (new)
 
-| Option                       | Analysis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Option                       | Analysis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Azure Artifacts              | - ![(info)](../../../static/img/cross-functional-projects/information.png) Similar visibility to MyGet, which has historically been acceptable.<br/>- ✅ Easy to automate - proven.<br/>- ✅ Easily retrieve "latest" version with a given URL.<br/>- ⚠️ Compressing an exe into a NuGet package requires extra handling by the end-user:<br/> - Download with `chocolatey` , or<br/> - Manually rename from .nupkg to .zip and extract files, or<br/> - Use a provided PowerShell script to download latest and extract. |
-| Azure Blob Storage or AWS S3 | - ✅  Easy to use<br/>- ✅ Low cost - slightly lower than AWS as volume goes up<br/>- ✅ ![(info)](../../../static/img/cross-functional-projects/information.png) Easy to automate - proven with Azure, assumed with Amazon<br/>- ⚠️ Download links in Confluence need to be changed every time a new release is available.                                                                                                                                      |
-| GitHub Releases              | - ✅ Proven model<br/>- ❌ Public repositories are "too" public, and private repositories require continued management of GitHub user access.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Azure Blob Storage or AWS S3 | - ✅  Easy to use<br/>- ✅ Low cost - slightly lower than AWS as volume goes up<br/>- ✅ ![(info)](../../../static/img/cross-functional-projects/information.png) Easy to automate - proven with Azure, assumed with Amazon<br/>- ⚠️ Download links in Confluence need to be changed every time a new release is available.                                                                                                                                                                                                |
+| GitHub Releases              | - ✅ Proven model<br/>- ❌ Public repositories are "too" public, and private repositories require continued management of GitHub user access.                                                                                                                                                                                                                                                                                                                                                                            |
 
 Similar to .NET application installers - Azure Blob Storage seems like a good
 and reasonable fit for this need.
@@ -209,30 +209,3 @@ No change to current practice.
 No change to current practice.
 
 **_Recommendation: Amazon S3_**
-
-## Next Steps
-
-:::note
-
-Conversation between [Chris Moffatt
-(Deactivated)](https://edfi.atlassian.net/wiki/people/557058:19debe99-4842-4bab-b285-76589691f7ff?ref=confluence)
-and [Stephen
-Fuqua](https://edfi.atlassian.net/wiki/people/5b7c806bfe42212a79620406?ref=confluence)
-on 20 Jul 2020, agreed to:
-
-- Azure Artifacts for NuGet and npm packages
-- Azure blob storage for other large binaries
-- Probable 1-year deprecation notice on MyGet
-
-:::
-
-**See** **[Transition from MyGet to Azure
-Artifacts](../../continuous-integration/distribution-of-binary-packages/transition-from-myget-to-azure-artifacts.md).**
-
-:::note
-
-For more information on each of the evaluated storage options,
-see [Background Research Notes for File
-Distribution](./background-research-notes-for-file-distribution.md).
-
-:::
